@@ -1,0 +1,64 @@
+{% load static %}
+
+body {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+#home-header {
+	background-color: rgb(37, 37, 37);
+	height: 700px;
+	padding: 0;
+}
+
+#home-carousel {
+	height: 100%;
+}
+
+.carousel-caption {
+	top: 50%;
+	transform: translate(0%, -40%);
+}
+
+#carousel-caption-1 {
+	position: relative;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: black;
+	opacity: 80%;
+	height: 30%;
+}
+
+#carousel-caption-1 h1 {
+	position: relative;
+	top: 25%;
+	color: rgb(255, 255, 255);
+}
+
+.carousel-item {
+	height: 100%;
+	font-size: 50px;
+	font-weight: bold;
+}
+
+#carousel-item-1 {
+	background-image: url('../img/logo_multi.jpg');
+	background-size: cover;
+}
+
+.carousel-item img {
+	position: relative;
+	height: 80%;
+	top: 10%;
+}
+
+.carousel-item-2 p {
+	float: left;
+	text-align: left;
+}
+
+.carousel-item-3 p {
+	float: right;
+	text-align: right;
+}
