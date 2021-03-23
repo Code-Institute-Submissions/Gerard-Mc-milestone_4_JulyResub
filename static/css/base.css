@@ -5,7 +5,7 @@ body {
 	margin: 0;
 	border: 0;
 }
-
+/* Homepage carousel styling */
 #home-header {
 	background-color: rgb(37, 37, 37);
 	height: 700px;
@@ -21,36 +21,57 @@ body {
 	transform: translate(0%, -40%);
 }
 
-#carousel-caption-1 {
-	position: relative;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	background-color: black;
-	opacity: 80%;
-	height: 30%;
-}
-
-#carousel-caption-1 h1 {
-	position: relative;
-	top: 25%;
-	color: rgb(255, 255, 255);
-}
-
 .carousel-item {
 	height: 100%;
 	font-size: 50px;
 	font-weight: bold;
 }
 
-#carousel-item-1 {
+.carousel-item-1 {
+	background-image: linear-gradient(to right, rgba(250, 92, 119, 1), rgba(80, 110, 250, 1));
+}
+
+.carousel-item-2 {
+	background-image: linear-gradient(to right, rgba(180, 250, 117, 1), rgba(250, 243, 105, 1));
+}
+
+.carousel-item-3 {
+	background-image: linear-gradient(to right, rgba(250, 92, 119, 1), rgba(80, 110, 250, 1));
+}
+
+.carousel-item-4 {
+	background-image: linear-gradient(to right, rgba(180, 250, 117, 1), rgba(250, 243, 105, 1));
+}
+
+.carousel-item-1 .carousel-item-image {
+	background-image: url('../img/multi_format_transparent.png');
+}
+
+.carousel-item-2 .carousel-item-image {
 	background-image: url('../img/logo_multi.jpg');
+}
+
+.carousel-item-3 .carousel-item-image {
+	background-image: url('../img/logo_multiPlatform_transparent.png');
+}
+
+.carousel-item-4 .carousel-item-image {
+	background-image: url('../img/digital-graphic-designer.jpg');
+	filter: brightness(.8);
+}
+
+.carousel-item-image {
+	position: relative;
+	top: 10%;
+	height: 55%;
+	background-position: center;
+	background-repeat: no-repeat;
 	background-size: cover;
 }
 
-.carousel-item img {
-	position: relative;
-	height: 80%;
-	top: 10%;
+.carousel-item-1 p {
+	float: right;
+	text-align: right;
 }
 
 .carousel-item-2 p {
@@ -63,3 +84,19 @@ body {
 	text-align: right;
 }
 
+.carousel-item-4 p {
+	float: left;
+	text-align: left;
+}
+
+.carousel-button {
+	margin-top: 20px;
+	display: block;
+	background-color: #fa5c77;
+	text-decoration: none !important;
+	color: white;
+	font-size: 0.3em;
+	border-radius: 0px;
+	padding: 10px 25px;
+	text-align: center;
+}
