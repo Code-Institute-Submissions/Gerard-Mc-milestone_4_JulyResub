@@ -6,6 +6,7 @@ body {
 	border: 0;
 }
 
+
 /* Homepage carousel styling */
 
 #home-header {
@@ -22,16 +23,21 @@ body {
 	top: 15%;
 	font-size: 22px;
 	line-height: 1.2;
-	margin-right: -10%;
+	width: 80%;
 }
 
 .carousel-caption:nth-child(even) {
-	margin-left: -10%;
+	margin-left: 0% !important;
+	margin-right: 10% !important;
 }
 
 .carousel-caption p {
 	text-shadow: 2px 1px rgba(0, 0, 0, 0.43);
 	width: auto;
+}
+
+.carousel-caption span {
+	background-color: rgba(0, 0, 0, 0);
 }
 
 .carousel-item {
@@ -111,6 +117,33 @@ body {
 	right: -35%;
 }
 
+
+/* Homepage carousel animations */
+
+.carousel-button-animation-cover {
+	width: 0px;
+	margin-left: 20px;
+	height: 27px;
+	padding: 0;
+	position: absolute;
+	border-radius: 0px;
+	text-decoration: none !important;
+	color: #fa5c77;
+	overflow: hidden;
+	animation-name: carousel-button;
+	animation-duration: .8s;
+	animation-delay: 0s;
+}
+
+@keyframes carousel-button {
+	0% {
+		width: 75%
+	}
+	100% {
+		width: 0%
+	}
+}
+
 @media (min-width: 768px) {
 	#home-header {
 		height: 350px;
@@ -118,7 +151,7 @@ body {
 	.carousel-caption {
 		top: 15%;
 		font-size: 40px;
-		margin-right: -10%;
+		width: 70%;
 	}
 	.carousel-caption:nth-child(even) {
 		margin-left: -10%;
@@ -134,6 +167,28 @@ body {
 		position: relative;
 		bottom: -20px;
 	}
+	/* Homepage carousel animations */
+	.carousel-button-animation-cover {
+		width: 0px;
+		height: 35px;
+		padding: 0;
+		position: absolute;
+		border-radius: 0px;
+		text-decoration: none !important;
+		color: #fa5c77;
+		overflow: hidden;
+		animation-name: carousel-button;
+		animation-duration: .8s;
+		animation-delay: 0s;
+	}
+	@keyframes carousel-button {
+		0% {
+			width: 30%
+		}
+		100% {
+			width: 0%
+		}
+	}
 }
 
 @media (min-width: 1440px) {
@@ -143,5 +198,10 @@ body {
 	.carousel-caption {
 		top: 15%;
 		font-size: 60px;
+	}
+	.carousel-button-animation-cover {
+		padding: 0;
+		width: 0px;
+		height: 42px;
 	}
 }
