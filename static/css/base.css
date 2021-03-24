@@ -5,10 +5,12 @@ body {
 	margin: 0;
 	border: 0;
 }
+
 /* Homepage carousel styling */
+
 #home-header {
 	background-color: rgb(37, 37, 37);
-	height: 700px;
+	height: 250px;
 	padding: 0;
 }
 
@@ -17,13 +19,18 @@ body {
 }
 
 .carousel-caption {
-	top: 50%;
-	transform: translate(0%, -40%);
+	top: 10%;
+	font-size: 22px;
+	line-height: 1.2;
+}
+
+.carousel-caption p {
+	text-shadow: 2px 2px #000000;
+	width: auto;
 }
 
 .carousel-item {
 	height: 100%;
-	font-size: 50px;
 	font-weight: bold;
 }
 
@@ -32,7 +39,7 @@ body {
 }
 
 .carousel-item-2 {
-	background-image: linear-gradient(to right, rgba(180, 250, 117, 1), rgba(250, 243, 105, 1));
+	background-image: linear-gradient(to right, rgb(163, 226, 108), rgba(250, 243, 105, 1));
 }
 
 .carousel-item-3 {
@@ -40,53 +47,33 @@ body {
 }
 
 .carousel-item-4 {
-	background-image: linear-gradient(to right, rgba(180, 250, 117, 1), rgba(250, 243, 105, 1));
+	background-image: linear-gradient(to right, rgb(163, 226, 108), rgba(250, 243, 105, 1));
 }
 
 .carousel-item-1 .carousel-item-image {
-	background-image: url('../img/multi_format_transparent.png');
+	background-image: url('../img/slider-img-1.jfif');
 }
 
 .carousel-item-2 .carousel-item-image {
-	background-image: url('../img/logo_multi.jpg');
+	background-image: url('../img/logo_multi.jpg.png');
 }
 
 .carousel-item-3 .carousel-item-image {
-	background-image: url('../img/logo_multiPlatform_transparent.png');
+	background-image: url('../img/slider-img-3.jpg');
 }
 
 .carousel-item-4 .carousel-item-image {
-	background-image: url('../img/digital-graphic-designer.jpg');
-	filter: brightness(.8);
+	background-image: url('../img/multi_format.jpg.png');
 }
 
 .carousel-item-image {
 	position: relative;
 	top: 10%;
-	height: 55%;
+	height: 80%;
+	width: 100%;
 	background-position: center;
 	background-repeat: no-repeat;
-	background-size: cover;
-}
-
-.carousel-item-1 p {
-	float: right;
-	text-align: right;
-}
-
-.carousel-item-2 p {
-	float: left;
-	text-align: left;
-}
-
-.carousel-item-3 p {
-	float: right;
-	text-align: right;
-}
-
-.carousel-item-4 p {
-	float: left;
-	text-align: left;
+	background-size: contain;
 }
 
 .carousel-button {
