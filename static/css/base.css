@@ -88,7 +88,60 @@ body {
 	text-decoration: none !important;
 	color: white;
 	font-size: 0.3em;
-	border-radius: 0px;
+	border-radius: 30px;
 	padding: 10px 25px;
 	text-align: center;
+}
+
+.carousel-indicators li {
+	height: 4px;
+	width: 36px;
+	margin: 5px;
+	position: relative;
+	bottom: -20px;
+}
+
+.carousel-control-prev-icon {
+	position: relative;
+	left: -35%;
+}
+
+.carousel-control-next-icon {
+	position: relative;
+	right: -35%;
+}
+
+@media (min-width: 768px) {
+	#home-header {
+		height: 350px;
+	}
+	.carousel-caption {
+		top: 15%;
+		font-size: 40px;
+		margin-right: -10%;
+	}
+	.carousel-caption:nth-child(even) {
+		margin-left: -10%;
+	}
+	.carousel-caption p {
+		text-shadow: 2px 1px rgba(0, 0, 0, 0);
+		width: auto;
+	}
+	.carousel-indicators li {
+		height: 9px;
+		width: 36px;
+		margin: 5px;
+		position: relative;
+		bottom: -20px;
+	}
+}
+
+@media (min-width: 1440px) {
+	#home-header {
+		height: 450px;
+	}
+	.carousel-caption {
+		top: 15%;
+		font-size: 60px;
+	}
 }
