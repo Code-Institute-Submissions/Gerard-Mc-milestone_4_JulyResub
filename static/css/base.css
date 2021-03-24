@@ -19,13 +19,18 @@ body {
 }
 
 .carousel-caption {
-	top: 10%;
+	top: 15%;
 	font-size: 22px;
 	line-height: 1.2;
+	margin-right: -10%;
+}
+
+.carousel-caption:nth-child(even) {
+	margin-left: -10%;
 }
 
 .carousel-caption p {
-	text-shadow: 2px 2px #000000;
+	text-shadow: 2px 1px rgba(0, 0, 0, 0.43);
 	width: auto;
 }
 
@@ -55,11 +60,11 @@ body {
 }
 
 .carousel-item-2 .carousel-item-image {
-	background-image: url('../img/logo_multi.jpg.png');
+	background-image: url('../img/slider-img-3.jpg');
 }
 
 .carousel-item-3 .carousel-item-image {
-	background-image: url('../img/slider-img-3.jpg');
+	background-image: url('../img/logo_multi.jpg.png');
 }
 
 .carousel-item-4 .carousel-item-image {
