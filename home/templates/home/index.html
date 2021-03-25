@@ -2,8 +2,8 @@
 {% load static %}
 
 {% block content %}
-<section id="home-header" class="container-fluid">
-    <div id="home-carousel" class="carousel slide carousel-fade" data-interval="4000" data-ride="carousel">
+<section id="home-header" class="container-fluid fixed-top">
+    <div id="home-carousel" class="carousel slide carousel-fade" data-interval="50000000" data-ride="carousel">
         <ul class="carousel-indicators ">
             <li data-target="#home-carousel" data-slide-to="0" class="active"></li>
             <li data-target="#home-carousel" data-slide-to="1"></li>
@@ -26,7 +26,11 @@
                 </div>
             </div>
             <div class="carousel-item carousel-item-2">
-                <div class="float-right col-6  col-sm-6 carousel-item-image"></div>
+                <div class="float-right col-8  col-sm-6 carousel-item-image">
+                    <div
+                        class="carousel-image-animation-cover-vertical d-none d-sm-block col-10 col-sm-10 col-lg-9 mx-auto">
+                    </div>
+                </div>
                 <div class="carousel-caption float-left text-left ">
                     <p><span class="header">MILESTONE 4<br>A GRAPHICS DESIGN<br>WEBSITE
                             FOR A PORTFOLIO</span></p>
@@ -52,7 +56,10 @@
                 </div>
             </div>
             <div class="carousel-item carousel-item-4">
-                <div class="float-right col-8 col-sm-6 carousel-item-image"></div>
+                <div class="float-right col-sm-7 carousel-item-image">
+                    <div class="carousel-image-animation-cover-vertical d-none d-sm-block col-12 col-sm-11 mx-auto">
+                    </div>
+                </div>
                 <div class="carousel-caption float-left text-left ">
                     <p><span class="header">MILESTONE 4<br>A GRAPHICS DESIGN<br>WEBSITE
                             FOR A PORTFOLIO</span></p>

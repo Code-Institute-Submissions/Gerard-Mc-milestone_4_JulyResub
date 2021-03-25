@@ -1,10 +1,15 @@
 {% load static %}
 
+{
+	% load static %
+}
+
 body {
 	padding: 0;
 	margin: 0;
 	border: 0;
 }
+
 
 /* Homepage carousel styling */
 
@@ -125,13 +130,13 @@ body {
 	height: 28px;
 	padding: 0;
 	position: absolute;
-	border-radius: 0px;
+	border-radius: 30px;
 	text-decoration: none !important;
 	color: #fa5c77;
 	overflow: hidden;
 	animation-name: carousel-button;
-	animation-duration: 1s;
-	animation-delay: 0s;
+	animation-duration: .8s;
+	animation-delay: .3s;
 }
 
 @keyframes carousel-button {
@@ -156,7 +161,7 @@ body {
 	background-repeat: no-repeat;
 	background-size: cover;
 	animation-name: carousel-image;
-	animation-duration: .8s;
+	animation-duration: .6s;
 	animation-delay: 0s;
 }
 
@@ -166,6 +171,27 @@ body {
 	}
 	100% {
 		width: 0%
+	}
+}
+
+.carousel-image-animation-cover-vertical {
+	background-image: url('../img/slider-img-3-cover.png');
+	animation-name: carousel-image-vertical;
+	width: auto;
+	height: 0%;
+	opacity: 0;
+	animation-duration: .4s;
+	animation-delay: 0s;
+}
+
+@keyframes carousel-image-vertical {
+	0% {
+		height: 100%;
+		opacity: 1;
+	}
+	100% {
+		height: 0%;
+		opacity: 1;
 	}
 }
 
@@ -205,7 +231,7 @@ body {
 	}
 	@keyframes carousel-button {
 		0% {
-			width: 40%
+			width: 30%
 		}
 		100% {
 			width: 0%
