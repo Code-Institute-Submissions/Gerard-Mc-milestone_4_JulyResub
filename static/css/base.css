@@ -21,14 +21,15 @@ body {
 
 .carousel-caption {
 	top: 15%;
-	font-size: 22px;
+	font-size: 24px;
 	line-height: 1.2;
-	width: 80%;
+	right: 5%;
+	margin-right: -10%;
 }
 
 .carousel-caption:nth-child(even) {
-	margin-left: 0% !important;
-	margin-right: 10% !important;
+	margin-left: -10%;
+	margin-right: 0%;
 }
 
 .carousel-caption p {
@@ -37,7 +38,7 @@ body {
 }
 
 .carousel-caption span {
-	background-color: rgba(0, 0, 0, 0);
+	background-color: rgba(204, 204, 204, 0);
 }
 
 .carousel-item {
@@ -88,7 +89,6 @@ body {
 }
 
 .carousel-button {
-	margin-top: 20px;
 	display: block;
 	background-color: #fa5c77;
 	text-decoration: none !important;
@@ -123,7 +123,7 @@ body {
 .carousel-button-animation-cover {
 	width: 0px;
 	margin-left: 20px;
-	height: 27px;
+	height: 28px;
 	padding: 0;
 	position: absolute;
 	border-radius: 0px;
@@ -131,18 +131,47 @@ body {
 	color: #fa5c77;
 	overflow: hidden;
 	animation-name: carousel-button;
-	animation-duration: .8s;
+	animation-duration: 1.2s;
 	animation-delay: 0s;
 }
 
 @keyframes carousel-button {
 	0% {
-		width: 75%
+		width: 40%
 	}
 	100% {
 		width: 0%
 	}
 }
+
+.carousel-image-animation-cover {
+	background-image: url('../img/slider-img-1-cover.png');
+}
+
+.carousel-image-animation-cover {
+	position: absolute;
+	top: 10%;
+	left: 0;
+	height: 80%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	animation-name: carousel-image;
+	animation-duration: .3s;
+	animation-delay: 0s;
+}
+
+@keyframes carousel-image {
+	0% {
+		width: 100%
+	}
+	100% {
+		width: 0%
+	}
+}
+
+
+/* Carousel sm - md screens */
 
 @media (min-width: 768px) {
 	#home-header {
@@ -151,7 +180,11 @@ body {
 	.carousel-caption {
 		top: 15%;
 		font-size: 40px;
-		width: 70%;
+		right: 8vw;
+	}
+	.carousel-caption:nth-child(even) {
+		margin-left: -10%;
+		margin-right: 0%;
 	}
 	.carousel-caption:nth-child(even) {
 		margin-left: -10%;
@@ -167,7 +200,7 @@ body {
 		position: relative;
 		bottom: -20px;
 	}
-	/* Homepage carousel animations */
+	/* sm-md carousel animations */
 	.carousel-button-animation-cover {
 		width: 0px;
 		height: 35px;
@@ -178,20 +211,35 @@ body {
 		color: #fa5c77;
 		overflow: hidden;
 		animation-name: carousel-button;
-		animation-duration: .8s;
+		animation-duration: 1.2s;
 		animation-delay: 0s;
 	}
 	@keyframes carousel-button {
 		0% {
-			width: 30%
+			width: 40%
 		}
 		100% {
 			width: 0%
 		}
 	}
+	.carousel-image-animation-cover {
+		position: absolute;
+		top: 0%;
+		left: 0;
+		height: 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		animation-name: carousel-image;
+		animation-duration: .8s;
+		animation-delay: 0s;
+	}
 }
 
-@media (min-width: 1440px) {
+
+/* Carousel lg+ screens */
+
+@media (min-width: 1200px) {
 	#home-header {
 		height: 450px;
 	}
@@ -203,5 +251,5 @@ body {
 		padding: 0;
 		width: 0px;
 		height: 42px;
-	}
+    }
 }
