@@ -1,0 +1,52 @@
+[
+   {
+      "pk":1,
+      "model":"products.product",
+      "fields":{
+         "name":"Vexum",
+         "description":"This Graphics design works very well. It harmonically improves my tennis by a lot.",
+         "price": 50,
+         "category":1,
+         "rating":5,
+         "image":"1.png"
+      }
+   },
+   {
+      "pk":2,
+      "model":"products.product",
+      "fields":{
+         "name":"New Arrivals",
+         "description":"The box this comes in is 4 meter by 5 foot and weights 18 kilogram.",
+         "price": 150,
+         "category":2,
+         "rating":4,
+         "image":"b1.jfif"
+      }
+   },
+   {
+      "pk":3,
+      "model":"products.product",
+      "fields":{
+         "name":"Tubes",
+         "description":"My co-worker Fred has one of these. He says it looks brown.",
+         "price": 50,
+         "category":3,
+         "rating":3,
+         "image":"i1.png"
+      }
+   },
+   {
+      "pk":4,
+      "model":"products.product",
+      "fields":{
+         "name":"Virginia",
+         "description":"I saw one of these in New Zealand and I bought one.",
+         "price": 180,
+         "category":5,
+         "rating":5,
+         "image":"p1.png"
+      }
+   }
+]
+
+   
