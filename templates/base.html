@@ -42,7 +42,7 @@
 </head>
 
 <body>
-    <header class="container-fluid sticky-top">
+    <header class="container-fluid ">
         <div id="topnav" class="row d-flex">
             <div class="col-12 col-md-4 text-center my-0 my-auto text-md-left">
                 <a href="{% url 'home' %}" class="nav-link">
@@ -88,6 +88,7 @@
             </div>
         </div>
     </header>
+                {% include 'includes/nav.html' %}
 
 
     {% if messages %}
