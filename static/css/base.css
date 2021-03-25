@@ -131,7 +131,7 @@ body {
 	color: #fa5c77;
 	overflow: hidden;
 	animation-name: carousel-button;
-	animation-duration: 1.2s;
+	animation-duration: 1s;
 	animation-delay: 0s;
 }
 
@@ -157,7 +157,7 @@ body {
 	background-repeat: no-repeat;
 	background-size: cover;
 	animation-name: carousel-image;
-	animation-duration: .3s;
+	animation-duration: .8s;
 	animation-delay: 0s;
 }
 
@@ -202,17 +202,7 @@ body {
 	}
 	/* sm-md carousel animations */
 	.carousel-button-animation-cover {
-		width: 0px;
 		height: 35px;
-		padding: 0;
-		position: absolute;
-		border-radius: 0px;
-		text-decoration: none !important;
-		color: #fa5c77;
-		overflow: hidden;
-		animation-name: carousel-button;
-		animation-duration: 1.2s;
-		animation-delay: 0s;
 	}
 	@keyframes carousel-button {
 		0% {
@@ -223,16 +213,8 @@ body {
 		}
 	}
 	.carousel-image-animation-cover {
-		position: absolute;
 		top: 0%;
-		left: 0;
 		height: 100%;
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
-		animation-name: carousel-image;
-		animation-duration: .8s;
-		animation-delay: 0s;
 	}
 }
 
@@ -248,8 +230,6 @@ body {
 		font-size: 60px;
 	}
 	.carousel-button-animation-cover {
-		padding: 0;
-		width: 0px;
 		height: 42px;
-    }
+	}
 }
