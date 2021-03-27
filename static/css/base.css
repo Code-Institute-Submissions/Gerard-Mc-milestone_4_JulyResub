@@ -1,13 +1,12 @@
 {% load static %}
 
-{
-	% load static %
-}
+@import url('https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap');
 
 body {
 	padding: 0;
 	margin: 0;
 	border: 0;
+	background-color: rgb(226, 226, 226);
 }
 
 
@@ -257,4 +256,58 @@ body {
 	.carousel-button-animation-cover {
 		height: 41px;
 	}
+}
+
+/* Style top and bottom nav */
+
+#topnav h2 {
+	font-weight: 700;
+	;
+}
+
+.nav-text-style {
+	color: rgb(0, 0, 0) !important;
+	font-weight: 700!important;
+	font-family: 'Goldman', cursive!important;
+}
+
+#lower-nav-md {
+	padding: 0px;
+}
+
+.curve-top{
+    border-top-left-radius: 50%;
+	border-top-right-radius: 50%;
+}
+
+.lower-nav-text-style {
+	color: rgba(80, 110, 250, 1) !important;
+	font-weight: 700!important;
+	font-family: 'Goldman', cursive!important;
+	font-size: 24px !important;
+}
+
+.lower-nav-text-style:hover{
+    color: rgba(250, 92, 119, 1) !important;
+}
+
+/* Background and colour change classes */
+.grey-bg {
+	background-color: rgb(226, 226, 226)!important;
+}
+
+.white-bg {
+	background-color: rgb(255, 255, 255)!important;
+}
+
+.color-white {
+	color: white!important;
+}
+
+.color-pink {
+	color: rgba(250, 92, 119, 1) !important;
+}
+
+.color-blue {
+	color:rgba(80, 110, 250, 1) !important;
 }
