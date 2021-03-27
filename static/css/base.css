@@ -6,7 +6,7 @@ body {
 	padding: 0;
 	margin: 0;
 	border: 0;
-	background-color: rgb(226, 226, 226);
+	background-color: rgb(233, 233, 233);
 }
 
 
@@ -66,7 +66,7 @@ body {
 }
 
 .carousel-item-1 .carousel-item-image {
-	background-image: url('../img/slider-img-1.jfif');
+	background-image: url('../img/slider-img-1.jpg');
 }
 
 .carousel-item-2 .carousel-item-image {
@@ -74,11 +74,11 @@ body {
 }
 
 .carousel-item-3 .carousel-item-image {
-	background-image: url('../img/logo_multi.jpg.png');
+	background-image: url('../img/logo_multi.png');
 }
 
 .carousel-item-4 .carousel-item-image {
-	background-image: url('../img/multi_format.jpg.png');
+	background-image: url('../img/multi_format.png');
 }
 
 .carousel-item-image {
@@ -134,7 +134,7 @@ body {
 	color: #fa5c77;
 	overflow: hidden;
 	animation-name: carousel-button;
-	animation-duration: .8s;
+	animation-duration: .5s;
 	animation-delay: .3s;
 }
 
@@ -226,7 +226,7 @@ body {
 	}
 	/* sm-md carousel animations */
 	.carousel-button-animation-cover {
-		height: 35px;
+		height: 34px;
 	}
 	@keyframes carousel-button {
 		0% {
@@ -293,7 +293,7 @@ body {
 
 /* Background and colour change classes */
 .grey-bg {
-	background-color: rgb(226, 226, 226)!important;
+	background-color: rgb(233, 233, 233)!important;
 }
 
 .white-bg {
