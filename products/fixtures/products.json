@@ -4,13 +4,13 @@
       "model":"products.product",
       "fields":{
          "name":"Vexum",
-         "description":"This Graphics design works very well. It harmonically improves my tennis by a lot.",
-         "price": 50,
+         "description":"When motorists sped in and out of traffic, all she could think of was those in need of a transplant.",
+         "price":50,
          "category":1,
          "rating":5,
-         "user_description": "Big colourful image please.",
-         "size": 4,
-         "testimonial": "Really good.",
+         "user_description":"Big colourful image please.",
+         "size":4,
+         "testimonial":"Really good.",
          "image":"1.png"
       }
    },
@@ -18,45 +18,585 @@
       "pk":2,
       "model":"products.product",
       "fields":{
-         "name":"New Arrivals",
-         "description":"The box this comes in is 4 meter by 5 foot and weights 18 kilogram.",
-         "price": 150,
-         "category":2,
+         "name":"Newton",
+         "description":"The crowd yells and screams for more memes.",
+         "price":50,
+         "category":1,
          "rating":4,
-         "user_description": "Big colourful image please.",
-         "size": 4,
-         "testimonial": "Really good.",
-         "image":"b1.jfif"
+         "user_description":"Big colourful image please.",
+         "size":3,
+         "testimonial":"Really good.",
+         "image":"2.png"
       }
    },
    {
       "pk":3,
       "model":"products.product",
       "fields":{
-         "name":"Tubes",
-         "description":"My co-worker Fred has one of these. He says it looks brown.",
-         "price": 50,
-         "category":3,
-         "rating":3,
-         "user_description": "Big colourful image please.",
-         "size": 4,
-         "testimonial": "Really good.",
-         "image":"i1.png"
+         "name":"Star",
+         "description":"Mary plays the piano.",
+         "price":50,
+         "category":1,
+         "rating":4,
+         "user_description":"Big colourful image please.",
+         "size":4,
+         "testimonial":"Really good.",
+         "image":"3.png"
       }
    },
    {
       "pk":4,
       "model":"products.product",
       "fields":{
+         "name":"Blue Cow",
+         "description":"It was obvious she was hot, sweaty, and tired.",
+         "price":50,
+         "category":1,
+         "rating":3,
+         "user_description":"Big colourful image please.",
+         "size":3,
+         "testimonial":"Really good.",
+         "image":"4.png"
+      }
+   },
+   {
+      "pk":5,
+      "model":"products.product",
+      "fields":{
+         "name":"Pelletier",
+         "description":"You're good at English when you know the difference between a man eating chicken and a man-eating chicken.",
+         "price":50,
+         "category":1,
+         "rating":1,
+         "user_description":"Big colourful image please.",
+         "size":1,
+         "testimonial":"Really good.",
+         "image":"5.png"
+      }
+   },
+   {
+      "pk":6,
+      "model":"products.product",
+      "fields":{
+         "name":"Heart",
+         "description":"It didn't take long for Gary to detect the robbers were amateurs.",
+         "price":50,
+         "category":1,
+         "rating":2,
+         "user_description":"Big colourful image please.",
+         "size":2,
+         "testimonial":"Really good.",
+         "image":"6.png"
+      }
+   },
+   {
+      "pk":7,
+      "model":"products.product",
+      "fields":{
+         "name":"Carina",
+         "description":"I purchased a baby clown from the Russian terrorist black market.",
+         "price":50,
+         "category":1,
+         "rating":4,
+         "user_description":"Big colourful image please.",
+         "size":1,
+         "testimonial":"Really good.",
+         "image":"7.png"
+      }
+   },
+   {
+      "pk":8,
+      "model":"products.product",
+      "fields":{
+         "name":"Dan's Donouts",
+         "description":"He uses onomatopoeia as a weapon of mental destruction.",
+         "price":50,
+         "category":1,
+         "rating":4,
+         "user_description":"Big colourful image please.",
+         "size":1,
+         "testimonial":"Really good.",
+         "image":"8.png"
+      }
+   },
+   {
+      "pk":9,
+      "model":"products.product",
+      "fields":{
+         "name":"Snake",
+         "description":"We will not allow you to bring your pet armadillo along.",
+         "price":50,
+         "category":1,
+         "rating":4,
+         "user_description":"Big colourful image please.",
+         "size":3,
+         "testimonial":"Really good.",
+         "image":"9.png"
+      }
+   },
+   {
+      "pk":10,
+      "model":"products.product",
+      "fields":{
+         "name":"Football",
+         "description":"She was the type of girl who wanted to live in a pink house.",
+         "price":50,
+         "category":1,
+         "rating":3,
+         "user_description":"Big colourful image please.",
+         "size":3,
+         "testimonial":"Really good.",
+         "image":"10.png"
+      }
+   },
+   {
+      "pk":11,
+      "model":"products.product",
+      "fields":{
          "name":"Virginia",
-         "description":"I saw one of these in New Zealand and I bought one.",
-         "price": 180,
+         "description":"The box this comes in is 4 meter by 5 foot and weights 18 kilogram.",
+         "price":150,
+         "category":2,
+         "rating":2,
+         "user_description":"Big colourful image please.",
+         "size":1,
+         "testimonial":"Really good.",
+         "image":"b1.jfif"
+      }
+   },
+   {
+      "pk":12,
+      "model":"products.product",
+      "fields":{
+         "name":"Offline",
+         "description":"She hadn't had her cup of coffee, and that made things all the worse.",
+         "price":150,
+         "category":2,
+         "rating":5,
+         "user_description":"Big colourful image please.",
+         "size":4,
+         "testimonial":"Really good.",
+         "image":"b2.jfif"
+      }
+   },
+   {
+      "pk":13,
+      "model":"products.product",
+      "fields":{
+         "name":"Neon",
+         "description":"I would be delighted if the sea were full of cucumber juice.",
+         "price":150,
+         "category":2,
+         "rating":5,
+         "user_description":"Big colourful image please.",
+         "size":2,
+         "testimonial":"Really good.",
+         "image":"b3.jfif"
+      }
+   },
+   {
+      "pk":14,
+      "model":"products.product",
+      "fields":{
+         "name":"Christmas",
+         "description":"Writing a list of random sentences is harder than I initially thought it would be.",
+         "price":150,
+         "category":2,
+         "rating":5,
+         "user_description":"Big colourful image please.",
+         "size":2,
+         "testimonial":"Really good.",
+         "image":"b4.jfif"
+      }
+   },
+   {
+      "pk":15,
+      "model":"products.product",
+      "fields":{
+         "name":"Summer Camp",
+         "description":"They throw cabbage that turns your brain into emotional baggage.",
+         "price":150,
+         "category":2,
+         "rating":1,
+         "user_description":"Big colourful image please.",
+         "size":1,
+         "testimonial":"Really good.",
+         "image":"b5.jfif"
+      }
+   },
+   {
+      "pk":16,
+      "model":"products.product",
+      "fields":{
+         "name":"Christmas Fair",
+         "description":"There was no telling what thoughts would come from the machine.",
+         "price":150,
+         "category":2,
+         "rating":2,
+         "user_description":"Big colourful image please.",
+         "size":3,
+         "testimonial":"Really good.",
+         "image":"b6.jfif"
+      }
+   },
+   {
+      "pk":17,
+      "model":"products.product",
+      "fields":{
+         "name":"Gothic",
+         "description":"He had concluded that pigs must be able to fly in Hog Heaven.",
+         "price":150,
+         "category":2,
+         "rating":2,
+         "user_description":"Big colourful image please.",
+         "size":1,
+         "testimonial":"Really good.",
+         "image":"b7.jfif"
+      }
+   },
+   {
+      "pk":18,
+      "model":"products.product",
+      "fields":{
+         "name":"Black Friday",
+         "description":"He learned the hardest lesson of his life and had the scars, both physical and mental, to prove it.",
+         "price":150,
+         "category":2,
+         "rating":5,
+         "user_description":"Big colourful image please.",
+         "size":4,
+         "testimonial":"Really good.",
+         "image":"b8.jfif"
+      }
+   },
+   {
+      "pk":19,
+      "model":"products.product",
+      "fields":{
+         "name":"Holo",
+         "description":"I ate a sock because people on the Internet told me to.",
+         "price":150,
+         "category":2,
+         "rating":4,
+         "user_description":"Big colourful image please.",
+         "size":4,
+         "testimonial":"Really good.",
+         "image":"b9.jfif"
+      }
+   },
+   {
+      "pk":20,
+      "model":"products.product",
+      "fields":{
+         "name":"Students",
+         "description":"The beauty of the sunset was obscured by the industrial cranes.",
+         "price":150,
+         "category":2,
+         "rating":5,
+         "user_description":"Big colourful image please.",
+         "size":2,
+         "testimonial":"Really good.",
+         "image":"b10.jfif"
+      }
+   },
+   {
+      "pk":21,
+      "model":"products.product",
+      "fields":{
+         "name":"Tubes",
+         "description":"Just go ahead and press that button.",
+         "price":50,
+         "category":3,
+         "rating":3,
+         "user_description":"Big colourful image please.",
+         "size":4,
+         "testimonial":"Really good.",
+         "image":"b1.png"
+      }
+   },
+   {
+      "pk":22,
+      "model":"products.product",
+      "fields":{
+         "name":"Spud",
+         "description":"They were excited to see their first sloth.",
+         "price":50,
+         "category":3,
+         "rating":2,
+         "user_description":"Big colourful image please.",
+         "size":1,
+         "testimonial":"Really good.",
+         "image":"i2.png"
+      }
+   },
+   {
+      "pk":23,
+      "model":"products.product",
+      "fields":{
+         "name":"Drop",
+         "description":"In the end, he realized he could see sound and hear words.",
+         "price":50,
+         "category":3,
+         "rating":3,
+         "user_description":"Big colourful image please.",
+         "size":1,
+         "testimonial":"Really good.",
+         "image":"i3.png"
+      }
+   },
+   {
+      "pk":24,
+      "model":"products.product",
+      "fields":{
+         "name":"Glove",
+         "description":"He appeared to be confusingly perplexed.",
+         "price":50,
+         "category":3,
+         "rating":5,
+         "user_description":"Big colourful image please.",
+         "size":4,
+         "testimonial":"Really good.",
+         "image":"i4.png"
+      }
+   },
+   {
+      "pk":25,
+      "model":"products.product",
+      "fields":{
+         "name":"Hazmat",
+         "description":"There are few things better in life than a slice of pie.",
+         "price":50,
+         "category":3,
+         "rating":4,
+         "user_description":"Big colourful image please.",
+         "size":4,
+         "testimonial":"Really good.",
+         "image":"i5.png"
+      }
+   },
+   {
+      "pk":26,
+      "model":"products.product",
+      "fields":{
+         "name":"Snow Drop",
+         "description":"Traveling became almost extinct during the pandemic.",
+         "price":50,
+         "category":3,
+         "rating":3,
+         "user_description":"Big colourful image please.",
+         "size":4,
+         "testimonial":"Really good.",
+         "image":"i6.png"
+      }
+   },
+   {
+      "pk":27,
+      "model":"products.product",
+      "fields":{
+         "name":"Smiley",
+         "description":"Buried deep in the snow, he hoped his batteries were fresh in his avalanche beacon.",
+         "price":50,
+         "category":3,
+         "rating":5,
+         "user_description":"Big colourful image please.",
+         "size":1,
+         "testimonial":"Really good.",
+         "image":"i7.png"
+      }
+   },
+   {
+      "pk":28,
+      "model":"products.product",
+      "fields":{
+         "name":"Squares",
+         "description":"Various sea birds are elegant, but nothing is as elegant as a gliding pelican.",
+         "price":50,
+         "category":3,
+         "rating":1,
+         "user_description":"Big colourful image please.",
+         "size":1,
+         "testimonial":"Really good.",
+         "image":"i8.png"
+      }
+   },
+   {
+      "pk":29,
+      "model":"products.product",
+      "fields":{
+         "name":"Cup",
+         "description":"There were white out conditions in the town; subsequently, the roads were impassable.",
+         "price":50,
+         "category":3,
+         "rating":2,
+         "user_description":"Big colourful image please.",
+         "size":2,
+         "testimonial":"Really good.",
+         "image":"i9.png"
+      }
+   },
+   {
+      "pk":30,
+      "model":"products.product",
+      "fields":{
+         "name":"Cats Eye",
+         "description":"With a single flip of the coin, his life changed forever.",
+         "price":50,
+         "category":3,
+         "rating":3,
+         "user_description":"Big colourful image please.",
+         "size":3,
+         "testimonial":"Really good.",
+         "image":"i10.png"
+      }
+   },
+   {
+      "pk":31,
+      "model":"products.product",
+      "fields":{
+         "name":"Red",
+         "description":"Cats are good pets, for they are clean and are not noisy.",
+         "price":180,
+         "category":4,
+         "rating":2,
+         "user_description":"Big colourful image please.",
+         "size":2,
+         "testimonial":"Really good.",
+         "image":"p1.png"
+      }
+   },
+   {
+      "pk":32,
+      "model":"products.product",
+      "fields":{
+         "name":"Game Day",
+         "description":"The three-year-old girl ran down the beach as the kite flew behind her.",
+         "price":180,
+         "category":4,
+         "rating":3,
+         "user_description":"Big colourful image please.",
+         "size":4,
+         "testimonial":"Really good.",
+         "image":"p2.png"
+      }
+   },
+   {
+      "pk":33,
+      "model":"products.product",
+      "fields":{
+         "name":"Nature",
+         "description":"With a single flip of the coin, his life changed forever.",
+         "price":180,
          "category":4,
          "rating":5,
-         "user_description": "Big colourful image please.",
-         "size": 4,
-         "testimonial": "Really good.",
-         "image":"p1.png"
+         "user_description":"Big colourful image please.",
+         "size":1,
+         "testimonial":"Really good.",
+         "image":"p3.png"
+      }
+   },
+   {
+      "pk":34,
+      "model":"products.product",
+      "fields":{
+         "name":"Buildings",
+         "description":"Before he moved to the inner city, he had always believed that security complexes were psychological.",
+         "price":180,
+         "category":4,
+         "rating":1,
+         "user_description":"Big colourful image please.",
+         "size":2,
+         "testimonial":"Really good.",
+         "image":"p4.png"
+      }
+   },
+   {
+      "pk":35,
+      "model":"products.product",
+      "fields":{
+         "name":"Baloons",
+         "description":"Seek success, but always be prepared for random cats.",
+         "price":180,
+         "category":4,
+         "rating":2,
+         "user_description":"Big colourful image please.",
+         "size":3,
+         "testimonial":"Really good.",
+         "image":"p5.png"
+      }
+   },
+   {
+      "pk":36,
+      "model":"products.product",
+      "fields":{
+         "name":"Turtle",
+         "description":"It took him a while to realize that everything he decided not to change, he was actually choosing.",
+         "price":180,
+         "category":4,
+         "rating":5,
+         "user_description":"Big colourful image please.",
+         "size":3,
+         "testimonial":"Really good.",
+         "image":"p6.png"
+      }
+   },
+   {
+      "pk":37,
+      "model":"products.product",
+      "fields":{
+         "name":"Passion",
+         "description":"She is never happy until she finds something to be unhappy about; then, she is overjoyed.",
+         "price":180,
+         "category":4,
+         "rating":5,
+         "user_description":"Big colourful image please.",
+         "size":1,
+         "testimonial":"Really good.",
+         "image":"p7.png"
+      }
+   },
+   {
+      "pk":38,
+      "model":"products.product",
+      "fields":{
+         "name":"Dance",
+         "description":"He was surprised that his immense laziness was inspirational to others.",
+         "price":180,
+         "category":4,
+         "rating":5,
+         "user_description":"Big colourful image please.",
+         "size":1,
+         "testimonial":"Really good.",
+         "image":"p8.png"
+      }
+   },
+   {
+      "pk":39,
+      "model":"products.product",
+      "fields":{
+         "name":"Red 2",
+         "description":"The efficiency we have at removing trash has made creating trash more acceptable.",
+         "price":180,
+         "category":4,
+         "rating":5,
+         "user_description":"Big colourful image please.",
+         "size":1,
+         "testimonial":"Really good.",
+         "image":"p9.png"
+      }
+   },
+   {
+      "pk":40,
+      "model":"products.product",
+      "fields":{
+         "name":"Headline",
+         "description":"I saw one of these in New Zealand and I bought one.",
+         "price":180,
+         "category":4,
+         "rating":3,
+         "user_description":"Big colourful image please.",
+         "size":2,
+         "testimonial":"Really good.",
+         "image":"p10.png"
       }
    }
 ]
