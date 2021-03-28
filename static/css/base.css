@@ -313,27 +313,64 @@ body {
 	color: rgba(80, 110, 250, 1) !important;
 }
 
+.navbar-toggler {
+	margin-right: 15px;
+}
+
+
 /* fixes heading bug starting at around 1220 px */
-@media screen and (min-width:993px) and (max-width:1279px){
-  #topnav h2 {
-        font-size: 25px;
-        padding-top: 4px;
-        padding-bottom: 4px;
-    }
-    
+
+@media screen and (min-width:993px) and (max-width:1279px) {
+	#topnav h2 {
+		font-size: 25px;
+		padding-top: 4px;
+		padding-bottom: 4px;
+	}
+}
+
+@media (max-width: 495px) {
+	nav a {
+		padding-left: 0;
+		margin-left: -15px;
+	}
+	nav a h2 {
+		font-size: 23px;
+	}
+	#img-mobile {
+		max-width: 70px;
+		height: auto;
+	}
+	#topnav {
+		margin-top: 80px!important;
+	}
+	.color-blue {
+		display: block;
+	}
 }
 
 @media (max-width: 992px) {
+	nav {
+		border-radius: 0!important;
+		position: absolute!important;
+		top: 0;
+		z-index: 20;
+	}
+	#topnav {
+		margin-top: 64px;
+	}
 	#topnav h2 {
-        font-size: 20px;
-    }
-    
-	#topnav h2 img {
-		max-width: 70px;
+		font-size: 20px;
+	}
+	#img-mobile {
+		max-width: 80px!important;
 		width: 100%;
+		height: auto;
+	}
+	#img-mobile {
+		max-width: 70px;
 		height: auto;
 	}
 	#nav-cart-user {
 		background-color: white;
-    }
+	}
 }
