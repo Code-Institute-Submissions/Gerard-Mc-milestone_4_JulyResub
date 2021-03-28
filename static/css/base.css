@@ -5,7 +5,7 @@ body {
 	padding: 0;
 	margin: 0;
 	border: 0;
-	background-color: rgb(233, 233, 233);
+	background-color: rgb(245, 245, 245);
 }
 
 
@@ -294,11 +294,19 @@ body {
 /* Background and colour change classes */
 
 .grey-bg {
-	background-color: rgb(233, 233, 233)!important;
+		background-color: rgb(245, 245, 245);
 }
 
 .white-bg {
 	background-color: rgb(255, 255, 255)!important;
+}
+
+.pink-bg {
+	background-color: rgba(250, 92, 119, 1) !important;
+}
+
+.blue-bg {
+	background-color: rgba(80, 110, 250, 1) !important;
 }
 
 .color-white {
@@ -315,6 +323,10 @@ body {
 
 .navbar-toggler {
 	margin-right: 15px;
+}
+
+.font{
+    font-family: 'Goldman', cursive!important;
 }
 
 
