@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+{% for product in products %}
+<div class="container">
+<img  src="/media/{{ product.image }}">
+<br>
+{{ product.name }}
+<br>
+{{ product.category }}
+<br>
+{{ product.description }}
+<br>
+{{ product.rating }}
+<br>
+{{ product.testimonial }}
+</div>
+<br>
+<br>
+<br>
+{% endfor %}
+
+{% endblock %}
