@@ -44,21 +44,27 @@
 <body>
     <header class="container-fluid grey-bg">
         <div id="topnav" class="row d-flex">
-            <div class="py-1 col-12 col-lg-4 my-auto text-center">
+            <div class="py-1 d-none d-lg-block col-lg-4 my-auto text-center">
                 <a href="{% url 'home' %}" class="nav-link nav-text-style">
-                    <h2 class="h2-style white-bg color-pink py-3">&nbsp;GRAPHICS <span class="color-blue">DIVINE</span></h2>
+                    <h2 class="h2-style white-bg color-pink">&nbsp;GRAPHICS <span class="color-blue">DIVINE</span></h2>
                 </a>
             </div>
-            <div class="col-12 col-lg-4">
-                <img class="my-1 col-lg-4 offset-lg-4 my-4" src="/static/img/site-logo.png" alt="Shop Logo"> 
+            <div class=" d-lg-none my-auto text-center col-8">
+                <a href="{% url 'home' %}" class="nav-link nav-text-style float-left">
+                    <h2 class="h2-style color-pink "> <img class="my-1 col-4" src="/static/img/site-logo.png"  alt="Shop Logo"><br>GRAPHICS <span class="color-blue">DIVINE</span></h2>
+                  
+                </a>
             </div>
-            <div class="py-1 col-12 col-lg-4 my-auto">
+            <div class="col-lg-4 d-none d-lg-block">
+                <img class=" col-lg-4 offset-lg-4 my-4" src="/static/img/site-logo.png" alt="Shop Logo">
+            </div>
+            <div id="nav-cart-user" class="py-1 col-12 col-lg-4 my-auto">
                 <ul class="list-inline list-unstyled text-center my-auto nav-text-style white-bg">
                     <li class="list-inline-item dropdown color-pink">
                         <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false">
                             <div class="text-center ">
-                                <p class="my-0 color-pink">My Account</p>
+                                <p class="my-0 color-pink white-bg">My Account</p>
                             </div>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="user-options">
@@ -74,14 +80,14 @@
                             {% endif %}
                         </div>
                     </li>
-                    <li class="list-inline-item">
+                    <li class="list-inline-item white-bg">
                         <a class="nav-link" href="">
                             <div class="text-center">
                                 <p class="my-0">
                                     {% if grand_total %}
-                                        ${{ grand_total|floatformat:2 }}
+                                    ${{ grand_total|floatformat:2 }}
                                     {% else %}
-                                        $0.00
+                                    $0.00
                                     {% endif %}
                                 </p>
                             </div>
@@ -91,7 +97,7 @@
             </div>
         </div>
     </header>
-                {% include 'includes/nav.html' %}
+    {% include 'includes/nav.html' %}
 
 
     {% if messages %}
