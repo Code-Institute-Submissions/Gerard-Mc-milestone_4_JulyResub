@@ -274,6 +274,27 @@ body {
 	z-index: -1;
 }
 
+@media screen and (min-width:1130px) and (max-width:1445px) {
+
+    .underlay {
+        height: 163px;
+    }
+}
+
+@media screen and (min-width:991px) and (max-width:1130px) {
+
+    .underlay {
+        height: 153px;
+    }
+}
+
+@media (min-width: 1800px) {
+
+    .underlay {
+      background-image: linear-gradient(to right, rgb(226, 226, 226),rgb(226, 226, 226))!important;
+    }
+}
+
 #topnav h2 {
 	font-weight: 700;
 }
