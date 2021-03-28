@@ -299,11 +299,11 @@
          "image":"b10.jfif"
       }
    },
-   {
+    {
       "pk":21,
       "model":"products.product",
       "fields":{
-         "name":"Tubes",
+         "name":"Wings",
          "description":"Just go ahead and press that button.",
          "price":50,
          "category":3,
@@ -311,7 +311,7 @@
          "user_description":"Big colourful image please.",
          "size":4,
          "testimonial":"Really good.",
-         "image":"b1.png"
+         "image":"i1.png"
       }
    },
    {
