@@ -313,10 +313,21 @@ body {
 	color: rgba(80, 110, 250, 1) !important;
 }
 
-@media (max-width: 1200px) {
+/* fixes heading bug starting at around 1220 px */
+@media screen and (min-width:993px) and (max-width:1279px){
+  #topnav h2 {
+        font-size: 25px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+    
+}
+
+@media (max-width: 992px) {
 	#topnav h2 {
-		font-size: 20px;
-	}
+        font-size: 20px;
+    }
+    
 	#topnav h2 img {
 		max-width: 70px;
 		width: 100%;
@@ -324,5 +335,5 @@ body {
 	}
 	#nav-cart-user {
 		background-color: white;
-	}
+    }
 }
