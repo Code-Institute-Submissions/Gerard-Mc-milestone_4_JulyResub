@@ -279,6 +279,11 @@ body {
 	border-top-right-radius: 50%;
 }
 
+.border-bottom-radius {
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+
 .lower-nav-text-style {
 	color: rgba(80, 110, 250, 1) !important;
 	font-weight: 700!important;
@@ -294,7 +299,7 @@ body {
 /* Background and colour change classes */
 
 .grey-bg {
-		background-color: rgb(245, 245, 245);
+	background-color: rgb(245, 245, 245);
 }
 
 .white-bg {
@@ -325,8 +330,12 @@ body {
 	margin-right: 15px;
 }
 
-.font{
-    font-family: 'Goldman', cursive!important;
+.font {
+	font-family: 'Goldman', cursive!important;
+}
+
+.blue-pink-gradient-bg {
+	background-image: linear-gradient(to right, rgba(250, 92, 119, 1), rgba(80, 110, 250, 1));
 }
 
 
@@ -357,6 +366,18 @@ body {
 	}
 	.color-blue {
 		display: block;
+	}
+}
+
+@media (max-width: 768px) {
+	#home-about-section p {
+		font-size: 16px;
+	}
+	#home-about-section h1 {
+		font-size: 26px;
+	}
+	#home-about-section a {
+		font-size: 12px;
 	}
 }
 
