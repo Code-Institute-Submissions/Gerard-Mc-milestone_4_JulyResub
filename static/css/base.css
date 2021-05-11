@@ -483,3 +483,11 @@ body {
 	box-sizing: border-box;
 	margin-bottom: 2vw;
 }
+
+.portfolio-nav {
+    text-decoration:none;
+    list-style-type: none;
+    color: rgb(100, 100, 100) !important;
+	font-weight: 700!important;
+	font-family: 'Goldman', cursive!important;
+}
