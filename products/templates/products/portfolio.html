@@ -10,10 +10,11 @@
     <ul
       class="portfolio-nav d-flex justify-content-center mx-auto w-100 col-lg-4 offset-lg-4 color-blue"
     >
-      <li class="mx-auto"><a href="#">Logo</a></li>
-      <li class="mx-auto"><a href="#">Poster</a></li>
-      <li class="mx-auto"><a href="#">Icon</a></li>
-      <li class="mx-auto"><a href="#">Banner</a></li>
+        <li class="mx-auto"><a href="{% url 'products' %}">All</a></li>
+      <li class="mx-auto"><a href="{% url 'products' %}?category=logo">Logo</a></li>
+      <li class="mx-auto"><a href="{% url 'products' %}?category=poster">Poster</a></li>
+      <li class="mx-auto"><a href="{% url 'products' %}?category=icon">Icon</a></li>
+      <li class="mx-auto"><a href="{% url 'products' %}?category=banner">Banner</a></li>
     </ul>
   </div>
   <div class="row">
