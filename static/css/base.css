@@ -398,6 +398,11 @@ body {
 	border-width: 2px;
 }
 
+.button-style{
+	border-radius: 15px;
+	border-style: none;
+	font-family: 'Goldman', cursive !important;
+}
 
 /* General site styling classes ends here */
 

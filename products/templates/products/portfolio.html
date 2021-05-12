@@ -1,4 +1,6 @@
-{% extends "base.html" %} {% load static %} {% block content %}
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
 <div class="container-fluid">
   <div class="row">
     <div class="col text-center mt-4">
@@ -7,39 +9,40 @@
     </div>
   </div>
   <div class="portfolio-nav d-flex justify-content-center col-12 mb-2">
-    <ul
-      class="portfolio-nav d-flex justify-content-center mx-auto w-100 col-lg-4 offset-lg-4 color-blue"
-    >
-        <li class="mx-auto"><a href="{% url 'products' %}">All</a></li>
+    <ul class="portfolio-nav d-flex justify-content-center mx-auto w-100 col-lg-4 offset-lg-4 color-blue">
+      <li class="mx-auto"><a href="{% url 'products' %}">All</a></li>
       <li class="mx-auto"><a href="{% url 'products' %}?category=logo">Logo</a></li>
       <li class="mx-auto"><a href="{% url 'products' %}?category=poster">Poster</a></li>
       <li class="mx-auto"><a href="{% url 'products' %}?category=icon">Icon</a></li>
       <li class="mx-auto"><a href="{% url 'products' %}?category=banner">Banner</a></li>
     </ul>
+    <div class="btn-group dropleft">
+      <button type="button"
+        class="btn btn-secondary dropdown-toggle btn-sm font-weight-bold button-style color-blue bg-white"
+        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Sort
+      </button>
+      <div class="dropdown-menu button-style">
+        <a class="dropdown-item color-blue" href="#">Rating ASC</a>
+        <a class="dropdown-item color-blue" href="#">Rating DESC</a>
+        <a class="dropdown-item color-blue" href="#">Price ASC</a>
+        <a class="dropdown-item color-blue" href="#">Price DESC</a>
+      </div>
+    </div>
   </div>
   <div class="row">
     <div class="col-10 offset-1">
       <div class="row">
         {% for product in products %}
-        <div
-          id="product-image-container"
-          class="border-box col-sm-6 col-md-6 col-lg-4 col-xl-3 white-bg p-4 d-flex align-items-center justify-content-center"
-        >
+        <div id="product-image-container"
+          class="border-box col-sm-6 col-md-6 col-lg-4 col-xl-3 white-bg p-4 d-flex align-items-center justify-content-center">
           {% if product.image %}
           <div data-toggle="modal" data-target="#{{ product.name}}">
-            <img
-              class="img-fluid"
-              src="/media/{{ product.image }}"
-              alt="{{ product.friendly_name }}"
-            />
+            <img class="img-fluid" src="/media/{{ product.image }}" alt="{{ product.friendly_name }}" />
           </div>
           {% else %}
           <div data-toggle="modal">
-            <img
-              class="img-fluid"
-              src="/static/img/slider-img-3-cover.png"
-              alt="{{ product.friendly_name }}"
-            />
+            <img class="img-fluid" src="/static/img/slider-img-3-cover.png" alt="{{ product.friendly_name }}" />
           </div>
           {% endif %}
           <div class="modal" id="{{ product.name }}" role="dialog">
@@ -49,29 +52,18 @@
                   <h4 class="modal-title">
                     <strong>{{ product.category|title }}</strong>
                   </h4>
-                  <button
-                    type="button"
-                    class="close"
-                    data-dismiss="modal"
-                    aria-label="Close"
-                  >
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
                 <div class="modal-body">
-                  <img
-                    class="img-fluid px-5"
-                    src="/media/{{ product.image }}"
-                    alt="{{ product.friendly_name }}"
-                  />
+                  <img class="img-fluid px-5" src="/media/{{ product.image }}" alt="{{ product.friendly_name }}" />
                   <h5 class="modal-title">
                     <strong>{{ product.friendly_name }}</strong>
                   </h5>
                   <p>{{ product.description }}</p>
                   <div class="modal-footer p-0">
-                    <a href="#" type="button" class="btn btn-dark mt-3"
-                      >Order</a
-                    >
+                    <a href="#" type="button" class="btn btn-dark mt-3">Order</a>
                   </div>
                 </div>
               </div>
