@@ -1,4 +1,7 @@
-{% extends "base.html" %} {% load static %} {% block content %}
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
 <div class="container-fluid grey-bg">
   <div class="row">
     <div class="col text-center mt-4">
@@ -25,18 +28,22 @@
       </li>
     </ul>
 
-    <div class="btn-group dropleft">
+    <div class="btn-group dropleft" style="position: absolute; right: 10px; margin-top: 43px; z-index: 2;">
       <button type="button"
         class="btn btn-secondary dropdown-toggle btn-sm font-weight-bold button-style color-blue bg-white"
         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Sort
+        {{ category_sort_display }}
       </button>
 
       <div class="dropdown-menu button-style">
-        <a class="dropdown-item color-blue" href="{% url 'portfolio' %}?sort=rating&category={{ category }}&direction=asc">Rating ASC</a>
-        <a class="dropdown-item color-blue" href="{% url 'portfolio' %}?sort=rating&category={{ category }}&direction=desc">Rating DESC</a>
-        <a class="dropdown-item color-blue" href="{% url 'portfolio' %}?sort=price&category={{ category }}&direction=asc">Price ASC</a>
-        <a class="dropdown-item color-blue" href="{% url 'portfolio' %}?sort=price&category={{ category }}&direction=desc">Price DESC</a>
+        <a class="dropdown-item color-blue"
+          href="{% url 'portfolio' %}?sort=rating&category={{ category }}&direction=asc">Rating ASC</a>
+        <a class="dropdown-item color-blue"
+          href="{% url 'portfolio' %}?sort=rating&category={{ category }}&direction=desc">Rating DESC</a>
+        <a class="dropdown-item color-blue"
+          href="{% url 'portfolio' %}?sort=price&category={{ category }}&direction=asc">Price ASC</a>
+        <a class="dropdown-item color-blue"
+          href="{% url 'portfolio' %}?sort=price&category={{ category }}&direction=desc">Price DESC</a>
       </div>
     </div>
   </div>
