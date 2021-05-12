@@ -3,7 +3,8 @@
       "pk":1,
       "model":"products.product",
       "fields":{
-         "name":"Vexum",
+         "name":"vexum",
+         "friendly_name":"Vexum",
          "description":"When motorists sped in and out of traffic, all she could think of was those in need of a transplant.",
          "price":50,
          "category":1,
@@ -18,7 +19,8 @@
       "pk":2,
       "model":"products.product",
       "fields":{
-         "name":"Newton",
+         "name":"newton",
+         "friendly_name":"Newton",
          "description":"The crowd yells and screams for more memes.",
          "price":50,
          "category":1,
@@ -33,7 +35,8 @@
       "pk":3,
       "model":"products.product",
       "fields":{
-         "name":"Star",
+         "name":"star",
+         "friendly_name":"Star",
          "description":"Mary plays the piano.",
          "price":50,
          "category":1,
@@ -48,7 +51,8 @@
       "pk":4,
       "model":"products.product",
       "fields":{
-         "name":"Blue Cow",
+         "name":"blue_cow",
+         "friendly_name":"Blue Cow",
          "description":"It was obvious she was hot, sweaty, and tired.",
          "price":50,
          "category":1,
@@ -63,7 +67,8 @@
       "pk":5,
       "model":"products.product",
       "fields":{
-         "name":"Pelletier",
+         "name":"pelletier",
+         "friendly_name":"Pelletier",
          "description":"You're good at English when you know the difference between a man eating chicken and a man-eating chicken.",
          "price":50,
          "category":1,
@@ -78,7 +83,8 @@
       "pk":6,
       "model":"products.product",
       "fields":{
-         "name":"Heart",
+         "name":"heart",
+         "friendly_name":"Heart",
          "description":"It didn't take long for Gary to detect the robbers were amateurs.",
          "price":50,
          "category":1,
@@ -93,7 +99,8 @@
       "pk":7,
       "model":"products.product",
       "fields":{
-         "name":"Carina",
+         "name":"carina",
+         "friendly_name":"Carina",
          "description":"I purchased a baby clown from the Russian terrorist black market.",
          "price":50,
          "category":1,
@@ -108,7 +115,8 @@
       "pk":8,
       "model":"products.product",
       "fields":{
-         "name":"Dan's Donouts",
+         "name":"dans_donouts",
+         "friendly_name":"Dans's Donouts",
          "description":"He uses onomatopoeia as a weapon of mental destruction.",
          "price":50,
          "category":1,
@@ -123,7 +131,8 @@
       "pk":9,
       "model":"products.product",
       "fields":{
-         "name":"Snake",
+         "name":"snake",
+         "friendly_name":"Snake",
          "description":"We will not allow you to bring your pet armadillo along.",
          "price":50,
          "category":1,
@@ -138,7 +147,8 @@
       "pk":10,
       "model":"products.product",
       "fields":{
-         "name":"Football",
+         "name":"football",
+         "friendly_name":"Football",
          "description":"She was the type of girl who wanted to live in a pink house.",
          "price":50,
          "category":1,
@@ -153,7 +163,8 @@
       "pk":11,
       "model":"products.product",
       "fields":{
-         "name":"Virginia",
+         "name":"virginia",
+         "friendly_name":"Virginia",
          "description":"The box this comes in is 4 meter by 5 foot and weights 18 kilogram.",
          "price":150,
          "category":2,
@@ -168,7 +179,8 @@
       "pk":12,
       "model":"products.product",
       "fields":{
-         "name":"Offline",
+         "name":"offline",
+         "friendly_name":"Offline",
          "description":"She hadn't had her cup of coffee, and that made things all the worse.",
          "price":150,
          "category":2,
@@ -183,7 +195,8 @@
       "pk":13,
       "model":"products.product",
       "fields":{
-         "name":"Neon",
+         "name":"neon",
+         "friendly_name":"Neon",
          "description":"I would be delighted if the sea were full of cucumber juice.",
          "price":150,
          "category":2,
@@ -198,7 +211,8 @@
       "pk":14,
       "model":"products.product",
       "fields":{
-         "name":"Christmas",
+         "name":"christmas",
+         "friendly_name":"Christmas",
          "description":"Writing a list of random sentences is harder than I initially thought it would be.",
          "price":150,
          "category":2,
@@ -213,7 +227,8 @@
       "pk":15,
       "model":"products.product",
       "fields":{
-         "name":"Summer Camp",
+         "name":"summer_camp",
+         "friendly_name":"Summer Camp",
          "description":"They throw cabbage that turns your brain into emotional baggage.",
          "price":150,
          "category":2,
@@ -228,7 +243,8 @@
       "pk":16,
       "model":"products.product",
       "fields":{
-         "name":"Christmas Fair",
+         "name":"christmas_fair",
+         "friendly_name":"Christmas Fair",
          "description":"There was no telling what thoughts would come from the machine.",
          "price":150,
          "category":2,
@@ -243,7 +259,8 @@
       "pk":17,
       "model":"products.product",
       "fields":{
-         "name":"Gothic",
+         "name":"gothic",
+         "friendly_name":"Gothic",
          "description":"He had concluded that pigs must be able to fly in Hog Heaven.",
          "price":150,
          "category":2,
@@ -258,7 +275,8 @@
       "pk":18,
       "model":"products.product",
       "fields":{
-         "name":"Black Friday",
+         "name":"black_friday",
+         "friendly_name":"Black Friday",
          "description":"He learned the hardest lesson of his life and had the scars, both physical and mental, to prove it.",
          "price":150,
          "category":2,
@@ -273,7 +291,8 @@
       "pk":19,
       "model":"products.product",
       "fields":{
-         "name":"Holo",
+         "name":"holo",
+         "friendly_name":"Holo",
          "description":"I ate a sock because people on the Internet told me to.",
          "price":150,
          "category":2,
@@ -288,7 +307,8 @@
       "pk":20,
       "model":"products.product",
       "fields":{
-         "name":"Students",
+         "name":"students",
+         "friendly_name":"Students",
          "description":"The beauty of the sunset was obscured by the industrial cranes.",
          "price":150,
          "category":2,
@@ -303,7 +323,8 @@
       "pk":21,
       "model":"products.product",
       "fields":{
-         "name":"Wings",
+         "name":"wings",
+         "friendly_name":"Wings",
          "description":"Just go ahead and press that button.",
          "price":50,
          "category":3,
@@ -318,7 +339,8 @@
       "pk":22,
       "model":"products.product",
       "fields":{
-         "name":"Spud",
+         "name":"spud",
+         "friendly_name":"Spud",
          "description":"They were excited to see their first sloth.",
          "price":50,
          "category":3,
@@ -333,7 +355,8 @@
       "pk":23,
       "model":"products.product",
       "fields":{
-         "name":"Drop",
+         "name":"drop",
+         "friendly_name":"Drop",
          "description":"In the end, he realized he could see sound and hear words.",
          "price":50,
          "category":3,
@@ -348,7 +371,8 @@
       "pk":24,
       "model":"products.product",
       "fields":{
-         "name":"Glove",
+         "name":"glove",
+         "friendly_name":"Glove",
          "description":"He appeared to be confusingly perplexed.",
          "price":50,
          "category":3,
@@ -363,7 +387,8 @@
       "pk":25,
       "model":"products.product",
       "fields":{
-         "name":"Hazmat",
+         "name":"hazmat",
+         "friendly_name":"Hazmat",
          "description":"There are few things better in life than a slice of pie.",
          "price":50,
          "category":3,
@@ -378,7 +403,8 @@
       "pk":26,
       "model":"products.product",
       "fields":{
-         "name":"Snow Drop",
+         "name":"snow_drop",
+         "friendly_name":"Snow Drop",
          "description":"Traveling became almost extinct during the pandemic.",
          "price":50,
          "category":3,
@@ -393,7 +419,8 @@
       "pk":27,
       "model":"products.product",
       "fields":{
-         "name":"Smiley",
+         "name":"smiley",
+         "friendly_name":"Smiley",
          "description":"Buried deep in the snow, he hoped his batteries were fresh in his avalanche beacon.",
          "price":50,
          "category":3,
@@ -408,7 +435,8 @@
       "pk":28,
       "model":"products.product",
       "fields":{
-         "name":"Squares",
+         "name":"squares",
+         "friendly_name":"Squares",
          "description":"Various sea birds are elegant, but nothing is as elegant as a gliding pelican.",
          "price":50,
          "category":3,
@@ -423,7 +451,8 @@
       "pk":29,
       "model":"products.product",
       "fields":{
-         "name":"Cup",
+         "name":"cup",
+         "friendly_name":"Cup",
          "description":"There were white out conditions in the town; subsequently, the roads were impassable.",
          "price":50,
          "category":3,
@@ -438,7 +467,8 @@
       "pk":30,
       "model":"products.product",
       "fields":{
-         "name":"Cats Eye",
+         "name":"cats_eye",
+         "friendly_name":"Cats Eye",
          "description":"With a single flip of the coin, his life changed forever.",
          "price":50,
          "category":3,
@@ -453,7 +483,8 @@
       "pk":31,
       "model":"products.product",
       "fields":{
-         "name":"Red",
+         "name":"red",
+         "friendly_name":"Red",
          "description":"Cats are good pets, for they are clean and are not noisy.",
          "price":180,
          "category":4,
@@ -468,7 +499,8 @@
       "pk":32,
       "model":"products.product",
       "fields":{
-         "name":"Game Day",
+         "name":"game_day",
+         "friendly_name":"Game Day",
          "description":"The three-year-old girl ran down the beach as the kite flew behind her.",
          "price":180,
          "category":4,
@@ -483,7 +515,8 @@
       "pk":33,
       "model":"products.product",
       "fields":{
-         "name":"Nature",
+         "name":"nature",
+         "friendly_name":"Nature",
          "description":"With a single flip of the coin, his life changed forever.",
          "price":180,
          "category":4,
@@ -498,7 +531,8 @@
       "pk":34,
       "model":"products.product",
       "fields":{
-         "name":"Buildings",
+         "name":"buildings",
+         "friendly_name":"Buildings",
          "description":"Before he moved to the inner city, he had always believed that security complexes were psychological.",
          "price":180,
          "category":4,
@@ -513,7 +547,8 @@
       "pk":35,
       "model":"products.product",
       "fields":{
-         "name":"Baloons",
+         "name":"baloons",
+         "friendly_name":"Baloons",
          "description":"Seek success, but always be prepared for random cats.",
          "price":180,
          "category":4,
@@ -528,7 +563,8 @@
       "pk":36,
       "model":"products.product",
       "fields":{
-         "name":"Turtle",
+         "name":"turtle",
+         "friendly_name":"Turtle",
          "description":"It took him a while to realize that everything he decided not to change, he was actually choosing.",
          "price":180,
          "category":4,
@@ -543,7 +579,8 @@
       "pk":37,
       "model":"products.product",
       "fields":{
-         "name":"Passion",
+         "name":"passion",
+         "friendly_name":"Passion",
          "description":"She is never happy until she finds something to be unhappy about; then, she is overjoyed.",
          "price":180,
          "category":4,
@@ -558,7 +595,8 @@
       "pk":38,
       "model":"products.product",
       "fields":{
-         "name":"Dance",
+         "name":"dance",
+         "friendly_name":"Dance",
          "description":"He was surprised that his immense laziness was inspirational to others.",
          "price":180,
          "category":4,
@@ -573,7 +611,8 @@
       "pk":39,
       "model":"products.product",
       "fields":{
-         "name":"Red 2",
+         "name":"red_2",
+         "friendly_name":"Red 2",
          "description":"The efficiency we have at removing trash has made creating trash more acceptable.",
          "price":180,
          "category":4,
@@ -588,7 +627,8 @@
       "pk":40,
       "model":"products.product",
       "fields":{
-         "name":"Headline",
+         "name":"headline",
+         "friendly_name":"Headline",
          "description":"I saw one of these in New Zealand and I bought one.",
          "price":180,
          "category":4,

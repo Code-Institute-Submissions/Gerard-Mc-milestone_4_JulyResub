@@ -1,13 +1,12 @@
 from django.shortcuts import render
 from .models import Product, Category
+from datetime import datetime
 
 
 def products(request):
     """ View displays all products and sorts by categories """
-
     products = Product.objects.all()
     categories = None
-
     if request.GET:
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
