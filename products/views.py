@@ -16,6 +16,7 @@ def portfolio(request):
     # category_sort_display for HTML dropdown. Sent through the view context.
     # Default is "Rating DESC"
     category_sort_display = "Rating DESC"
+    active_category = ""
 
     if request.GET:
         if 'category' in request.GET:
@@ -30,10 +31,12 @@ def portfolio(request):
                     categories_string += "" + categories[i] + ","
                 # Removes comma after final word.
                 categories_string = categories_string[:-1]
+                active_category = "all"
             else:
                 # Converts lists with a single item to string.
                 for i in categories:
                     categories_string += i
+                    active_category = i
             # Takes sort parameter value from URL.
             if 'sort' in request.GET:
                 sort = request.GET['sort']
@@ -53,6 +56,7 @@ def portfolio(request):
                 print(category_sort_display)
 
     context = {
+        'active_category': active_category,
         'category_sort_display': category_sort_display,
         'products': products,
         'category': categories_string,

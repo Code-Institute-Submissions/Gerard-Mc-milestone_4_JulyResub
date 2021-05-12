@@ -11,19 +11,19 @@
   </div>
   <div class="portfolio-nav d-flex justify-content-center col-12 mb-2">
     <ul class="portfolio-nav d-flex justify-content-center mx-auto w-100 col-lg-4 offset-lg-4 color-blue">
-      <li class="mx-auto">
+      <li id="all_link" class="mx-auto">
         <a href="{% url 'portfolio' %}?category=logo,poster,icon,banner">All</a>
       </li>
-      <li class="mx-auto">
+      <li id="logo_link" class="mx-auto">
         <a href="{% url 'portfolio' %}?category=logo">Logo</a>
       </li>
-      <li class="mx-auto">
+      <li id="poster_link" class="mx-auto">
         <a href="{% url 'portfolio' %}?category=poster">Poster</a>
       </li>
-      <li class="mx-auto">
+      <li id="icon_link" class="mx-auto">
         <a href="{% url 'portfolio' %}?category=icon">Icon</a>
       </li>
-      <li class="mx-auto">
+      <li id="banner_link" class="mx-auto">
         <a href="{% url 'portfolio' %}?category=banner">Banner</a>
       </li>
     </ul>
@@ -94,4 +94,13 @@
     </div>
   </div>
 </div>
+{% endblock %}
+
+{% block postloadjs %}
+<script>
+  var active = `{{ active_category }}` + "_link"
+  console.log(active);
+  document.getElementById(active).classList.add("active_li");
+  console.log(document.getElementById(active).className);
+</script>
 {% endblock %}
