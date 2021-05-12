@@ -10,11 +10,11 @@
   </div>
   <div class="portfolio-nav d-flex justify-content-center col-12 mb-2">
     <ul class="portfolio-nav d-flex justify-content-center mx-auto w-100 col-lg-4 offset-lg-4 color-blue">
-      <li class="mx-auto"><a href="{% url 'products' %}">All</a></li>
-      <li class="mx-auto"><a href="{% url 'products' %}?category=logo">Logo</a></li>
-      <li class="mx-auto"><a href="{% url 'products' %}?category=poster">Poster</a></li>
-      <li class="mx-auto"><a href="{% url 'products' %}?category=icon">Icon</a></li>
-      <li class="mx-auto"><a href="{% url 'products' %}?category=banner">Banner</a></li>
+      <li class="mx-auto"><a href="{% url 'portfolio' %}">All</a></li>
+      <li class="mx-auto"><a href="{% url 'portfolio' %}?category=logo">Logo</a></li>
+      <li class="mx-auto"><a href="{% url 'portfolio' %}?category=poster">Poster</a></li>
+      <li class="mx-auto"><a href="{% url 'portfolio' %}?category=icon">Icon</a></li>
+      <li class="mx-auto"><a href="{% url 'portfolio' %}?category=banner">Banner</a></li>
     </ul>
     <div class="btn-group dropleft">
       <button type="button"
@@ -23,10 +23,10 @@
         Sort
       </button>
       <div class="dropdown-menu button-style">
-        <a class="dropdown-item color-blue" href="#">Rating ASC</a>
-        <a class="dropdown-item color-blue" href="#">Rating DESC</a>
-        <a class="dropdown-item color-blue" href="#">Price ASC</a>
-        <a class="dropdown-item color-blue" href="#">Price DESC</a>
+        <a class="dropdown-item color-blue" href="{% url 'portfolio' %}?sort=rating&direction=asc">Rating ASC</a>
+        <a class="dropdown-item color-blue" href="{% url 'portfolio' %}?sort=rating&direction=desc">Rating DESC</a>
+        <a class="dropdown-item color-blue" href="{% url 'portfolio' %}?sort=price&direction=asc">Price ASC</a>
+        <a class="dropdown-item color-blue" href="{% url 'portfolio' %}?sort=price&direction=desc">Price DESC</a>
       </div>
     </div>
   </div>
@@ -39,6 +39,8 @@
           {% if product.image %}
           <div data-toggle="modal" data-target="#{{ product.name}}">
             <img class="img-fluid" src="/media/{{ product.image }}" alt="{{ product.friendly_name }}" />
+            <h4>{{ product.rating }}</h4>
+            <h4>{{ product.price}}</h4>
           </div>
           {% else %}
           <div data-toggle="modal">
