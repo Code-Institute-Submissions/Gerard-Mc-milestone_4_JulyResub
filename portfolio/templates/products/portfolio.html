@@ -5,8 +5,7 @@
 <div class="container-fluid grey-bg">
   <div class="row">
     <div class="col text-center mt-4">
-      <h1 class="h1-text-style">Portfolio</h1>
-      <hr class="w-50 hr-grey" />
+      <h1 class="h1-text-style mb-4 mt-3">Portfolio</h1>
     </div>
   </div>
   <div class="portfolio-nav d-flex justify-content-center col-12 mb-2">
@@ -56,8 +55,6 @@
           {% if product.image %}
           <div data-toggle="modal" data-target="#{{ product.name}}">
             <img class="img-fluid" src="/media/{{ product.image }}" alt="{{ product.name }}" />
-            <h4>Rating: {{ product.rating }}</h4>
-            <h4>Price: {{ product.price}}</h4>
           </div>
           {% else %}
           <div data-toggle="modal">
@@ -78,11 +75,11 @@
                 <div class="modal-body">
                   <img class="img-fluid px-5" src="/media/{{ product.image }}" alt="{{ product.name }}" />
                   <h5 class="modal-title">
-                    <strong>{{ product.name }}</strong>
+                    <strong>{{ product.friendly_name }}</strong>
                   </h5>
                   <p>{{ product.description }}</p>
                   <div class="modal-footer p-0">
-                    <a href="#" type="button" class="btn btn-dark mt-3">Order</a>
+                    <a href="{% url 'order' %}"  type="button" class="btn btn-dark mt-3">Order Your Own</a>
                   </div>
                 </div>
               </div>
@@ -99,8 +96,6 @@
 {% block postloadjs %}
 <script>
   var active = `{{ active_category }}` + "_link"
-  console.log(active);
   document.getElementById(active).classList.add("active_li");
-  console.log(document.getElementById(active).className);
 </script>
 {% endblock %}
