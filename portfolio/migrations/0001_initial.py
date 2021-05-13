@@ -33,7 +33,7 @@ class Migration(migrations.Migration):
                 ('size', models.IntegerField(validators=[django.core.validators.MinValueValidator(2), django.core.validators.MaxValueValidator(4)])),
                 ('testimonial', models.TextField(blank=True, null=True)),
                 ('image', models.ImageField(upload_to='images/')),
-                ('category', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, to='products.category')),
+                ('category', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, to='portfolio.category')),
             ],
         ),
     ]

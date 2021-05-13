@@ -3,5 +3,64 @@
 
 {% block content %}
 
+<div class="row white-bg" style="border-top-style: solid;
+border-top-color: rgb(239, 242, 255); border-top-width: 2px;">
+    <div class="col text-center mt-5 mb-3">
+      <h1 class="h1-text-style">Order</h1>
+    </div>
+  </div>
+
+<div class="container-fluid white-bg d-flex align-items-center justify-content-center pt-4 pb-5 font">
+<form>
+    <div class="form-group">
+        <h6 class="d-block font-weight-bold">Type </h6>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+          <label class="form-check-label" for="inlineRadio1">Logo</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+          <label class="form-check-label" for="inlineRadio2">Poster</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+          <label class="form-check-label" for="inlineRadio3">Icon</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
+            <label class="form-check-label" for="inlineRadio3">Banner</label>
+          </div>
+      </div>
+    <div class="form-group">
+      <h6 class="d-block font-weight-bold">Size </h6>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option1">
+        <label class="form-check-label" for="inlineRadio1">Small</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio6" value="option2">
+        <label class="form-check-label" for="inlineRadio2">Medium</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio7" value="option3">
+        <label class="form-check-label" for="inlineRadio3">Large</label>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1" class="font-weight-bold">Description</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlFile1" class="font-weight-bold">Inspiration</label>
+        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+      </div>
+      <br>
+      <h6 class="d-block font-weight-bold">Price: $0.00 </h6>
+      <br>
+      <button type="submit" class="btn btn-primary mb-2 blue-bg font">Add to Cart</button>
+  </form>
+
+</div>
+
 
 {% endblock %}

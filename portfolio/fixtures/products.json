@@ -1,7 +1,7 @@
 [
    {
       "pk":1,
-      "model":"products.product",
+      "model":"portfolio.product",
       "fields":{
          "name":"vexum",
          "friendly_name":"Vexum",
@@ -17,7 +17,7 @@
    },
    {
       "pk":2,
-      "model":"products.product",
+      "model":"portfolio.product",
       "fields":{
          "name":"newton",
          "friendly_name":"Newton",
@@ -33,7 +33,7 @@
    },
    {
       "pk":3,
-      "model":"products.product",
+      "model":"portfolio.product",
       "fields":{
          "name":"star",
          "friendly_name":"Star",
@@ -49,7 +49,7 @@
    },
    {
       "pk":4,
-      "model":"products.product",
+      "model":"portfolio.product",
       "fields":{
          "name":"blue_cow",
          "friendly_name":"Blue Cow",
@@ -65,7 +65,7 @@
    },
    {
       "pk":5,
-      "model":"products.product",
+      "model":"portfolio.product",
       "fields":{
          "name":"pelletier",
          "friendly_name":"Pelletier",
@@ -81,7 +81,7 @@
    },
    {
       "pk":6,
-      "model":"products.product",
+      "model":"portfolio.product",
       "fields":{
          "name":"heart",
          "friendly_name":"Heart",
@@ -97,7 +97,7 @@
    },
    {
       "pk":7,
-      "model":"products.product",
+      "model":"portfolio.product",
       "fields":{
          "name":"carina",
          "friendly_name":"Carina",
@@ -113,7 +113,7 @@
    },
    {
       "pk":8,
-      "model":"products.product",
+      "model":"portfolio.product",
       "fields":{
          "name":"dans_donouts",
          "friendly_name":"Dans's Donouts",
@@ -129,7 +129,7 @@
    },
    {
       "pk":9,
-      "model":"products.product",
+      "model":"portfolio.product",
       "fields":{
          "name":"snake",
          "friendly_name":"Snake",
@@ -145,7 +145,7 @@
    },
    {
       "pk":10,
-      "model":"products.product",
+      "model":"portfolio.product",
       "fields":{
          "name":"football",
          "friendly_name":"Football",
@@ -161,7 +161,7 @@
    },
    {
       "pk":11,
-      "model":"products.product",
+      "model":"portfolio.product",
       "fields":{
          "name":"virginia",
          "friendly_name":"Virginia",
@@ -177,7 +177,7 @@
    },
    {
       "pk":12,
-      "model":"products.product",
+      "model":"portfolio.product",
       "fields":{
          "name":"offline",
          "friendly_name":"Offline",
@@ -193,7 +193,7 @@
    },
    {
       "pk":13,
-      "model":"products.product",
+      "model":"portfolio.product",
       "fields":{
          "name":"neon",
          "friendly_name":"Neon",
@@ -209,7 +209,7 @@
    },
    {
       "pk":14,
-      "model":"products.product",
+      "model":"portfolio.product",
       "fields":{
          "name":"christmas",
          "friendly_name":"Christmas",
@@ -225,7 +225,7 @@
    },
    {
       "pk":15,
-      "model":"products.product",
+      "model":"portfolio.product",
       "fields":{
          "name":"summer_camp",
          "friendly_name":"Summer Camp",
@@ -241,7 +241,7 @@
    },
    {
       "pk":16,
-      "model":"products.product",
+      "model":"portfolio.product",
       "fields":{
          "name":"christmas_fair",
          "friendly_name":"Christmas Fair",
@@ -257,7 +257,7 @@
    },
    {
       "pk":17,
-      "model":"products.product",
+      "model":"portfolio.product",
       "fields":{
          "name":"gothic",
          "friendly_name":"Gothic",
@@ -273,7 +273,7 @@
    },
    {
       "pk":18,
-      "model":"products.product",
+      "model":"portfolio.product",
       "fields":{
          "name":"black_friday",
          "friendly_name":"Black Friday",
@@ -289,7 +289,7 @@
    },
    {
       "pk":19,
-      "model":"products.product",
+      "model":"portfolio.product",
       "fields":{
          "name":"holo",
          "friendly_name":"Holo",
@@ -305,7 +305,7 @@
    },
    {
       "pk":20,
-      "model":"products.product",
+      "model":"portfolio.product",
       "fields":{
          "name":"students",
          "friendly_name":"Students",
@@ -321,7 +321,7 @@
    },
     {
       "pk":21,
-      "model":"products.product",
+      "model":"portfolio.product",
       "fields":{
          "name":"wings",
          "friendly_name":"Wings",
@@ -337,7 +337,7 @@
    },
    {
       "pk":22,
-      "model":"products.product",
+      "model":"portfolio.product",
       "fields":{
          "name":"spud",
          "friendly_name":"Spud",
@@ -353,7 +353,7 @@
    },
    {
       "pk":23,
-      "model":"products.product",
+      "model":"portfolio.product",
       "fields":{
          "name":"drop",
          "friendly_name":"Drop",
@@ -369,7 +369,7 @@
    },
    {
       "pk":24,
-      "model":"products.product",
+      "model":"portfolio.product",
       "fields":{
          "name":"glove",
          "friendly_name":"Glove",
@@ -385,7 +385,7 @@
    },
    {
       "pk":25,
-      "model":"products.product",
+      "model":"portfolio.product",
       "fields":{
          "name":"hazmat",
          "friendly_name":"Hazmat",
@@ -401,7 +401,7 @@
    },
    {
       "pk":26,
-      "model":"products.product",
+      "model":"portfolio.product",
       "fields":{
          "name":"snow_drop",
          "friendly_name":"Snow Drop",
@@ -417,7 +417,7 @@
    },
    {
       "pk":27,
-      "model":"products.product",
+      "model":"portfolio.product",
       "fields":{
          "name":"smiley",
          "friendly_name":"Smiley",
@@ -433,7 +433,7 @@
    },
    {
       "pk":28,
-      "model":"products.product",
+      "model":"portfolio.product",
       "fields":{
          "name":"squares",
          "friendly_name":"Squares",
@@ -449,7 +449,7 @@
    },
    {
       "pk":29,
-      "model":"products.product",
+      "model":"portfolio.product",
       "fields":{
          "name":"cup",
          "friendly_name":"Cup",
@@ -465,7 +465,7 @@
    },
    {
       "pk":30,
-      "model":"products.product",
+      "model":"portfolio.product",
       "fields":{
          "name":"cats_eye",
          "friendly_name":"Cats Eye",
@@ -481,7 +481,7 @@
    },
    {
       "pk":31,
-      "model":"products.product",
+      "model":"portfolio.product",
       "fields":{
          "name":"red",
          "friendly_name":"Red",
@@ -497,7 +497,7 @@
    },
    {
       "pk":32,
-      "model":"products.product",
+      "model":"portfolio.product",
       "fields":{
          "name":"game_day",
          "friendly_name":"Game Day",
@@ -513,7 +513,7 @@
    },
    {
       "pk":33,
-      "model":"products.product",
+      "model":"portfolio.product",
       "fields":{
          "name":"nature",
          "friendly_name":"Nature",
@@ -529,7 +529,7 @@
    },
    {
       "pk":34,
-      "model":"products.product",
+      "model":"portfolio.product",
       "fields":{
          "name":"buildings",
          "friendly_name":"Buildings",
@@ -545,7 +545,7 @@
    },
    {
       "pk":35,
-      "model":"products.product",
+      "model":"portfolio.product",
       "fields":{
          "name":"baloons",
          "friendly_name":"Baloons",
@@ -561,7 +561,7 @@
    },
    {
       "pk":36,
-      "model":"products.product",
+      "model":"portfolio.product",
       "fields":{
          "name":"turtle",
          "friendly_name":"Turtle",
@@ -577,7 +577,7 @@
    },
    {
       "pk":37,
-      "model":"products.product",
+      "model":"portfolio.product",
       "fields":{
          "name":"passion",
          "friendly_name":"Passion",
@@ -593,7 +593,7 @@
    },
    {
       "pk":38,
-      "model":"products.product",
+      "model":"portfolio.product",
       "fields":{
          "name":"dance",
          "friendly_name":"Dance",
@@ -609,7 +609,7 @@
    },
    {
       "pk":39,
-      "model":"products.product",
+      "model":"portfolio.product",
       "fields":{
          "name":"red_2",
          "friendly_name":"Red 2",
@@ -625,7 +625,7 @@
    },
    {
       "pk":40,
-      "model":"products.product",
+      "model":"portfolio.product",
       "fields":{
          "name":"headline",
          "friendly_name":"Headline",

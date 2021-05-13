@@ -1,7 +1,7 @@
 [
    {
       "pk":1,
-      "model":"products.category",
+      "model":"portfolio.category",
       "fields":{
          "name":"logo",
          "friendly_name":"Logo"
@@ -9,7 +9,7 @@
    },
    {
       "pk":2,
-      "model":"products.category",
+      "model":"portfolio.category",
       "fields":{
          "name":"poster",
          "friendly_name":"Poster"
@@ -17,7 +17,7 @@
    },
    {
       "pk":3,
-      "model":"products.category",
+      "model":"portfolio.category",
       "fields":{
          "name":"icon",
          "friendly_name":"Icon"
@@ -25,7 +25,7 @@
    },
    {
       "pk":4,
-      "model":"products.category",
+      "model":"portfolio.category",
       "fields":{
          "name":"banner",
          "friendly_name":"Banner"
