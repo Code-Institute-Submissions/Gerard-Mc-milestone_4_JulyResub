@@ -48,7 +48,8 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'home',
     'order',
-    'portfolio'
+    'portfolio',
+    'profile_page'
 ]
 
 MIDDLEWARE = [
@@ -157,3 +158,6 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# Fast delivery percentage multiplier.
+FAST_DELIVERY_CHARGE = 15

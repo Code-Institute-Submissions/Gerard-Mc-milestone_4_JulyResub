@@ -7,9 +7,13 @@ class ProductAdmin(admin.ModelAdmin):
         'name',
         'category',
         'rating',
+        'complete',
+        'created_at',
+        'modified_at',
+
     )
 
-    ordering = ('pk',)
+    ordering = ('created_at',)
 
 
 class CategoryAdmin(admin.ModelAdmin):

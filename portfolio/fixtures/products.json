@@ -12,7 +12,8 @@
          "user_description":"Big colourful image please.",
          "size":4,
          "testimonial":"Really good.",
-         "image":"1.png"
+         "image":"1.png",
+         "complete": true
       }
    },
    {
@@ -28,7 +29,8 @@
          "user_description":"Big colourful image please.",
          "size":3,
          "testimonial":"Really good.",
-         "image":"2.png"
+         "image":"2.png",
+         "complete": true
       }
    },
    {
@@ -44,7 +46,8 @@
          "user_description":"Big colourful image please.",
          "size":4,
          "testimonial":"Really good.",
-         "image":"3.png"
+         "image":"3.png",
+         "complete": true
       }
    },
    {
@@ -60,7 +63,8 @@
          "user_description":"Big colourful image please.",
          "size":3,
          "testimonial":"Really good.",
-         "image":"4.png"
+         "image":"4.png",
+         "complete": true
       }
    },
    {
@@ -76,7 +80,8 @@
          "user_description":"Big colourful image please.",
          "size":1,
          "testimonial":"Really good.",
-         "image":"5.png"
+         "image":"5.png",
+         "complete": true
       }
    },
    {
@@ -92,7 +97,8 @@
          "user_description":"Big colourful image please.",
          "size":2,
          "testimonial":"Really good.",
-         "image":"6.png"
+         "image":"6.png",
+         "complete": true
       }
    },
    {
@@ -108,7 +114,8 @@
          "user_description":"Big colourful image please.",
          "size":1,
          "testimonial":"Really good.",
-         "image":"7.png"
+         "image":"7.png",
+         "complete": true
       }
    },
    {
@@ -124,7 +131,8 @@
          "user_description":"Big colourful image please.",
          "size":1,
          "testimonial":"Really good.",
-         "image":"8.png"
+         "image":"8.png",
+         "complete": true
       }
    },
    {
@@ -140,7 +148,8 @@
          "user_description":"Big colourful image please.",
          "size":3,
          "testimonial":"Really good.",
-         "image":"9.png"
+         "image":"9.png",
+         "complete": true
       }
    },
    {
@@ -156,7 +165,8 @@
          "user_description":"Big colourful image please.",
          "size":3,
          "testimonial":"Really good.",
-         "image":"10.png"
+         "image":"10.png",
+         "complete": true
       }
    },
    {
@@ -172,7 +182,8 @@
          "user_description":"Big colourful image please.",
          "size":1,
          "testimonial":"Really good.",
-         "image":"b1.jfif"
+         "image":"b1.jfif",
+         "complete": true
       }
    },
    {
@@ -188,7 +199,8 @@
          "user_description":"Big colourful image please.",
          "size":4,
          "testimonial":"Really good.",
-         "image":"b2.jfif"
+         "image":"b2.jfif",
+         "complete": true
       }
    },
    {
@@ -204,7 +216,8 @@
          "user_description":"Big colourful image please.",
          "size":2,
          "testimonial":"Really good.",
-         "image":"b3.jfif"
+         "image":"b3.jfif",
+         "complete": true
       }
    },
    {
@@ -220,7 +233,8 @@
          "user_description":"Big colourful image please.",
          "size":2,
          "testimonial":"Really good.",
-         "image":"b4.jfif"
+         "image":"b4.jfif",
+         "complete": true
       }
    },
    {
@@ -236,7 +250,8 @@
          "user_description":"Big colourful image please.",
          "size":1,
          "testimonial":"Really good.",
-         "image":"b5.jfif"
+         "image":"b5.jfif",
+         "complete": true
       }
    },
    {
@@ -252,7 +267,8 @@
          "user_description":"Big colourful image please.",
          "size":3,
          "testimonial":"Really good.",
-         "image":"b6.jfif"
+         "image":"b6.jfif",
+         "complete": true
       }
    },
    {
@@ -268,7 +284,8 @@
          "user_description":"Big colourful image please.",
          "size":1,
          "testimonial":"Really good.",
-         "image":"b7.jfif"
+         "image":"b7.jfif",
+         "complete": true
       }
    },
    {
@@ -284,7 +301,8 @@
          "user_description":"Big colourful image please.",
          "size":4,
          "testimonial":"Really good.",
-         "image":"b8.jfif"
+         "image":"b8.jfif",
+         "complete": true
       }
    },
    {
@@ -300,7 +318,8 @@
          "user_description":"Big colourful image please.",
          "size":4,
          "testimonial":"Really good.",
-         "image":"b9.jfif"
+         "image":"b9.jfif",
+         "complete": true
       }
    },
    {
@@ -316,7 +335,8 @@
          "user_description":"Big colourful image please.",
          "size":2,
          "testimonial":"Really good.",
-         "image":"b10.jfif"
+         "image":"b10.jfif",
+         "complete": true
       }
    },
     {
@@ -332,7 +352,8 @@
          "user_description":"Big colourful image please.",
          "size":4,
          "testimonial":"Really good.",
-         "image":"i1.png"
+         "image":"i1.png",
+         "complete": true
       }
    },
    {
@@ -348,7 +369,8 @@
          "user_description":"Big colourful image please.",
          "size":1,
          "testimonial":"Really good.",
-         "image":"i2.png"
+         "image":"i2.png",
+         "complete": true
       }
    },
    {
@@ -364,7 +386,8 @@
          "user_description":"Big colourful image please.",
          "size":1,
          "testimonial":"Really good.",
-         "image":"i3.png"
+         "image":"i3.png",
+         "complete": true
       }
    },
    {
@@ -380,7 +403,8 @@
          "user_description":"Big colourful image please.",
          "size":4,
          "testimonial":"Really good.",
-         "image":"i4.png"
+         "image":"i4.png",
+         "complete": true
       }
    },
    {
@@ -396,7 +420,8 @@
          "user_description":"Big colourful image please.",
          "size":4,
          "testimonial":"Really good.",
-         "image":"i5.png"
+         "image":"i5.png",
+         "complete": true
       }
    },
    {
@@ -412,7 +437,8 @@
          "user_description":"Big colourful image please.",
          "size":4,
          "testimonial":"Really good.",
-         "image":"i6.png"
+         "image":"i6.png",
+         "complete": true
       }
    },
    {
@@ -428,7 +454,8 @@
          "user_description":"Big colourful image please.",
          "size":1,
          "testimonial":"Really good.",
-         "image":"i7.png"
+         "image":"i7.png",
+         "complete": true
       }
    },
    {
@@ -444,7 +471,8 @@
          "user_description":"Big colourful image please.",
          "size":1,
          "testimonial":"Really good.",
-         "image":"i8.png"
+         "image":"i8.png",
+         "complete": false
       }
    },
    {
@@ -460,7 +488,8 @@
          "user_description":"Big colourful image please.",
          "size":2,
          "testimonial":"Really good.",
-         "image":"i9.png"
+         "image":"i9.png",
+         "complete": true
       }
    },
    {
@@ -476,7 +505,8 @@
          "user_description":"Big colourful image please.",
          "size":3,
          "testimonial":"Really good.",
-         "image":"i10.png"
+         "image":"i10.png",
+         "complete": true
       }
    },
    {
@@ -492,7 +522,8 @@
          "user_description":"Big colourful image please.",
          "size":2,
          "testimonial":"Really good.",
-         "image":"p1.png"
+         "image":"p1.png",
+         "complete": true
       }
    },
    {
@@ -508,7 +539,8 @@
          "user_description":"Big colourful image please.",
          "size":4,
          "testimonial":"Really good.",
-         "image":"p2.png"
+         "image":"p2.png",
+         "complete": true
       }
    },
    {
@@ -524,7 +556,8 @@
          "user_description":"Big colourful image please.",
          "size":1,
          "testimonial":"Really good.",
-         "image":"p3.png"
+         "image":"p3.png",
+         "complete": false
       }
    },
    {
@@ -540,7 +573,8 @@
          "user_description":"Big colourful image please.",
          "size":2,
          "testimonial":"Really good.",
-         "image":"p4.png"
+         "image":"p4.png",
+         "complete": true
       }
    },
    {
@@ -556,7 +590,8 @@
          "user_description":"Big colourful image please.",
          "size":3,
          "testimonial":"Really good.",
-         "image":"p5.png"
+         "image":"p5.png",
+         "complete": true
       }
    },
    {
@@ -572,7 +607,8 @@
          "user_description":"Big colourful image please.",
          "size":3,
          "testimonial":"Really good.",
-         "image":"p6.png"
+         "image":"p6.png",
+         "complete": true
       }
    },
    {
@@ -588,7 +624,8 @@
          "user_description":"Big colourful image please.",
          "size":1,
          "testimonial":"Really good.",
-         "image":"p7.png"
+         "image":"p7.png",
+         "complete": true
       }
    },
    {
@@ -604,7 +641,8 @@
          "user_description":"Big colourful image please.",
          "size":1,
          "testimonial":"Really good.",
-         "image":"p8.png"
+         "image":"p8.png",
+         "complete": true
       }
    },
    {
@@ -620,7 +658,8 @@
          "user_description":"Big colourful image please.",
          "size":1,
          "testimonial":"Really good.",
-         "image":"p9.png"
+         "image":"p9.png",
+         "complete": true
       }
    },
    {
@@ -636,7 +675,8 @@
          "user_description":"Big colourful image please.",
          "size":2,
          "testimonial":"Really good.",
-         "image":"p10.png"
+         "image":"p10.png",
+         "complete": true
       }
    }
 ]

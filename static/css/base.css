@@ -351,6 +351,10 @@ footer .lower-footer{
 	color: rgba(250, 92, 119, 1) !important;
 }
 
+.color-black {
+	color: rgb(0, 0, 0) !important;
+}
+
 .color-blue {
 	color: rgba(80, 110, 250, 1) !important;
 }
@@ -473,7 +477,7 @@ footer .lower-footer{
 		max-width: 70px;
 		height: auto;
 	}
-	#nav-cart-user {
+	#nav-user {
 		background-color: white;
 	}
 }
@@ -516,3 +520,5 @@ footer .lower-footer{
 	outline: none;
 	box-shadow: none;
  }
+
+ 
