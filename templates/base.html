@@ -56,13 +56,13 @@
             <div class="col-lg-4 d-none d-lg-block">
                 <img class=" col-lg-4 offset-lg-4 my-4" src="/static/img/site-logo.png" alt="Shop Logo">
             </div>
-            <div id="nav-user" class="py-1 col-12 col-lg-3 offset-lg-1 my-auto white-bg float-right">
+            <div id="nav-cart-user" class="py-1 col-12 col-lg-3 offset-lg-1 my-auto white-bg float-right">
                 <ul class="list-inline list-unstyled text-center my-auto nav-text-style">
-                    <li class="list-inline-item dropdown color-pink">
+                    <li class="list-inline-item dropdown color-blue">
                         <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false">
                             <div class="text-center">
-                                <p class="my-0 color-pink">My Account</p>
+                                <p class="my-0">My Account</p>
                             </div>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="user-options">
@@ -70,7 +70,7 @@
                             {% if request.user.is_superuser %}
                             <a href="" class="dropdown-item">Admin</a>
                             {% endif %}
-                            <a href="{% url 'profile_page' %}" class="dropdown-item ">Your Account</a>
+                            <a href="" class="dropdown-item ">Your Account</a>
                             <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                             {% else %}
                             <a href="{% url 'account_login' %}" class="dropdown-item">Sign In</a>
@@ -78,10 +78,25 @@
                             {% endif %}
                         </div>
                     </li>
+                    <li class="list-inline-item">
+                        <a class="nav-link" href="{% url 'cart' %}">
+                            <div class="text-center">
+                                <p class="my-0 px-0">
+                                    Cart&nbsp; <span class="color-pink">
+                                    {% if grand_total %}
+                                    ${{ grand_total|floatformat:2 }}
+                                    {% else %}
+                                    $0.00
+                                    {% endif %}
+                                </span>
+                                </u>
+                                </p>
+                            </div>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
-
     </header>
     {% include 'includes/nav.html' %}
 
