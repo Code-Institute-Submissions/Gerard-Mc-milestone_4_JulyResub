@@ -14,3 +14,24 @@ class OrderForm(forms.ModelForm):
             'user_description': 'Description',
             'size': 'Size',
         }
+        # widgets = {
+        #     'user_description': forms.Textarea(
+        #         attrs={'placeholder': 'Describe what you would like your product to look like...',
+        #         'class': 'form-check-input',
+        #         'id': 'Description',
+        #         }),
+        #         'category': forms.Select(
+        #         attrs={
+        #         'class': 'form-check-input',
+        #         'id': 'Type',
+        #         }),
+        #         'size': forms.Select(
+        #         attrs={
+        #         'class': 'form-check-input',
+        #         'id': 'Size',
+        #         }),
+        #         'fast_delivery': forms.Select(
+        #         attrs={
+        #         'class': 'form-check-input',
+        #         'id': 'Delivery',}),
+        # }

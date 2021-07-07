@@ -359,6 +359,11 @@ footer .lower-footer{
 	color: rgba(80, 110, 250, 1) !important;
 }
 
+.bold-font{
+
+	font-size: bolder;
+}
+
 .navbar-toggler {
 	margin-right: 15px;
 }

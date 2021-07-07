@@ -3,5 +3,32 @@
 
 {% block content %}
 <section class="container-fluid">
+    <div class="container-fluid col-4 offset-4">
+        <h1 class="text-center mt-5">Cart</h1>
+    </div>
+
+    {% for id in cart_items %}
+    <div class="container mb-5 mt-4 col-10 offset-1">
+        <hr>
+        {% if  id.item_type == "1" %}
+        <h3>Logo</h3>
+        {% elif id.item_type == "2" %}
+        <h3>Poster</h3>
+        {% elif id.item_type == "3" %}
+        <h3>Icon</h3>
+        {% else %}
+        <h3>Banner</h3>
+        {% endif %}
+        
+        <p>Size: {{ id.size|title }}</p>
+        <p>Description: {{ id.user_description }}</p>
+        {% if  id.item_type == "True" %}
+        <p>Fast Delivery: Yes</p>
+        {% else %}
+        <p>Fast Delivery: No</p>
+        {% endif %}
+    </div>
+    
+    {% endfor %}
 </section>
 {% endblock %}
