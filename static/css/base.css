@@ -302,6 +302,12 @@ footer .lower-footer{
 	border-bottom-right-radius: 3px;
 }
 
+.border-top{
+	border-top-style: solid;
+	border-top-width: 2px;
+	border-top-color:rgb(255, 239, 239);
+}
+
 .lower-nav-text-style {
 	color: rgba(80, 110, 250, 1) !important;
 	font-weight: 700!important;
@@ -361,7 +367,7 @@ footer .lower-footer{
 
 .bold-font{
 
-	font-size: bolder;
+	font-size: 700;
 }
 
 .navbar-toggler {
@@ -406,6 +412,7 @@ footer .lower-footer{
 	border-style: none;
 	font-family: 'Goldman', cursive!important;
 }
+
 
 #home-main{
 	padding: 0 !important;
@@ -526,4 +533,11 @@ footer .lower-footer{
 	box-shadow: none;
  }
 
+
+ /* Form Styling  */
+
+ .text-area{
+
+	max-width: 100%;
+ }
  

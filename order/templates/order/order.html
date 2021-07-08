@@ -2,15 +2,13 @@
 {% load static %}
 
 {% block content %}
-<div class="row white-bg" style="border-top-style: solid;
-border-top-color: rgb(239, 242, 255); border-top-width: 2px;">
-  <div class="col text-center mt-5 mb-3">
-    <h1 class="h1-text-style">Order</h1>
-  </div>
-</div>
+<div class="row white-bg border-top">
 {% if request.user.is_authenticated %}
-<div class="container-fluid white-bg d-flex align-items-center justify-content-center pt-4 pb-5 font">
-  <form class="form" action="{% url 'add_to_cart' %}" method="POST">
+  <form class="form col-lg-4 offset-lg-4 button-style p-5 border-box" action="{% url 'add_to_cart' %}" method="POST">
+    <h1 class="h1-text-style mb-3 bold-font text-center">Order Form</h1>
+    <hr>
+    <p>Please describe what you what like the product to be in the fields below</p>
+    <hr>
     {% csrf_token %}
     {% for input in form %}
     <div class="form-group">
@@ -20,10 +18,11 @@ border-top-color: rgb(239, 242, 255); border-top-width: 2px;">
       </div>
     </div>
     {% endfor %}
+    <hr>
     <br>
     <h6 class="d-block font-weight-bold">Price: $0.00</h6>
     <br>
-    <button type="submit" class="btn btn-primary mb-2 blue-bg font">Order</button>
+    <button type="submit" class="btn btn-primary mb-2 blue-bg font">Add to Cart</button>
   </form>
 </div>
 {% else %}
