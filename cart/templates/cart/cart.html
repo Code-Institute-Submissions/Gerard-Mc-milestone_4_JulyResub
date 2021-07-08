@@ -4,7 +4,12 @@
 {% block content %}
 <section class="container-fluid">
     <div class="container-fluid col-4 offset-4">
-        <h1 class="text-center mt-5">Cart</h1>
+        <h1 class="text-center mt-5 mb-5">Cart</h1>
+    </div>
+    <div class="container-fluid col-10 offset-1">
+        <hr>
+        <h3 class="">Items: {{ product_count }}</h3>
+        <h3 class="">Total: {{ total }}</h3>
     </div>
 
     {% for id in cart_items %}
@@ -27,6 +32,12 @@
         {% else %}
         <p>Fast Delivery: No</p>
         {% endif %}
+        <form class="form" action="{% url 'remove_from_cart' %}" method="POST">
+            {% csrf_token %}
+            <textarea name="id" style="display:none;">{{ id.id }}</textarea>
+            <br>
+            <button type="submit" class="btn btn-primary mb-2 blue-bg font">Remove</button>
+          </form>
     </div>
     
     {% endfor %}

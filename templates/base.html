@@ -70,7 +70,7 @@
                             {% if request.user.is_superuser %}
                             <a href="" class="dropdown-item">Admin</a>
                             {% endif %}
-                            <a href="" class="dropdown-item ">Your Account</a>
+                            <a href="{% url 'profile_page' %}" class="dropdown-item ">Your Account</a>
                             <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                             {% else %}
                             <a href="{% url 'account_login' %}" class="dropdown-item">Sign In</a>
@@ -83,8 +83,8 @@
                             <div class="text-center">
                                 <p class="my-0 px-0">
                                     Cart&nbsp; <span class="color-pink">
-                                    {% if grand_total %}
-                                    ${{ grand_total|floatformat:2 }}
+                                    {% if total %}
+                                    ${{ total|floatformat:2 }}
                                     {% else %}
                                     $0.00
                                     {% endif %}
