@@ -5,31 +5,31 @@
 <div class="container-fluid grey-bg">
   <div class="row">
     <div class="col text-center mt-4">
-      <h1 class="h1-text-style mb-4 mt-3">Portfolio</h1>
+      <h1 class="h1-text-style mb-4 mt-5">Portfolio</h1>
     </div>
   </div>
-  <div class="portfolio-nav d-flex justify-content-center col-12 mb-2">
-    <ul class="portfolio-nav d-flex justify-content-center mx-auto w-100 col-lg-4 offset-lg-4 color-blue">
+  <div id="portfolio-nav-wrap" class="portfolio-nav d-flex justify-content-center col-12 mb-2">
+    <ul class="portfolio-nav d-flex justify-content-center mx-auto w-100 col-lg-4 offset-lg-4 color-blue bg-white py-2 px-5 shadow-less">
       <li id="all_link" class="mx-auto">
-        <a href="{% url 'portfolio' %}?category=logo,poster,icon,banner">All</a>
+        <a href="{% url 'portfolio' %}?category=logo,poster,icon,banner">&nbsp;All&nbsp;</a>
       </li>
       <li id="logo_link" class="mx-auto">
-        <a href="{% url 'portfolio' %}?category=logo">Logo</a>
+        <a href="{% url 'portfolio' %}?category=logo">&nbsp;Logo&nbsp;</a>
       </li>
       <li id="poster_link" class="mx-auto">
-        <a href="{% url 'portfolio' %}?category=poster">Poster</a>
+        <a href="{% url 'portfolio' %}?category=poster">&nbsp;Poster&nbsp;</a>
       </li>
       <li id="icon_link" class="mx-auto">
-        <a href="{% url 'portfolio' %}?category=icon">Icon</a>
+        <a href="{% url 'portfolio' %}?category=icon">&nbsp;Icon&nbsp;</a>
       </li>
       <li id="banner_link" class="mx-auto">
-        <a href="{% url 'portfolio' %}?category=banner">Banner</a>
+        <a href="{% url 'portfolio' %}?category=banner">&nbsp;Banner&nbsp;</a>
       </li>
     </ul>
 
     <div class="btn-group dropleft" style="position: absolute; right: 10px; margin-top: 43px; z-index: 2;">
       <button type="button"
-        class="btn btn-secondary dropdown-toggle btn-sm font-weight-bold button-style color-blue bg-white"
+        class="btn btn-secondary dropdown-toggle btn-sm font-weight-bold button-style color-blue bg-white px-3 shadow-less"
         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         {{ category_sort_display }}
       </button>
@@ -47,7 +47,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-10 offset-1 grey-bg p-5">
+    <div class="col-10 offset-1 p-5">
       <div class="row">
         {% for product in products %}
         <div id="product-image-container"

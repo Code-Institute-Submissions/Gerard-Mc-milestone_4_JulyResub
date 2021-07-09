@@ -298,11 +298,15 @@ footer .lower-footer{
 }
 
 .shadow{
-	box-shadow: 1px 1px 5px #888888;
+	box-shadow: 1px 1px 2px #888888;
 }
 
 .shadow-extra{
 	box-shadow: 2px 2px 15px #c0c0c0;
+}
+
+.shadow-less{
+	box-shadow: 1px 1px 5px #c0c0c0;
 }
 
 .border-none{
@@ -533,14 +537,16 @@ footer .lower-footer{
 /* Styles portfolio page category links */
 
 .portfolio-nav li a{
-    color: rgba(80, 110, 250, 1) !important;
+    color: rgba(80, 110, 250, 1);
+	font-weight: 500;
 
 }
 
 .active_li {
 	text-decoration: underline;
 	line-height: .9;
-	font-size: 20px;
+	font-weight: 400;
+	font-size: 22px;
   }
 
 /* Remove navbar toggler active outline */
