@@ -18,6 +18,7 @@ class OrderForm(forms.ModelForm):
             'user_description': forms.Textarea(
                 attrs={'placeholder': 'Your product\'s description...',
                 'class': 'form-check-input w-100',
+                'style': 'max-height: 100px',
                 'id': 'Description',
                 }),
                 'category': forms.Select(

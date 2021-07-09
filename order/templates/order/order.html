@@ -2,13 +2,12 @@
 {% load static %}
 
 {% block content %}
-<div class="row white-bg border-top">
+<div class="container-fluid border-top">
 {% if request.user.is_authenticated %}
-  <form class="form col-lg-4 offset-lg-4 button-style p-5 border-box" action="{% url 'add_to_cart' %}" method="POST">
-    <h1 class="h1-text-style mb-3 bold-font text-center">Order Form</h1>
+  <form class="form col-lg-4 offset-lg-4 button-style p-5 border-box shadow bg-white my-5" action="{% url 'add_to_cart' %}" method="POST">
+    <h1 class="h1-text-style mb-0 bold-font text-center">Order Form</h1>
     <hr>
     <p>Please describe what you what like the product to be in the fields below</p>
-    <hr>
     {% csrf_token %}
     {% for input in form %}
     <div class="form-group">
@@ -22,13 +21,17 @@
     <br>
     <h6 class="d-block font-weight-bold">Price: $0.00</h6>
     <br>
-    <button type="submit" class="btn btn-primary mb-2 blue-bg font">Add to Cart</button>
+    <button type="submit" class="btn btn-primary mb-2 pink-bg border-none font">Add to Cart</button>
   </form>
-</div>
+
 {% else %}
-<div class="col text-center mt-5 mb-5">
-  <p><a href="{% url 'account_login' %}">login</a> or <a href="{% url 'account_signup' %}">register</a> to order a
-    product.</p>
-</div>
+
+  <div class="height-60vh row d-flex justify-content-center align-items-center">
+      <p><a href="{% url 'account_login' %}">Login</a> or <a href="{% url 'account_signup' %}">register</a> to order a
+        product.</p>
+
+    
+  </div>
 {% endif %}
+</div>
 {% endblock %}

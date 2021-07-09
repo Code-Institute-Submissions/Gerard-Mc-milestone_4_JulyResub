@@ -7,17 +7,20 @@ body {
 	margin: 0;
 	border: 0;
 	background-color: rgb(226, 226, 226);
-	background-image: linear-gradient(to right,  rgb(239, 242, 255),rgb(239, 242, 255), rgb(255, 255, 255),rgb(239, 242, 255), rgb(239, 242, 255));
+	background-image: linear-gradient(to right,  rgb(239, 242, 255),rgb(239, 242, 255), rgb(250, 250, 250),rgb(239, 242, 255), rgb(239, 242, 255));
 }
 
 footer{
-	border-top-style: solid;
-	border-top-color: rgb(239, 242, 255);
-	background-image: linear-gradient(to right,  rgb(239, 242, 255),rgb(239, 242, 255), rgb(255, 255, 255),rgb(239, 242, 255), rgb(239, 242, 255));
+	background-image: linear-gradient(to right,  rgb(239, 242, 255),rgb(239, 242, 255),rgb(250, 250, 250),rgb(239, 242, 255), rgb(239, 242, 255));
 }
 footer .lower-footer{
 	border-top-style: solid;
-	border-top-color: rgb(239, 242, 255);s
+	border-top-width: 1px;
+	border-top-color: rgb(204, 204, 204);
+}
+
+.add-space-10px{
+	height: 10px;
 }
 
 /* Homepage carousel styling */
@@ -292,9 +295,18 @@ footer .lower-footer{
 .curve-top {
 	border-top-left-radius: 50%;
 	border-top-right-radius: 50%;
-	border-top-style: solid;
-	border-width: 2px;
-	border-top-color: rgba(239, 242, 255, 0.582);
+}
+
+.shadow{
+	box-shadow: 1px 1px 5px #888888;
+}
+
+.shadow-extra{
+	box-shadow: 2px 2px 15px #c0c0c0;
+}
+
+.border-none{
+	border-style: none;
 }
 
 .border-bottom-radius {
@@ -413,6 +425,10 @@ footer .lower-footer{
 	font-family: 'Goldman', cursive!important;
 }
 
+.height-60vh{
+	min-height: 60vh;
+}
+
 
 #home-main{
 	padding: 0 !important;
@@ -500,7 +516,7 @@ footer .lower-footer{
 #product-image-container {
 	border-color: rgb(245, 245, 245);
 	border-style: solid;
-	border-width: 0 1vw;
+	border-width: 0;
 	box-sizing: border-box;
 	margin-bottom: 2vw;
 }
