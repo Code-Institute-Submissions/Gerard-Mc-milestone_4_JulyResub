@@ -9,7 +9,12 @@ def cart_contents(request):
     total = 0
     cart  = request.session.get('cart', {})
     product_count = 0
+    order_page_elements_display = False
     for id in cart.items():
+
+        if id:
+            order_page_elements_display = True
+
         total += 50
         product_count += 1
         cart_items.append({
@@ -25,6 +30,7 @@ def cart_contents(request):
         'cart_items': cart_items,
         'total': total,
         'product_count': product_count,
+        'order_page_elements_display': order_page_elements_display,
     }
 
     return context
