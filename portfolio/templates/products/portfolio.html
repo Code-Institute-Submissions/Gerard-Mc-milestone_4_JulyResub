@@ -57,7 +57,7 @@
             <img class="img-fluid" src="/media/{{ product.image }}" alt="{{ product.name }}" />
           </div>
           {% else %}
-          <div data-toggle="modal">
+          <div data-toggle="modal" data-target="#{{ product.name}}">
             <img class="img-fluid" src="/static/img/slider-img-3-cover.png" alt="{{ product.name }}" />
           </div>
           {% endif %}
@@ -66,18 +66,20 @@
               <div class="modal-content">
                 <div class="modal-header">
                   <h4 class="modal-title">
-                    <strong>{{ product.category|title }}</strong>
+                    <strong>{{ product.friendly_name|title }}</strong>
                   </h4>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
                 <div class="modal-body">
+                  {% if product.image %}
                   <img class="img-fluid px-5" src="/media/{{ product.image }}" alt="{{ product.name }}" />
-                  <h5 class="modal-title">
-                    <strong>{{ product.friendly_name }}</strong>
+                  {% endif %}
+                  <h5 class="modal-title">Category: 
+                    <strong>{{ product.category }}</strong>
                   </h5>
-                  <p>{{ product.description }}</p>
+                  <p>Complexity: {{ product.complexity }}</p>
                   <div class="modal-footer p-0">
                     <a href="{% url 'order' %}"  type="button" class="btn btn-dark mt-3">Order Your Own</a>
                   </div>

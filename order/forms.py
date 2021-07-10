@@ -4,15 +4,17 @@ from django.db.models import CharField, TextField
 from portfolio.models import Product
 
 
-class OrderForm(forms.ModelForm):
+
+class CustomProductForm(forms.ModelForm):
     class Meta:
         model = Product
-        fields = ['category', 'size', 'user_description', 'fast_delivery']
+        fields = ['category', 'complexity', 'variations', 'user_description', 'fast_delivery']
         labels = {
             'category': 'Type',
+            'variations': 'Variations',
+            'complexity': 'Complexity',
             'fast_delivery': '72 Hour Delivery +15%',
             'user_description': 'Description',
-            'size': 'Size',
         }
         widgets = {
             'user_description': forms.Textarea(
@@ -26,7 +28,12 @@ class OrderForm(forms.ModelForm):
                 'class': 'form-check-input',
                 'id': 'Type',
                 }),
-                'size': forms.Select(
+                'complexity': forms.Select(
+                attrs={
+                'class': 'form-check-input',
+                'id': 'Type',
+                }),
+                'variations': forms.Select(
                 attrs={
                 'class': 'form-check-input',
                 'id': 'Size',
@@ -36,3 +43,5 @@ class OrderForm(forms.ModelForm):
                 'class': 'form-check-input',
                 'id': 'Delivery',}),
         }
+
+

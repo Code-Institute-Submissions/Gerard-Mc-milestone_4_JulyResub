@@ -15,7 +15,8 @@ def cart_contents(request):
         cart_items.append({
             'id': id[0],
             'item_type': id[1]["category"],
-            'size': id[1]["size"],
+            'complexity': id[1]["complexity"],
+            'variations': id[1]["variations"],
             'user_description': id[1]["user_description"],
             'fast_delivery': id[1]["fast_delivery"],
         })

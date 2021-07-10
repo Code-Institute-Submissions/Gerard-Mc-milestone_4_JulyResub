@@ -1,6 +1,6 @@
 from django.shortcuts import render
 import uuid
-from order.forms import OrderForm
+from order.forms import CustomProductForm
 
 
 def view_cart(request):
@@ -12,12 +12,13 @@ def add_to_cart(request):
     """ Add item to the cart page """
     id = str(uuid.uuid4())
     item_type = request.POST.get('category')
-    size = request.POST.get('size')
+    complexity = request.POST.get('complexity')
+    variations = request.POST.get('variations')
     user_description = request.POST.get('user_description')
     fast_delivery = request.POST.get('fast_delivery')
 
     cart_product = {
-      "category": item_type, "size": size, "user_description": user_description,
+      "category": item_type, "complexity": complexity, "variations": variations, "user_description": user_description,
       "fast_delivery": fast_delivery,
 }
     product_id = { f"{id}": [cart_product]}
@@ -25,7 +26,7 @@ def add_to_cart(request):
     cart.__setitem__(id, cart_product)
     request.session['cart'] = cart
     # print(request.session['cart'])
-    form = OrderForm()
+    form = CustomProductForm()
     context = {
         'form': form
     }
@@ -38,7 +39,5 @@ def remove_from_cart(request):
     cart = request.session.get('cart', {})
     del cart[id]
     request.session['cart'] = cart
-    print(request.session['cart'])
-    print("-------------------------------------------------------------------------------------")
 
     return render(request, 'cart/cart.html')

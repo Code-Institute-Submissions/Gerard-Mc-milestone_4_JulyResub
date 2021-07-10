@@ -4,7 +4,7 @@
       "model":"portfolio.category",
       "fields":{
          "name":"logo",
-         "friendly_name":"Logo"
+         "price": 100
       }
    },
    {
@@ -12,7 +12,7 @@
       "model":"portfolio.category",
       "fields":{
          "name":"poster",
-         "friendly_name":"Poster"
+         "price": 250
       }
    },
    {
@@ -20,7 +20,7 @@
       "model":"portfolio.category",
       "fields":{
          "name":"icon",
-         "friendly_name":"Icon"
+         "price": 50
       }
    },
    {
@@ -28,7 +28,7 @@
       "model":"portfolio.category",
       "fields":{
          "name":"banner",
-         "friendly_name":"Banner"
+         "price": 200
       }
    }
 ]

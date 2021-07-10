@@ -3,680 +3,120 @@
       "pk":1,
       "model":"portfolio.product",
       "fields":{
-         "name":"vexum",
-         "friendly_name":"Vexum",
-         "description":"When motorists sped in and out of traffic, all she could think of was those in need of a transplant.",
-         "price":50,
+         "name":"logo_1",
+         "friendly_name":"Standard Logo",
          "category":1,
-         "rating":5,
-         "user_description":"Big colourful image please.",
-         "size":4,
-         "testimonial":"Really good.",
-         "image":"1.png",
-         "complete": true
+         "complexity": 1
       }
    },
    {
       "pk":2,
       "model":"portfolio.product",
       "fields":{
-         "name":"newton",
-         "friendly_name":"Newton",
-         "description":"The crowd yells and screams for more memes.",
-         "price":50,
+         "name":"logo_2",
+         "friendly_name":"Advanced Logo",
          "category":1,
-         "rating":4,
-         "user_description":"Big colourful image please.",
-         "size":3,
-         "testimonial":"Really good.",
-         "image":"2.png",
-         "complete": true
+         "complexity": 1.25
       }
    },
    {
       "pk":3,
       "model":"portfolio.product",
       "fields":{
-         "name":"star",
-         "friendly_name":"Star",
-         "description":"Mary plays the piano.",
-         "price":50,
+         "name":"logo_3",
+         "friendly_name":"Complex Logo",
          "category":1,
-         "rating":4,
-         "user_description":"Big colourful image please.",
-         "size":4,
-         "testimonial":"Really good.",
-         "image":"3.png",
-         "complete": true
+         "complexity": 1.5
       }
    },
    {
       "pk":4,
       "model":"portfolio.product",
       "fields":{
-         "name":"blue_cow",
-         "friendly_name":"Blue Cow",
-         "description":"It was obvious she was hot, sweaty, and tired.",
-         "price":50,
-         "category":1,
-         "rating":3,
-         "user_description":"Big colourful image please.",
-         "size":3,
-         "testimonial":"Really good.",
-         "image":"4.png",
-         "complete": true
+         "name":"poster_1",
+         "friendly_name":"Standard Poster",
+         "category":2,
+         "complexity": 1
       }
    },
    {
       "pk":5,
       "model":"portfolio.product",
       "fields":{
-         "name":"pelletier",
-         "friendly_name":"Pelletier",
-         "description":"You're good at English when you know the difference between a man eating chicken and a man-eating chicken.",
-         "price":50,
-         "category":1,
-         "rating":1,
-         "user_description":"Big colourful image please.",
-         "size":1,
-         "testimonial":"Really good.",
-         "image":"5.png",
-         "complete": true
+         "name":"poster_2",
+         "friendly_name":"Advanced Poster",
+         "category":2,
+         "complexity": 1.25
       }
    },
    {
       "pk":6,
       "model":"portfolio.product",
       "fields":{
-         "name":"heart",
-         "friendly_name":"Heart",
-         "description":"It didn't take long for Gary to detect the robbers were amateurs.",
-         "price":50,
-         "category":1,
-         "rating":2,
-         "user_description":"Big colourful image please.",
-         "size":2,
-         "testimonial":"Really good.",
-         "image":"6.png",
-         "complete": true
+         "name":"poster_3",
+         "friendly_name":"Complex Poster",
+         "category":2,
+         "complexity": 1.5
       }
    },
    {
       "pk":7,
       "model":"portfolio.product",
       "fields":{
-         "name":"carina",
-         "friendly_name":"Carina",
-         "description":"I purchased a baby clown from the Russian terrorist black market.",
-         "price":50,
-         "category":1,
-         "rating":4,
-         "user_description":"Big colourful image please.",
-         "size":1,
-         "testimonial":"Really good.",
-         "image":"7.png",
-         "complete": true
+         "name":"icon_1",
+         "friendly_name":"Standard Icon",
+         "category":3,
+         "complexity": 1
       }
    },
    {
       "pk":8,
       "model":"portfolio.product",
       "fields":{
-         "name":"dans_donouts",
-         "friendly_name":"Dans's Donouts",
-         "description":"He uses onomatopoeia as a weapon of mental destruction.",
-         "price":50,
-         "category":1,
-         "rating":4,
-         "user_description":"Big colourful image please.",
-         "size":1,
-         "testimonial":"Really good.",
-         "image":"8.png",
-         "complete": true
+         "name":"icon_2",
+         "friendly_name":"Advanced Icon",
+         "category":3,
+         "complexity": 1.25
       }
    },
    {
       "pk":9,
       "model":"portfolio.product",
       "fields":{
-         "name":"snake",
-         "friendly_name":"Snake",
-         "description":"We will not allow you to bring your pet armadillo along.",
-         "price":50,
-         "category":1,
-         "rating":4,
-         "user_description":"Big colourful image please.",
-         "size":3,
-         "testimonial":"Really good.",
-         "image":"9.png",
-         "complete": true
+         "name":"icon_3",
+         "friendly_name":"Complex Icon",
+         "category":3,
+         "complexity": 1.5
       }
    },
    {
       "pk":10,
       "model":"portfolio.product",
       "fields":{
-         "name":"football",
-         "friendly_name":"Football",
-         "description":"She was the type of girl who wanted to live in a pink house.",
-         "price":50,
-         "category":1,
-         "rating":3,
-         "user_description":"Big colourful image please.",
-         "size":3,
-         "testimonial":"Really good.",
-         "image":"10.png",
-         "complete": true
+         "name":"banner_1",
+         "friendly_name":"Standard Banner",
+         "category":4,
+         "complexity": 1
       }
    },
    {
       "pk":11,
       "model":"portfolio.product",
       "fields":{
-         "name":"virginia",
-         "friendly_name":"Virginia",
-         "description":"The box this comes in is 4 meter by 5 foot and weights 18 kilogram.",
-         "price":150,
-         "category":2,
-         "rating":2,
-         "user_description":"Big colourful image please.",
-         "size":1,
-         "testimonial":"Really good.",
-         "image":"b1.jfif",
-         "complete": true
+         "name":"banner_2",
+         "friendly_name":"Advanced Banner",
+         "category":4,
+         "complexity": 1.25
       }
    },
    {
       "pk":12,
       "model":"portfolio.product",
       "fields":{
-         "name":"offline",
-         "friendly_name":"Offline",
-         "description":"She hadn't had her cup of coffee, and that made things all the worse.",
-         "price":150,
-         "category":2,
-         "rating":5,
-         "user_description":"Big colourful image please.",
-         "size":4,
-         "testimonial":"Really good.",
-         "image":"b2.jfif",
-         "complete": true
-      }
-   },
-   {
-      "pk":13,
-      "model":"portfolio.product",
-      "fields":{
-         "name":"neon",
-         "friendly_name":"Neon",
-         "description":"I would be delighted if the sea were full of cucumber juice.",
-         "price":150,
-         "category":2,
-         "rating":5,
-         "user_description":"Big colourful image please.",
-         "size":2,
-         "testimonial":"Really good.",
-         "image":"b3.jfif",
-         "complete": true
-      }
-   },
-   {
-      "pk":14,
-      "model":"portfolio.product",
-      "fields":{
-         "name":"christmas",
-         "friendly_name":"Christmas",
-         "description":"Writing a list of random sentences is harder than I initially thought it would be.",
-         "price":150,
-         "category":2,
-         "rating":5,
-         "user_description":"Big colourful image please.",
-         "size":2,
-         "testimonial":"Really good.",
-         "image":"b4.jfif",
-         "complete": true
-      }
-   },
-   {
-      "pk":15,
-      "model":"portfolio.product",
-      "fields":{
-         "name":"summer_camp",
-         "friendly_name":"Summer Camp",
-         "description":"They throw cabbage that turns your brain into emotional baggage.",
-         "price":150,
-         "category":2,
-         "rating":1,
-         "user_description":"Big colourful image please.",
-         "size":1,
-         "testimonial":"Really good.",
-         "image":"b5.jfif",
-         "complete": true
-      }
-   },
-   {
-      "pk":16,
-      "model":"portfolio.product",
-      "fields":{
-         "name":"christmas_fair",
-         "friendly_name":"Christmas Fair",
-         "description":"There was no telling what thoughts would come from the machine.",
-         "price":150,
-         "category":2,
-         "rating":2,
-         "user_description":"Big colourful image please.",
-         "size":3,
-         "testimonial":"Really good.",
-         "image":"b6.jfif",
-         "complete": true
-      }
-   },
-   {
-      "pk":17,
-      "model":"portfolio.product",
-      "fields":{
-         "name":"gothic",
-         "friendly_name":"Gothic",
-         "description":"He had concluded that pigs must be able to fly in Hog Heaven.",
-         "price":150,
-         "category":2,
-         "rating":2,
-         "user_description":"Big colourful image please.",
-         "size":1,
-         "testimonial":"Really good.",
-         "image":"b7.jfif",
-         "complete": true
-      }
-   },
-   {
-      "pk":18,
-      "model":"portfolio.product",
-      "fields":{
-         "name":"black_friday",
-         "friendly_name":"Black Friday",
-         "description":"He learned the hardest lesson of his life and had the scars, both physical and mental, to prove it.",
-         "price":150,
-         "category":2,
-         "rating":5,
-         "user_description":"Big colourful image please.",
-         "size":4,
-         "testimonial":"Really good.",
-         "image":"b8.jfif",
-         "complete": true
-      }
-   },
-   {
-      "pk":19,
-      "model":"portfolio.product",
-      "fields":{
-         "name":"holo",
-         "friendly_name":"Holo",
-         "description":"I ate a sock because people on the Internet told me to.",
-         "price":150,
-         "category":2,
-         "rating":4,
-         "user_description":"Big colourful image please.",
-         "size":4,
-         "testimonial":"Really good.",
-         "image":"b9.jfif",
-         "complete": true
-      }
-   },
-   {
-      "pk":20,
-      "model":"portfolio.product",
-      "fields":{
-         "name":"students",
-         "friendly_name":"Students",
-         "description":"The beauty of the sunset was obscured by the industrial cranes.",
-         "price":150,
-         "category":2,
-         "rating":5,
-         "user_description":"Big colourful image please.",
-         "size":2,
-         "testimonial":"Really good.",
-         "image":"b10.jfif",
-         "complete": true
-      }
-   },
-    {
-      "pk":21,
-      "model":"portfolio.product",
-      "fields":{
-         "name":"wings",
-         "friendly_name":"Wings",
-         "description":"Just go ahead and press that button.",
-         "price":50,
-         "category":3,
-         "rating":3,
-         "user_description":"Big colourful image please.",
-         "size":4,
-         "testimonial":"Really good.",
-         "image":"i1.png",
-         "complete": true
-      }
-   },
-   {
-      "pk":22,
-      "model":"portfolio.product",
-      "fields":{
-         "name":"spud",
-         "friendly_name":"Spud",
-         "description":"They were excited to see their first sloth.",
-         "price":50,
-         "category":3,
-         "rating":2,
-         "user_description":"Big colourful image please.",
-         "size":1,
-         "testimonial":"Really good.",
-         "image":"i2.png",
-         "complete": true
-      }
-   },
-   {
-      "pk":23,
-      "model":"portfolio.product",
-      "fields":{
-         "name":"drop",
-         "friendly_name":"Drop",
-         "description":"In the end, he realized he could see sound and hear words.",
-         "price":50,
-         "category":3,
-         "rating":3,
-         "user_description":"Big colourful image please.",
-         "size":1,
-         "testimonial":"Really good.",
-         "image":"i3.png",
-         "complete": true
-      }
-   },
-   {
-      "pk":24,
-      "model":"portfolio.product",
-      "fields":{
-         "name":"glove",
-         "friendly_name":"Glove",
-         "description":"He appeared to be confusingly perplexed.",
-         "price":50,
-         "category":3,
-         "rating":5,
-         "user_description":"Big colourful image please.",
-         "size":4,
-         "testimonial":"Really good.",
-         "image":"i4.png",
-         "complete": true
-      }
-   },
-   {
-      "pk":25,
-      "model":"portfolio.product",
-      "fields":{
-         "name":"hazmat",
-         "friendly_name":"Hazmat",
-         "description":"There are few things better in life than a slice of pie.",
-         "price":50,
-         "category":3,
-         "rating":4,
-         "user_description":"Big colourful image please.",
-         "size":4,
-         "testimonial":"Really good.",
-         "image":"i5.png",
-         "complete": true
-      }
-   },
-   {
-      "pk":26,
-      "model":"portfolio.product",
-      "fields":{
-         "name":"snow_drop",
-         "friendly_name":"Snow Drop",
-         "description":"Traveling became almost extinct during the pandemic.",
-         "price":50,
-         "category":3,
-         "rating":3,
-         "user_description":"Big colourful image please.",
-         "size":4,
-         "testimonial":"Really good.",
-         "image":"i6.png",
-         "complete": true
-      }
-   },
-   {
-      "pk":27,
-      "model":"portfolio.product",
-      "fields":{
-         "name":"smiley",
-         "friendly_name":"Smiley",
-         "description":"Buried deep in the snow, he hoped his batteries were fresh in his avalanche beacon.",
-         "price":50,
-         "category":3,
-         "rating":5,
-         "user_description":"Big colourful image please.",
-         "size":1,
-         "testimonial":"Really good.",
-         "image":"i7.png",
-         "complete": true
-      }
-   },
-   {
-      "pk":28,
-      "model":"portfolio.product",
-      "fields":{
-         "name":"squares",
-         "friendly_name":"Squares",
-         "description":"Various sea birds are elegant, but nothing is as elegant as a gliding pelican.",
-         "price":50,
-         "category":3,
-         "rating":1,
-         "user_description":"Big colourful image please.",
-         "size":1,
-         "testimonial":"Really good.",
-         "image":"i8.png",
-         "complete": false
-      }
-   },
-   {
-      "pk":29,
-      "model":"portfolio.product",
-      "fields":{
-         "name":"cup",
-         "friendly_name":"Cup",
-         "description":"There were white out conditions in the town; subsequently, the roads were impassable.",
-         "price":50,
-         "category":3,
-         "rating":2,
-         "user_description":"Big colourful image please.",
-         "size":2,
-         "testimonial":"Really good.",
-         "image":"i9.png",
-         "complete": true
-      }
-   },
-   {
-      "pk":30,
-      "model":"portfolio.product",
-      "fields":{
-         "name":"cats_eye",
-         "friendly_name":"Cats Eye",
-         "description":"With a single flip of the coin, his life changed forever.",
-         "price":50,
-         "category":3,
-         "rating":3,
-         "user_description":"Big colourful image please.",
-         "size":3,
-         "testimonial":"Really good.",
-         "image":"i10.png",
-         "complete": true
-      }
-   },
-   {
-      "pk":31,
-      "model":"portfolio.product",
-      "fields":{
-         "name":"red",
-         "friendly_name":"Red",
-         "description":"Cats are good pets, for they are clean and are not noisy.",
-         "price":180,
+         "name":"banner_3",
+         "friendly_name":"Complex Banner",
          "category":4,
-         "rating":2,
-         "user_description":"Big colourful image please.",
-         "size":2,
-         "testimonial":"Really good.",
-         "image":"p1.png",
-         "complete": true
-      }
-   },
-   {
-      "pk":32,
-      "model":"portfolio.product",
-      "fields":{
-         "name":"game_day",
-         "friendly_name":"Game Day",
-         "description":"The three-year-old girl ran down the beach as the kite flew behind her.",
-         "price":180,
-         "category":4,
-         "rating":3,
-         "user_description":"Big colourful image please.",
-         "size":4,
-         "testimonial":"Really good.",
-         "image":"p2.png",
-         "complete": true
-      }
-   },
-   {
-      "pk":33,
-      "model":"portfolio.product",
-      "fields":{
-         "name":"nature",
-         "friendly_name":"Nature",
-         "description":"With a single flip of the coin, his life changed forever.",
-         "price":180,
-         "category":4,
-         "rating":5,
-         "user_description":"Big colourful image please.",
-         "size":1,
-         "testimonial":"Really good.",
-         "image":"p3.png",
-         "complete": false
-      }
-   },
-   {
-      "pk":34,
-      "model":"portfolio.product",
-      "fields":{
-         "name":"buildings",
-         "friendly_name":"Buildings",
-         "description":"Before he moved to the inner city, he had always believed that security complexes were psychological.",
-         "price":180,
-         "category":4,
-         "rating":1,
-         "user_description":"Big colourful image please.",
-         "size":2,
-         "testimonial":"Really good.",
-         "image":"p4.png",
-         "complete": true
-      }
-   },
-   {
-      "pk":35,
-      "model":"portfolio.product",
-      "fields":{
-         "name":"baloons",
-         "friendly_name":"Baloons",
-         "description":"Seek success, but always be prepared for random cats.",
-         "price":180,
-         "category":4,
-         "rating":2,
-         "user_description":"Big colourful image please.",
-         "size":3,
-         "testimonial":"Really good.",
-         "image":"p5.png",
-         "complete": true
-      }
-   },
-   {
-      "pk":36,
-      "model":"portfolio.product",
-      "fields":{
-         "name":"turtle",
-         "friendly_name":"Turtle",
-         "description":"It took him a while to realize that everything he decided not to change, he was actually choosing.",
-         "price":180,
-         "category":4,
-         "rating":5,
-         "user_description":"Big colourful image please.",
-         "size":3,
-         "testimonial":"Really good.",
-         "image":"p6.png",
-         "complete": true
-      }
-   },
-   {
-      "pk":37,
-      "model":"portfolio.product",
-      "fields":{
-         "name":"passion",
-         "friendly_name":"Passion",
-         "description":"She is never happy until she finds something to be unhappy about; then, she is overjoyed.",
-         "price":180,
-         "category":4,
-         "rating":5,
-         "user_description":"Big colourful image please.",
-         "size":1,
-         "testimonial":"Really good.",
-         "image":"p7.png",
-         "complete": true
-      }
-   },
-   {
-      "pk":38,
-      "model":"portfolio.product",
-      "fields":{
-         "name":"dance",
-         "friendly_name":"Dance",
-         "description":"He was surprised that his immense laziness was inspirational to others.",
-         "price":180,
-         "category":4,
-         "rating":5,
-         "user_description":"Big colourful image please.",
-         "size":1,
-         "testimonial":"Really good.",
-         "image":"p8.png",
-         "complete": true
-      }
-   },
-   {
-      "pk":39,
-      "model":"portfolio.product",
-      "fields":{
-         "name":"red_2",
-         "friendly_name":"Red 2",
-         "description":"The efficiency we have at removing trash has made creating trash more acceptable.",
-         "price":180,
-         "category":4,
-         "rating":5,
-         "user_description":"Big colourful image please.",
-         "size":1,
-         "testimonial":"Really good.",
-         "image":"p9.png",
-         "complete": true
-      }
-   },
-   {
-      "pk":40,
-      "model":"portfolio.product",
-      "fields":{
-         "name":"headline",
-         "friendly_name":"Headline",
-         "description":"I saw one of these in New Zealand and I bought one.",
-         "price":180,
-         "category":4,
-         "rating":3,
-         "user_description":"Big colourful image please.",
-         "size":2,
-         "testimonial":"Really good.",
-         "image":"p10.png",
-         "complete": true
+         "complexity": 1.5
       }
    }
 ]

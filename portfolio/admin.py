@@ -6,19 +6,15 @@ class ProductAdmin(admin.ModelAdmin):
     list_display = (
         'name',
         'category',
-        'rating',
-        'complete',
-        'created_at',
-        'modified_at',
 
     )
 
-    ordering = ('created_at',)
+    ordering = ('name',)
 
 
 class CategoryAdmin(admin.ModelAdmin):
     list_display = (
-        'friendly_name',
+        'price',
         'name',
     )
 
