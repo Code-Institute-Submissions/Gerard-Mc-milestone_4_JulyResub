@@ -1,17 +1,24 @@
 from django.contrib import admin
-# from .models import CustomProduct
+from .models import Product, Category
 
 
-# class CustomProductAdmin(admin.ModelAdmin):
-#     list_display = (
-#         'name',
-#         'friendly_name',
-#         'category',
-#         'complexity',
+class ProductAdmin(admin.ModelAdmin):
+    list_display = (
+        'name',
+        'category',
 
-#     )
+    )
 
-#     ordering = ('category',)
+    ordering = ('name',)
 
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = (
+        'price',
+        'name',
+        'friendly_name',
+    )
 
-# admin.site.register(CustomProduct, CustomProductAdmin)
+    ordering = ('name',)
+
+admin.site.register(Product, ProductAdmin)
+admin.site.register(Category, CategoryAdmin)

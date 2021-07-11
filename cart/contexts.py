@@ -15,19 +15,15 @@ def cart_contents(request):
         category = get_object_or_404(Category, pk=int(id[1]["category"]))
         item_price = category.price
         item_price = item_price * Decimal(id[1]["complexity"])
+        item_price = item_price * Decimal(id[1]["variations"])
         if id[1]["fast_delivery"] == "True":
             item_price = item_price * Decimal(settings.FAST_DELIVERY_CHARGE)
-        if id[1]["variations"] == 2:
-            item_price = round(item_price * Decimal(settings.FAST_DELIVERY_CHARGE), 2)
         item_price = round(item_price, 2)
         total += item_price
         product_count += 1
 
         if id:
             order_page_elements_display = True
-
-        total += 50
-        product_count += 1
         cart_items.append({
             'id': id[0],
             'item_type': id[1]["category"],
@@ -46,5 +42,3 @@ def cart_contents(request):
     }
 
     return context
-
- 
