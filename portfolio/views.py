@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Product
+from .models import Product, Category
 
 
 def portfolio(request):
@@ -9,7 +9,7 @@ def portfolio(request):
     # categories_string is a conversion from list to string.
     # to be used in a query string for user sorting options in portfolio.html.
     categories_string = ""
-    categories = Product._meta.get_field('category')
+    categories = Category.objects.values('name')
     # Default sort and direction to be displayed in the HTML dropdown menu.
     sort_display = ""
     direction_display = ""

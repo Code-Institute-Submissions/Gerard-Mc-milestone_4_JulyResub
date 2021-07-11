@@ -163,4 +163,4 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Fast delivery percentage multiplier.
-FAST_DELIVERY_CHARGE = 15
+FAST_DELIVERY_CHARGE = 1.15

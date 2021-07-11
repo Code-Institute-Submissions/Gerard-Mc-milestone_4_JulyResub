@@ -43,6 +43,8 @@
         {% else %}
         <p>Fast Delivery: <u>No</u></p>
         {% endif %}
+        <br>
+        <p>Item Price: <strong>{{ item.price }}</strong></p>
         <form class="form" action="{% url 'remove_from_cart' %}" method="POST">
             {% csrf_token %}
             <textarea name="id" style="display:none;">{{ item.id }}</textarea>
