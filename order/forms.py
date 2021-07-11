@@ -49,5 +49,3 @@ class CustomProductForm(forms.ModelForm):
                 'id': 'delivery',
                 }),
         }
-
-

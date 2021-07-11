@@ -1,11 +1,3 @@
-SECRET_KEY="SDASDSFSDFGREGVICJVFDIPTGUERKMOVPK904U85T893YU6"
-
-
-
-
-
-
-
 from django.db import models
 from django.core.validators import MaxValueValidator, MinValueValidator
 from decimal import Decimal
@@ -48,18 +40,17 @@ class Category(models.Model):
         default=0, null=False, blank=False, max_digits=6, decimal_places=2)
 
     def __str__(self):
-        return self.friendly_name
+        return self.name
 
     def get_price(self):
         return self.price
 
 
 class Product(models.Model):
-
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(null=True, max_length=254)
     category = models.ForeignKey(
-        'Category', null=True, blank=True, on_delete=models.SET_NULL)
+        Category, null=True, blank=True, on_delete=models.SET_NULL)
     complexity = models.DecimalField(
         default=1,max_digits=3, decimal_places=2, choices=COMPLEXITY_OPTIONS)
     variations = models.DecimalField(default=1,max_digits=3, decimal_places=2, choices=VARIATION_CHOICES)
@@ -71,11 +62,13 @@ class Product(models.Model):
     type = models.DecimalField(default=1, max_digits=3, decimal_places=1, choices=CATEGORY_OPTIONS)
 
     def save(self, *args, **kwargs):
+        category_pk = Decimal(self.type)
+        item = Category.objects.get(pk=category_pk)
         delivery = 1
         if self.fast_delivery == True:
             delivery = Decimal(settings.FAST_DELIVERY_CHARGE)
 
-        self.price_total = self.category.price * self.complexity * self.variations * delivery
+        self.price_total = item.price * self.complexity * self.variations * delivery
         super().save(*args, **kwargs)
 
     def __str__(self):
