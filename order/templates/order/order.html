@@ -9,11 +9,12 @@
     <h1 class="h1-text-style mb-0 bold-font text-center">Order Form</h1>
     {% if order_page_elements_display == True %}
     <div class="container-fluid mt-3">
-     <p class="text-center"><a class="color-pink" href="{% url 'view_cart' %}"><u>Proceed to cart</u></a> or make another order</p>
+      <p class="text-center"><a class="color-pink" href="{% url 'view_cart' %}"><u>Proceed to cart</u></a> or make
+        another order.</p>
     </div>
     {% endif %}
     <hr>
-    <p>Please describe what you what like the product to be in the fields below</p>
+    <p>Please describe how you would like the product to look in the fields below</p>
     {% csrf_token %}
     {% for input in form %}
     <div class="form-group">
@@ -25,7 +26,7 @@
     {% endfor %}
     <hr>
     <br>
-    <h6 class="d-block font-weight-bold">Price: $0.00</h6>
+    <h6 class="d-block font-weight-bold">Total: $<span id="total_value">0.00</span></h6>
     <br>
     <button type="submit" class="btn btn-primary mb-2 pink-bg border-none font">Add to Cart</button>
   </form>
@@ -40,4 +41,81 @@
   </div>
   {% endif %}
 </div>
+
+<script>
+  var item_type = document.getElementById('item_type');
+  var complexity = document.getElementById('complexity');
+  var variations = document.getElementById('variations');
+  var item_type_value = 0.00;
+  var variations_value = 1.00;
+  var grand_total = 0.00;
+
+  function total() {
+    // Calculate item type value
+    if (item_type.value == 1) {
+      item_type_value = 100.00;
+    }
+
+    else if (item_type.value == 2) {
+      item_type_value = 250.00;
+      //   console.log(item_type_value);
+    }
+
+    else if (item_type.value == 3) {
+      item_type_value = 50.00;
+      // console.log(item_type_value);
+    }
+
+    else if (item_type.value == 4) {
+      item_type_value = 200.00;
+      // console.log(item_type_value);
+    }
+
+    else {
+      item_type_value = 0.00;
+    }
+
+    // Calculate variation value
+    if (variations.value == "1") {
+      variations_value = 1.00;
+      // console.log(variations_value);
+    }
+
+    else if (variations.value == "2") {
+      variations_value = 1.2;
+      // console.log(variations_value);
+    }
+
+    else if (variations.value == "3") {
+      variations_value = 1.35;
+      // console.log(variations_value);
+    }
+
+    else if (variations.value == "4") {
+      variations_value = 1.45;
+      // console.log(variations_value);
+    }
+
+    else {
+      variations_value = 1.00;
+      // console.log("variations_value");
+
+    }
+
+    if (item_type_value > 0) {
+      if (document.getElementById('delivery').value == "False") {
+        grand_total = Math.round(item_type_value * variations_value * complexity.value).toFixed(2);
+      }
+      else if (document.getElementById('delivery').value == "True") {
+        grand_total = Math.round(item_type_value * variations_value * complexity.value * 1.15).toFixed(2);
+      }
+    }
+
+    else {
+      grand_total = (0.00).toFixed(2);
+    }
+
+    document.getElementById("total_value").innerText = "" + grand_total + "";
+  }
+</script>
 {% endblock %}

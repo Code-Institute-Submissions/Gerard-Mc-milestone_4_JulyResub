@@ -25,23 +25,29 @@ class CustomProductForm(forms.ModelForm):
                 }),
                 'category': forms.Select(
                 attrs={
+                'onclick': 'total()',
                 'class': 'form-check-input',
-                'id': 'Type',
+                'id': 'item_type',
+                'required':True
                 }),
                 'complexity': forms.Select(
                 attrs={
+                'onclick': 'total()',
                 'class': 'form-check-input',
-                'id': 'Type',
+                'id': 'complexity',
                 }),
                 'variations': forms.Select(
                 attrs={
+                'onclick': 'total()',
                 'class': 'form-check-input',
-                'id': 'Size',
+                'id': 'variations',
                 }),
                 'fast_delivery': forms.Select(
                 attrs={
+                'onclick': 'total()',
                 'class': 'form-check-input',
-                'id': 'Delivery',}),
+                'id': 'delivery',
+                }),
         }
 
 

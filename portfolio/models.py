@@ -31,9 +31,9 @@ class Product(models.Model):
     
     VARIATION_CHOICES =[
         (1, '1'),
-        (2,'2'),
-        (3,'3'),
-        (4,'4'),
+        (2,'2  (+20%)'),
+        (3,'3  (+35%)'),
+        (4,'4  (+45%)'),
         ]
 
     DELIVERY_CHOICES =[
@@ -42,18 +42,18 @@ class Product(models.Model):
         ]
 
     COMPLEXITY_OPTIONS =[
-        (1, 'Normal'),
-        (1.5,'Advanced'),
-        (2,'Complex'),
+        (1.00, 'Normal'),
+        (1.25,'Advanced  (+25%)'),
+        (1.50,'Complex  (+50%)'),
     ]
 
 
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(null=True, max_length=254)
     category = models.ForeignKey(
-        'Category', null=True, blank=True, on_delete=models.SET_NULL)
+        'Category', null=True, blank=False, on_delete=models.SET_NULL)
     complexity = models.DecimalField(
-        default=1,max_digits=2, decimal_places=1, choices=COMPLEXITY_OPTIONS)
+        default=1,max_digits=3, decimal_places=2, choices=COMPLEXITY_OPTIONS)
     variations = models.DecimalField(default=1, max_digits=1, decimal_places=0, choices=VARIATION_CHOICES)
     user_description = models.TextField(default="", null=False, blank=False)
     fast_delivery  = models.BooleanField(default=False, null=True, blank=True, choices=DELIVERY_CHOICES)
