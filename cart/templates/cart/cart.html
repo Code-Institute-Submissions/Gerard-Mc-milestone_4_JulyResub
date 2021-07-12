@@ -18,11 +18,11 @@
 
     {% for item in cart_items %}
     <div class="container mb-5 col-10 offset-1 bg-white p-5 button-style shadow">
-        {% if  item.item_type == "1" %}
+        {% if  item.category == "1" %}
         <h2>Logo</h3>
-        {% elif item.item_type == "2" %}
+        {% elif item.category == "2" %}
         <h2>Poster</h3>
-        {% elif item.item_type == "3" %}
+        {% elif item.category == "3" %}
         <h2>Icon</h3>
         {% else %}
         <h2>Banner</h3>

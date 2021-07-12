@@ -26,7 +26,7 @@ def cart_contents(request):
             order_page_elements_display = True
         cart_items.append({
             'id': id[0],
-            'item_type': id[1]["category"],
+            'category': id[1]["category"],
             'complexity': id[1]["complexity"],
             'variations': id[1]["variations"],
             'user_description': id[1]["user_description"],
@@ -40,5 +40,5 @@ def cart_contents(request):
         'product_count': product_count,
         'order_page_elements_display': order_page_elements_display,
     }
-
+    print(cart)
     return context

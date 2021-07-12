@@ -41,20 +41,12 @@ class Order(models.Model):
 
 
 class OrderLineItem(models.Model):
-    CATEGORY_OPTIONS =[
-        (1,'Logo'),
-        (2,'Poster'),
-        (3,'Icon'),
-        (4,'Banner'),
-    ]
-
     VARIATION_CHOICES =[
         (1.00, 'Single'),
         (1.25,'2  (+25%)'),
         (1.50,'3  (+50%)'),
         (1.75,'3  (+75%)'),
         ]
-
     DELIVERY_CHOICES =[
         (False, "No"),
         (True, "Yes"),
@@ -77,18 +69,25 @@ class OrderLineItem(models.Model):
     is_complete = models.BooleanField(default=False, null=True, blank=True)
     lineitem_total = models.DecimalField(default=0, max_digits=10, decimal_places=2,null=False, blank=False, editable=False)
     order = models.ForeignKey(Order, null=True, blank=True, on_delete=models.CASCADE, related_name='lineitems')
-    type = models.DecimalField(default=1, max_digits=3, decimal_places=1, choices=CATEGORY_OPTIONS)
+    image = models.ImageField(null=True, blank=True)
 
     def save(self, *args, **kwargs):
-        category_pk = Decimal(self.type)
-        item = Category.objects.get(pk=category_pk)
+        complexity_level_label = ""
+        if self.complexity == 1:
+            complexity_level_label = "Standard"
+        elif self.complexity == 1.25:
+            complexity_level_label = "Advanced"
+        else:
+            complexity_level_label = "Complex"
+        self.name = f'{complexity_level_label}_{self.category.name}'
+        self.friendly_name = f'{complexity_level_label} {self.category.name}'
         delivery = 1
         if self.fast_delivery == True:
             delivery = Decimal(settings.FAST_DELIVERY_CHARGE)
-
-        self.lineitem_total = Decimal(item.price * self.complexity * self.variations * delivery)
+        self.lineitem_total = Decimal(self.category.price * self.complexity * self.variations * delivery)
         super().save(*args, **kwargs)
 
     def __str__(self):
-        return f'Name {self.type} on order {self.order.order_number}'
+        return f'{self.friendly_name } on order {self.order.order_number}'
+
 

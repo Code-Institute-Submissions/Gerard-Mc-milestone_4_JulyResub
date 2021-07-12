@@ -76,10 +76,11 @@
                   {% if product.image %}
                   <img class="img-fluid px-5" src="/media/{{ product.image }}" alt="{{ product.name }}" />
                   {% endif %}
-                  <h5 class="modal-title">Category: 
-                    <strong>{{ product.category }}</strong>
-                  </h5>
-                  <p>Complexity: {{ product.complexity }}</p>
+                  <br>
+                  <br>
+                  <h5 class="modal-title">User Description</h5>
+                  <p>{{ product.user_description }}</p>
+                  <p><strong>Price:</strong> {{ product.lineitem_total }}</p>
                   <div class="modal-footer p-0">
                     <a href="{% url 'order' %}"  type="button" class="btn btn-dark mt-3">Order Your Own</a>
                   </div>

@@ -43,72 +43,65 @@
 </div>
 
 <script>
-  var item_type = document.getElementById('item_type');
+  var category = document.getElementById('category');
   var complexity = document.getElementById('complexity');
   var variations = document.getElementById('variations');
-  var item_type_value = 0.00;
+  var category_value = 0.00;
   var variations_value = 1.00;
   var grand_total = 0.00;
 
   function total() {
+    console.log(category_value);
     // Calculate item type value
-    if (item_type.value == 1) {
-      item_type_value = 100.00;
+    if (category.value == 1) {
+      category_value = 100.00;
     }
 
-    else if (item_type.value == 2) {
-      item_type_value = 250.00;
-      //   console.log(item_type_value);
+    else if (category.value == 2) {
+      category_value = 250.00;
     }
 
-    else if (item_type.value == 3) {
-      item_type_value = 50.00;
-      // console.log(item_type_value);
+    else if (category.value == 3) {
+      category_value = 50.00;
     }
 
-    else if (item_type.value == 4) {
-      item_type_value = 200.00;
-      // console.log(item_type_value);
+    else if (category.value == 4) {
+      category_value = 200.00;
     }
 
     else {
-      item_type_value = 0.00;
+      category_value = 0.00;
     }
 
     // Calculate variation value
     if (variations.value == "1.00") {
       variations_value = 1.00;
-      // console.log(variations_value);
     }
 
     else if (variations.value == "1.25") {
       variations_value = 1.25;
-      // console.log(variations_value);
     }
 
     else if (variations.value == "1.50") {
       variations_value = 1.35;
-      // console.log(variations_value);
     }
 
     else if (variations.value == "1.75") {
       variations_value = 1.45;
-      // console.log(variations_value);
     }
 
     else {
       variations_value = 1.00;
-      // console.log("variations_value");
 
     }
 
-    if (item_type_value > 0) {
+    if (category_value > 0) {
       if (document.getElementById('delivery').value == "False") {
-        grand_total = item_type_value * variations_value * complexity.value;
+        grand_total = category_value * variations_value * complexity.value;
         grand_total = (grand_total).toFixed(2);
       }
       else if (document.getElementById('delivery').value == "True") {
-        grand_total = item_type_value * variations_value * complexity.value * 1.15;
+        grand_total = category_value * variations_value * complexity.value * 1.15;
         grand_total = (grand_total).toFixed(2);
       }
     }

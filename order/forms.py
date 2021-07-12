@@ -8,9 +8,9 @@ from checkout.models import OrderLineItem
 class CustomProductForm(forms.ModelForm):
     class Meta:
         model = OrderLineItem
-        fields = ['category', 'type', 'variations', 'user_description', 'fast_delivery']
+        fields = ['category', 'complexity', 'variations', 'user_description', 'fast_delivery']
         labels = {
-            'category': 'Type',
+            'category': 'category',
             'variations': 'Variations',
             'complexity': 'Complexity',
             'fast_delivery': '72 Hour Delivery +15%',
@@ -23,11 +23,11 @@ class CustomProductForm(forms.ModelForm):
                 'style': 'max-height: 100px',
                 'id': 'Description',
                 }),
-                'type': forms.Select(
+                'category': forms.Select(
                 attrs={
                 'onclick': 'total()',
                 'class': 'form-check-input',
-                'id': 'item_type',
+                'id': 'category',
                 'required':True
                 }),
                 'complexity': forms.Select(

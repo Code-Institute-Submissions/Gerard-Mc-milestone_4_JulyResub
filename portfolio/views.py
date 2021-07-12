@@ -25,6 +25,7 @@ def portfolio(request):
             categories = request.GET['category'].split(",")
             #  Filter products to the above category/categories.
             products = products.filter(category__name__in=categories)
+            print(products)
             # Converting the list back to string.
             if len(categories) > 1:
                 for i in range(len(categories)):

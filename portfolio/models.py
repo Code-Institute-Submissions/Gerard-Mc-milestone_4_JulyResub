@@ -5,11 +5,11 @@ from django.conf import settings
 
 class Category(models.Model):
     CATEGORY_OPTIONS =[
-            (1,'Logo'),
-            (2,'Poster'),
-            (3,'Icon'),
-            (4,'Banner'),
-        ]
+        ("logo",'Logo'),
+        ('poster','Poster'),
+        ('icon','Icon'),
+        ('banner','Banner'),
+    ]
     class Meta:
         verbose_name_plural = 'Categories'
 
