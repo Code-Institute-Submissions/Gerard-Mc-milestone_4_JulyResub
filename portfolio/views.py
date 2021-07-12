@@ -1,11 +1,12 @@
 from django.shortcuts import render
-from .models import Product, Category
+from .models import Category
+from checkout.models import OrderLineItem
 
 
 def portfolio(request):
     """ View displays all products and sorts by categories """
     # All products loaded when page loads.
-    products = Product.objects.all()
+    products = OrderLineItem.objects.all()
     # categories_string is a conversion from list to string.
     # to be used in a query string for user sorting options in portfolio.html.
     categories_string = ""

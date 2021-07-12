@@ -1,14 +1,14 @@
 from django import forms
 from django.db import models 
 from django.db.models import CharField, TextField
-from portfolio.models import Product
+from checkout.models import OrderLineItem
 
 
 
 class CustomProductForm(forms.ModelForm):
     class Meta:
-        model = Product
-        fields = ['category', 'complexity', 'variations', 'user_description', 'fast_delivery']
+        model = OrderLineItem
+        fields = ['category', 'type', 'variations', 'user_description', 'fast_delivery']
         labels = {
             'category': 'Type',
             'variations': 'Variations',
@@ -23,7 +23,7 @@ class CustomProductForm(forms.ModelForm):
                 'style': 'max-height: 100px',
                 'id': 'Description',
                 }),
-                'category': forms.Select(
+                'type': forms.Select(
                 attrs={
                 'onclick': 'total()',
                 'class': 'form-check-input',

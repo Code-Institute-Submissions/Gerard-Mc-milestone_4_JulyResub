@@ -1,25 +1,23 @@
 from django.contrib import admin
-from .models import Order
-from portfolio.models import Product
-from .models import Order
+from .models import Order, OrderLineItem
 
 
-class ProductAdminInline(admin.TabularInline):
-    model = Product
+class OrderLineItemAdminInline(admin.TabularInline):
+    model = OrderLineItem
     fields = ('order','type','complexity', 'variations', 
     'fast_delivery', 'user_description',
-    'price_total', 'is_complete')
-    readonly_fields = ('price_total',)
+    'lineitem_total', 'is_complete')
+    readonly_fields = ('lineitem_total',)
 
 
 class OrderAdmin(admin.ModelAdmin):
-    inlines = (ProductAdminInline,)
+    inlines = (OrderLineItemAdminInline,)
     readonly_fields = ('order_number', 'date',
                        'grand_total')
 
-    fields = ('order_number','date')
+    fields = ('order_number','date','grand_total')
 
-    list_display = ('order_number', 'date', 'full_name','grand_total',)
+    list_display = ('order_number', 'date', 'grand_total',)
 
     ordering = ('-date',)
 
