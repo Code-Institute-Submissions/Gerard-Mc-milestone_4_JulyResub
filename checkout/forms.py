@@ -12,20 +12,20 @@ class OrderForm(forms.ModelForm):
 
         def __init__(self, *args, **kwargs):
        
-        super().__init__(*args, **kwargs)
+            super().__init__(*args, **kwargs)
 
-        labels = {
-            'full_name': 'Full Name',
-            'email': 'Email Address',
-            'phone_number': 'Phone Number',
-            'country': 'Country',
-            'county': 'County',
-            'postcode': 'Postal Code',
-            'town_or_city': 'Town or City',
-            'street_address1': 'Street Address 1',
-            'street_address2': 'Street Address 2',
-        }
+            labels = {
+                'full_name': 'Full Name',
+                'email': 'Email Address',
+                'phone_number': 'Phone Number',
+                'country': 'Country',
+                'county': 'County',
+                'postcode': 'Postal Code',
+                'town_or_city': 'Town or City',
+                'street_address1': 'Street Address 1',
+                'street_address2': 'Street Address 2',
+            }
 
-        self.fields['full_name'].widget.attrs['autofocus'] = True
-        for field in self.fields:
-            self.fields[field].widget.attrs['class'] = 'payment-form-inputs'
+            self.fields['full_name'].widget.attrs['autofocus'] = True
+            for field in self.fields:
+                self.fields[field].widget.attrs['class'] = 'payment-form-inputs'

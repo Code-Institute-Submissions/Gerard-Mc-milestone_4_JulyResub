@@ -10,10 +10,10 @@ def checkout(request):
         messages.error(request, "Your cart is empty.")
         return redirect(reverse('order'))
 
-    order_form = OrderForm()
+    form = OrderForm()
     template = 'checkout/checkout.html'
     context = {
-        'order_form': order_form,
+        'form': form,
     }
 
     return render(request, template, context)

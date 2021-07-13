@@ -13,7 +13,7 @@
     </div>
     <div class="container-fluid col-10 offset-1 my-4 button-style">
         <button  onclick="window.location.href='{% url 'order' %}'" class="btn blue-bg color-white bold-font font shadow-extra">Return to order</button>
-        <button onclick="window.location.href='{% url 'view_cart' %}'" class="btn pink-bg color-white bold-font font shadow-extra border-none">Proceed to payment</button>
+        <button onclick="window.location.href='{% url 'checkout' %}'" class="btn pink-bg color-white bold-font font shadow-extra border-none">Proceed to payment</button>
     </div>
 
     {% for item in cart_items %}
