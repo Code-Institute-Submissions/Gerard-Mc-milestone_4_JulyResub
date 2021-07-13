@@ -324,6 +324,13 @@ footer .lower-footer{
 	border-top-color:rgb(255, 239, 239);
 }
 
+.border-bottom{
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
+	border-bottom-color:rgb(255, 239, 239);
+}
+
+
 .lower-nav-text-style {
 	color: rgba(80, 110, 250, 1) !important;
 	font-weight: 700!important;
