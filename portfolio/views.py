@@ -54,7 +54,6 @@ def portfolio(request):
                 # Sort products by chosen entity field.
                 products = products.order_by(sort)
                 category_sort_display = sort_display + " " + direction_display
-                print(category_sort_display)
 
     context = {
         'active_category': active_category,

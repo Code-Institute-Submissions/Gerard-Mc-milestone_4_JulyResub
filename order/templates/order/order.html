@@ -96,11 +96,11 @@
     }
 
     if (category_value > 0) {
-      if (document.getElementById('delivery').value == "False") {
+      if (document.getElementById('fast_delivery').value == "False") {
         grand_total = category_value * variations_value * complexity.value;
         grand_total = (grand_total).toFixed(2);
       }
-      else if (document.getElementById('delivery').value == "True") {
+      else if (document.getElementById('fast_delivery').value == "True") {
         grand_total = category_value * variations_value * complexity.value * 1.15;
         grand_total = (grand_total).toFixed(2);
       }
