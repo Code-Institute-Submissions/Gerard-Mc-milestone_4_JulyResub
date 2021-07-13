@@ -31,18 +31,24 @@
       <button type="button"
         class="btn btn-secondary dropdown-toggle btn-sm font-weight-bold button-style color-blue bg-white px-3 shadow-less"
         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        {% if category_sort_display == "Lineitem_total DESC" %}
+        Price DESC
+        {% elif  category_sort_display == "Lineitem_total ASC" %}
+        Price ASC
+        {% else %}
         {{ category_sort_display }}
+        {% endif %}
       </button>
 
       <div class="dropdown-menu button-style">
         <a class="dropdown-item color-blue"
-          href="{% url 'portfolio' %}?sort=rating&category={{ category }}&direction=asc">Rating ASC</a>
+          href="{% url 'portfolio' %}?sort=lineitem_total&category={{ category }}&direction=asc">Price ASC</a>
         <a class="dropdown-item color-blue"
-          href="{% url 'portfolio' %}?sort=rating&category={{ category }}&direction=desc">Rating DESC</a>
+          href="{% url 'portfolio' %}?sort=lineitem_total&category={{ category }}&direction=desc">Price DESC</a>
         <a class="dropdown-item color-blue"
-          href="{% url 'portfolio' %}?sort=price&category={{ category }}&direction=asc">Price ASC</a>
+          href="{% url 'portfolio' %}?sort=complexity&category={{ category }}&direction=asc">Complexity ASC</a>
         <a class="dropdown-item color-blue"
-          href="{% url 'portfolio' %}?sort=price&category={{ category }}&direction=desc">Price DESC</a>
+          href="{% url 'portfolio' %}?sort=complexity&category={{ category }}&direction=desc">Complexity DESC</a>
       </div>
     </div>
   </div>
@@ -53,15 +59,15 @@
         <div id="product-image-container"
           class="border-box col-sm-6 col-md-6 col-lg-4 col-xl-3 white-bg p-4 d-flex align-items-center justify-content-center shadow">
           {% if product.image %}
-          <div data-toggle="modal" data-target="#{{ product.name}}">
-            <img class="img-fluid" src="/media/{{ product.image }}" alt="{{ product.name }}" />
+          <div data-toggle="modal" data-target="#{{ product.name}}{{ product.id }}">
+            <img class="img-fluid" src="/media/{{ product.image }}" alt="{{ product.friendly_name }}" />
           </div>
           {% else %}
-          <div data-toggle="modal" data-target="#{{ product.name}}">
-            <img class="img-fluid" src="/static/img/slider-img-3-cover.png" alt="{{ product.name }}" />
+          <div data-toggle="modal" data-target="#{{ product.name}}{{ product.id }}">
+            <img class="img-fluid" src="/static/img/slider-img-3-cover.png" alt="{{ product.friendly_name }}" />
           </div>
           {% endif %}
-          <div class="modal" id="{{ product.name }}" role="dialog">
+          <div class="modal" id="{{ product.name }}{{ product.id }}" role="dialog">
             <div class="modal-dialog modal-sm">
               <div class="modal-content">
                 <div class="modal-header">
@@ -74,7 +80,7 @@
                 </div>
                 <div class="modal-body">
                   {% if product.image %}
-                  <img class="img-fluid px-5" src="/media/{{ product.image }}" alt="{{ product.name }}" />
+                  <img class="img-fluid px-5" src="/media/{{ product.image }}" alt="{{ product.friendly_name }}" />
                   {% endif %}
                   <br>
                   <br>
@@ -82,7 +88,7 @@
                   <p>{{ product.user_description }}</p>
                   <p><strong>Price:</strong> {{ product.lineitem_total }}</p>
                   <div class="modal-footer p-0">
-                    <a href="{% url 'order' %}"  type="button" class="btn btn-dark mt-3">Order Your Own</a>
+                    <a href="{% url 'order' %}"  type="button" class="btn btn-dark mt-3 pink-bg border-none">Order Your Own</a>
                   </div>
                 </div>
               </div>
