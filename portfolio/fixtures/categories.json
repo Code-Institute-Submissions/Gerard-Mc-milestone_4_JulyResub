@@ -1,7 +1,7 @@
 [
    {
       "pk":1,
-      "model":"portfolio.category",
+      "model":"checkout.category",
       "fields":{
          "name":"logo",
          "price": 100
@@ -9,7 +9,7 @@
    },
    {
       "pk":2,
-      "model":"portfolio.category",
+      "model":"checkout.category",
       "fields":{
          "name":"poster",
          "price": 250
@@ -17,7 +17,7 @@
    },
    {
       "pk":3,
-      "model":"portfolio.category",
+      "model":"checkout.category",
       "fields":{
          "name":"icon",
          "price": 50
@@ -25,7 +25,7 @@
    },
    {
       "pk":4,
-      "model":"portfolio.category",
+      "model":"checkout.category",
       "fields":{
          "name":"banner",
          "price": 200

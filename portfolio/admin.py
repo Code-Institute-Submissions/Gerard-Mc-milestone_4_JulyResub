@@ -1,15 +1,19 @@
 from django.contrib import admin
 from django.contrib import admin
-from .models import Category
+from .models import Product
 
 
-class CategoryAdmin(admin.ModelAdmin):
+class ProductAdmin(admin.ModelAdmin):
     list_display = (
-        'price',
-        'name',
         'friendly_name',
+        'category',
+        'complexity',
+        'lineitem_total',
+        'is_complete',
+        'display_in_portfolio',
     )
 
-    ordering = ('name',)
+    ordering = ('is_complete',)
 
-admin.site.register(Category, CategoryAdmin)
+
+admin.site.register(Product, ProductAdmin)

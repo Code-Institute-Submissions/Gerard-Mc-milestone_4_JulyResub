@@ -2,8 +2,30 @@ import uuid
 from django.db import models
 from django.db.models import Sum
 from django.conf import settings
-from portfolio.models import Category
 from decimal import Decimal
+
+class Category(models.Model):
+
+    CATEGORY_OPTIONS =[
+        ("logo",'Logo'),
+        ('poster','Poster'),
+        ('icon','Icon'),
+        ('banner','Banner'),
+    ]
+    
+    class Meta:
+        verbose_name_plural = 'Categories'
+
+    name = models.CharField(null=False, blank=False, max_length=254, choices=CATEGORY_OPTIONS)
+    friendly_name = models.CharField(default="default", max_length=254, null=True, blank=True)
+    price = models.DecimalField(
+        default=0, null=False, blank=False, max_digits=6, decimal_places=2)
+
+    def __str__(self):
+        return self.name
+
+    def get_price(self):
+        return self.price
 
 
 class Order(models.Model):
@@ -85,5 +107,3 @@ class OrderLineItem(models.Model):
 
     def __str__(self):
         return f'{self.friendly_name } on order {self.order.order_number}'
-
-

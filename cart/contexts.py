@@ -1,7 +1,7 @@
 from decimal import Decimal
 from django.conf import settings
 from django.shortcuts import get_object_or_404
-from portfolio.models import Category
+from checkout.models import Category
 
 def cart_contents(request):
 
@@ -40,5 +40,4 @@ def cart_contents(request):
         'product_count': product_count,
         'order_page_elements_display': order_page_elements_display,
     }
-    print(cart)
     return context

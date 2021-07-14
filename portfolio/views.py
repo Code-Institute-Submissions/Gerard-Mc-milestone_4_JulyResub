@@ -1,6 +1,5 @@
 from django.shortcuts import render
-from .models import Category
-from checkout.models import OrderLineItem
+from checkout.models import OrderLineItem, Category
 
 
 def portfolio(request):
@@ -10,7 +9,6 @@ def portfolio(request):
     # categories_string is a conversion from list to string.
     # to be used in a query string for user sorting options in portfolio.html.
     categories_string = ""
-    categories = Category.objects.values('name')
     # Default sort and direction to be displayed in the HTML dropdown menu.
     sort_display = ""
     direction_display = ""
