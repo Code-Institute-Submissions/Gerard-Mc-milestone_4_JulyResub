@@ -6,7 +6,7 @@ class OrderLineItemAdminInline(admin.TabularInline):
     model = OrderLineItem
     fields = ('image', 'order', 'category', 'complexity', 'variations', 
     'fast_delivery', 'user_description',
-    'lineitem_total', 'is_complete')
+    'lineitem_total', 'is_complete', 'display_in_portfolio')
     readonly_fields = ('lineitem_total',)
 
 

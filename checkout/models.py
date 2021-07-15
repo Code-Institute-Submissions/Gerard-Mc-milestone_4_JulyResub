@@ -75,6 +75,12 @@ class OrderLineItem(models.Model):
         (1.25,'Advanced (+25%)'),
         (1.50,'Complex (+50%)'),
     ]
+
+    DISPLAY_OPTIONS =[
+        ( True, 'Yes'),
+        ( False,'No'),
+    ]
+    
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(null=True, max_length=254)
     category = models.ForeignKey(
@@ -85,10 +91,10 @@ class OrderLineItem(models.Model):
     user_description = models.TextField(default="", null=False, blank=False)
     fast_delivery  = models.BooleanField(default=False, null=True, blank=True, choices=DELIVERY_CHOICES)
     is_complete = models.BooleanField(default=False, null=True, blank=True)
+    display_in_portfolio = models.BooleanField(default=False, null=True, blank=True, choices=DISPLAY_OPTIONS)
     lineitem_total = models.DecimalField(default=0, max_digits=10, decimal_places=2,null=False, blank=False, editable=False)
     order = models.ForeignKey(Order, null=True, blank=True, on_delete=models.CASCADE, related_name='lineitems')
     image = models.ImageField(null=True, blank=True)
-    image_url = models.URLField(max_length=1024, null=True, blank=True)
 
     def save(self, *args, **kwargs):
         self.image_url = f'settings.MEDIA_URL{uuid.uuid4().hex.upper()}'
