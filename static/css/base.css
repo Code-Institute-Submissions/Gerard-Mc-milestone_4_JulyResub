@@ -79,19 +79,19 @@ footer .lower-footer{
 }
 
 .carousel-item-1 .carousel-item-image {
-	background-image: url('../img/slider-img-1.jpg');
+	background-image: url("{% static 'img/slider-img-1.jpg' %}");
 }
 
 .carousel-item-2 .carousel-item-image {
-	background-image: url('../img/slider-img-3.jpg');
+	background-image: url("{% static 'img/slider-img-3.jpg' %}");
 }
 
 .carousel-item-3 .carousel-item-image {
-	background-image: url('../img/logo_multi.png');
+	background-image: url("{% static 'img/logo_multi.png' %}");
 }
 
 .carousel-item-4 .carousel-item-image {
-	background-image: url('../img/multi_format.png');
+	background-image: url("{% static 'img/multi_format.png' %}");
 }
 
 .carousel-item-image {
