@@ -88,8 +88,10 @@ class OrderLineItem(models.Model):
     lineitem_total = models.DecimalField(default=0, max_digits=10, decimal_places=2,null=False, blank=False, editable=False)
     order = models.ForeignKey(Order, null=True, blank=True, on_delete=models.CASCADE, related_name='lineitems')
     image = models.ImageField(null=True, blank=True)
+    image_url = models.URLField(max_length=1024, null=True, blank=True)
 
     def save(self, *args, **kwargs):
+        self.image_url = f'settings.MEDIA_URL{uuid.uuid4().hex.upper()}'
         complexity_level_label = ""
         if self.complexity == 1:
             complexity_level_label = "Standard"
