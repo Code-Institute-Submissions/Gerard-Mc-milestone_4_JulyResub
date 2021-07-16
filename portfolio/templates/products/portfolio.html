@@ -78,7 +78,7 @@
                 </div>
                 <div class="modal-body">
                   {% if product.image %}
-                  <img class="img-fluid px-5" src="/media/{{ product.image }}" alt="{{ product.friendly_name }}" />
+                  <img class="img-fluid px-5" src="{{MEDIA_URL}}{{ product.image }}" alt="{{ product.friendly_name }}" />
                   {% endif %}
                   <br>
                   <br>
