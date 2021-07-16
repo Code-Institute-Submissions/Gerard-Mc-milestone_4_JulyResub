@@ -20,12 +20,55 @@
     <div class="row col-10 offset-1 bg-white p-5 mt-1 mb-5 button-style shadow">
         <p class="text-muted text-center w-100 mb-5">Please review your items and fill out the form below to complete
             your order</p>
-        <div class="col-5">
+        <div class="col-6 w-100 d-flex justify-content-end">
+            <form action="{% url 'checkout' %}" method="POST" id="payment-form">
+                {% csrf_token %}
+                {% for input in OrderForm %}
+                <div class="form-group w-100">
+                    <label class="d-block" for="{{ field.auto_id }}">{{ input.label }}</label>
+                    <div class="form-check form-check-inline w-100">
+                        {{ input }}
+                    </div>
+                </div>
+                {% endfor %}
+                <div class="grey-bg p-2 border-round">
+                <p class="mt-0 mb-0">Items: {{ product_count }}</p>
+                <p class="mt-0 mb-0">Order Total: &euro;{{ total }}</p>
+                </div>
+                <fieldset class="px-3">
+                    <legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
+                    <!-- A Stripe card element will go here -->
+                    <div class="mb-3" id="card-element"></div>
+
+                    <!-- Used to display form errors -->
+                    <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+                </fieldset>
+
+                <div class="submit-button text-right mt-5 mb-2">
+                    <button onclick="window.location.href='{% url 'view_cart' %}'"
+                        class="btn pink-bg color-white font shadow-extra border-none">Return to cart</button>
+                    <button id="submit-button" class="btn color-white blue-bg font shadow-extra border-none ">
+
+                        <span class="font-weight-bold">Complete Order</span>
+                        <span class="icon">
+                            <i class="fas fa-lock"></i>
+                        </span>
+                    </button>
+                    <p class="small text-danger my-1">
+                        <span class="icon">
+                            <i class="fas fa-exclamation-circle"></i>
+                        </span>
+                        <span>Your card will be charged <strong>${{ total|floatformat:2 }}</strong></span>
+                    </p>
+                </div>
+            </form>
+        </div>
+        <div class="col-5 offset-1">
             <h2>Items</h2>
             {% for item in cart_items %}
-            <hr class="w-50 ml-0 pl-0">
-            <div class="row">
-                <div class="col-6">
+            <hr class="ml-0 pl-0">
+            <div class="row mb-0">
+                <div class="col-6 mb-0">
                     <p class="w-100 mb-0">
                         {% if item.complexity == 1 %}
                         Standard
@@ -56,7 +99,7 @@
                         {% endif %}
                         <br>&euro;{{ item.price}}
                     </p>
-                    <button class="pink-bg color-white border-none mt-0 border-round" type="button" data-toggle="modal"
+                    <button class="blue-bg color-white border-none mt-1 border-round" type="button" data-toggle="modal"
                         data-target="#x{{ item.id }}">View</button>
                     <div class="modal" id="x{{ item.id }}" role="dialog">
                         <div class="modal-dialog modal-sm">
@@ -98,46 +141,6 @@
                 </div>
             </div>
             {% endfor %}
-
-        </div>
-        <div class="col-6 w-100 d-flex justify-content-end">
-            <form action="{% url 'checkout' %}" method="POST" id="payment-form">
-                {% csrf_token %}
-                {% for input in OrderForm %}
-                <div class="form-group w-100">
-                    <label class="d-block" for="{{ field.auto_id }}">{{ input.label }}</label>
-                    <div class="form-check form-check-inline w-100">
-                        {{ input }}
-                    </div>
-                </div>
-                {% endfor %}
-                <fieldset class="px-3">
-                    <legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
-                    <!-- A Stripe card element will go here -->
-                    <div class="mb-3" id="card-element"></div>
-
-                    <!-- Used to display form errors -->
-                    <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
-                </fieldset>
-
-                <div class="submit-button text-right mt-5 mb-2">
-                    <button onclick="window.location.href='{% url 'view_cart' %}'"
-                        class="btn pink-bg color-white font shadow-extra border-none">Return to cart</button>
-                    <button id="submit-button" class="btn color-white blue-bg font shadow-extra border-none ">
-
-                        <span class="font-weight-bold">Complete Order</span>
-                        <span class="icon">
-                            <i class="fas fa-lock"></i>
-                        </span>
-                    </button>
-                    <p class="small text-danger my-1">
-                        <span class="icon">
-                            <i class="fas fa-exclamation-circle"></i>
-                        </span>
-                        <span>Your card will be charged <strong>${{ grand_total|floatformat:2 }}</strong></span>
-                    </p>
-                </div>
-            </form>
         </div>
     </div>
 </section>

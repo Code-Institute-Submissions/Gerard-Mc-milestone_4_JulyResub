@@ -62,7 +62,7 @@
           </div>
           {% else %}
           <div data-toggle="modal" data-target="#{{ product.name}}{{ product.id }}">
-            <img class="img-fluid" src="#" alt="{{ product.friendly_name }}" />
+            <img class="img-fluid" src="{% static 'img/no-image.jpg' %}" alt="{{ product.friendly_name }}" />
           </div>
           {% endif %}
           <div class="modal" id="{{ product.name }}{{ product.id }}" role="dialog">
