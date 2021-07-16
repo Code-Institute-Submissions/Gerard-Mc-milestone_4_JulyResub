@@ -51,7 +51,7 @@ in your terminal.
 
 * Migrate this data by inputting `python3 manage.py migrate` into your terminal.
 
-### Create a Super User
+### Create a Super User 
 
 To access the website's admin to create objects, you will first have to create an admin account.
 * Input `python3 manage.py createsuperuser` into your terminal.
@@ -60,3 +60,66 @@ To access the website's admin to create objects, you will first have to create a
 * After you open the website, add `/admin` to the end of the websites URL to open Admin.
 * Click categories and create 4 different categories ensuring all 4 names are used and used only once. You can input whatever you wish into the friendly name and price fields.
 The database and website should now work as expected.
+
+# Deployment
+## Remote Deployment
+
+### Set up an AWS account
+Images for the website were stored remotely by using a S3 Bucket provided by AWS.
+You will need to set up an AWS account, create a Bucket with public access, and input your credentials in the Heroku config vars section of the app's Heroku settings(explained later).
+In the settings.py file provided in the repository, input the Bucket name and the region name like the example format below.
+```
+AWS_STORAGE_BUCKET_NAME = 'your bucket name'
+AWS_S3_REGION_NAME = 'the region you choose'
+```
+The rest of the variables will be handled in the settings.py file included in the repository, and won't need a further configuration. After the Heroku app is created, they will need to be inputted as config vars. That will be shown in the coming Heroku section.
+
+More information on creating and setting up Buckets can be found [here](https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-bucket.html)
+
+### Create a Heroku App and Deploy
+[Heroku](https://www.heroku.com/) was used to host this project. The steps needed to get the project up and running are provided below.
+
+Create a Heroku account and create a new project app.
+When prompted, choose the region that is closest to you.
+When the app is created, go to the **resources** tab, search for the addon **Heroku Postgress**, and install it to your app.
+Go to the **Settings** tab, click **Reveal Config Vars**, and input your environment variables in the below format.
+```
+AWS_ACCESS_KEY_ID : `<your AWS access key>`
+DATABASE_URL: `<your database url>`
+AWS_SECRET_ACCESS_KEY: `<your AWS secret access key>`
+USE_AWS: `<True>`
+SECRET_KEY: `<your secret key>`
+EMAIL_HOST_PASS: `<your email password>`
+EMAIL_HOST_USER: `<your email address>`
+STRIPE_PUBLIC_KEY:	`<your stripe public key>`
+STRIPE_SECRET_KEY:	`<your stripe secret key>`
+STRIPE_WH_SECRET: `<your stripe wh key>`
+```
+The database URL in the environment variables is connected to the app in the settings.py file and won't need a further configuration.
+```
+DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    }
+```
+
+
+The requirements.txt and Procfile Heroku will need to run this project are included in the repository files and Heroku will use them in the build automatically.
+For reference, they are provided below.
+[Procfile](/workspace/milestone_4/Procfile)
+[Requirements.txt](/workspace/milestone_4/requirements.txt)
+
+Deploy on Heroku
+* Go to **settings > config vars** and input the key **DISABLE_COLLECTSTATIC** and set it to **True** 
+* Go to the **Deploy** tab in the Heroku dashboard.
+* At **Deployment Method**, choose Github and then connect to your cloned repository.
+* Choose **Automatic Deploy**, and click **Deploy Branch **.
+
+Go back to the settings.py file in your IDE, and in the line `ALLOWED_HOSTS =`, add set it equal to your website's address in the format below.
+
+`ALLOWED_HOSTS = ['example.herokuapp.com']`
+
+* Push the changes to Github and go back to **Settings > Config Vars**, and remove **DISABLE_COLLECTSTATIC**.
+* Redeploy the website in **Deploy > Deploy Branch** in the Heroku dashboard and the website should be up and running.
+
+* Go to the terminal in Heroku and follow the instructions under the headings **Create Database** and **Create a Super User** in the Local deployment section, and the website should b up and running.
+
