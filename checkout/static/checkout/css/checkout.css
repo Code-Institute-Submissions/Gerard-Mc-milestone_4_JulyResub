@@ -1,0 +1,23 @@
+.StripeElement {
+  box-sizing: border-box;
+  height: 40px;
+  padding: 8px 10px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 1px 1px 5px #c0c0c0;
+  -webkit-transition: box-shadow 150ms ease;
+  transition: box-shadow 150ms ease;
+}
+
+.StripeElement--focus{
+box-shadow: 1px 1px 5px #c0c0c0;
+}
+
+.StripeElement--webkit-autofill {
+  background-color: #fefde5 !important;
+}
+
+.stripe-style-input::placeholder {
+    color: #aab7c4;
+}

@@ -1,6 +1,7 @@
 {% load static %}
 
 @import url('https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 body {
 	padding: 0;
@@ -350,7 +351,7 @@ footer .lower-footer{
 /* General site styling classes*/
 
 .grey-bg {
-	background-color: rgb(231, 231, 231);
+	background-color: rgb(241, 241, 241);
 }
 
 .white-bg {
@@ -397,12 +398,21 @@ footer .lower-footer{
 	font-size: 700;
 }
 
+.bolder-font{
+
+	font-size:bolder;
+}
+
 .navbar-toggler {
 	margin-right: 15px;
 }
 
 .font {
-	font-family: 'Goldman', cursive!important;
+	font-family: 'Goldman', cursive;
+}
+
+.font-2{
+	font-family: 'Lato', sans-serif;
 }
 
 .blue-pink-gradient-bg {
