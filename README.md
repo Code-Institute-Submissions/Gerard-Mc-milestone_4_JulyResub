@@ -1,45 +1,62 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Deployment
 
-Welcome Gerard-Mc,
+## Local Deployment
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+Gitpod, an integrated development environment, was used to code this project. Github was used for version control and storing the project's files remotely.
 
-## Gitpod Reminders
+To run this project you will need to perform the following steps.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+### Install Technologies to Your Computer
 
-`python3 -m http.server`
+[PIP](https://pip.pypa.io/en/stable/installing) to install the project's requirements.
+[GIT](https://www.atlassian.com/git/tutorials/install-git) for cloning the project and version control.
+[Python](https://www.python.org/download/releases/3.0/) to run the project. 
 
-A blue button should appear to click: *Make Public*,
+### Clone the Repository
 
-Another blue button should appear to click: *Open Browser*.
+You will need to clone the site's repository.
+To do this,  enter `git clone https://github.com/Gerard-Mc/milestone_4.git` into your terminal.
+After the repository is cloned, change IDE directory to the one created after cloning by typing `cd <path to project folder>` into yor terminal.
+You will find more information on cloning repositories [here](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository)
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+### Create Accounts
 
-A blue button should appear to click: *Make Public*,
+The website requires a Stripe, Gmail, and AWS account.
+You will find links to them below.
+[Stripe](https://stripe.com/)
+[Gmail](https://www.google.com/)
+[AWS](https://aws.amazon.com/)
 
-Another blue button should appear to click: *Open Browser*.
+### Set up Environment Variables
+* Create a .env file in the root directory.
+* If not already included in the .gitignore file, make sure to add it otherwise your environment files will be visible to the public.
+* Paste the following code into the .env file and input the values found in your Stripe account.
+```
+import os  
+os.environ["DEVELOPMENT"] = "True"    
+os.environ["SECRET_KEY"] = "<Your Secret Key>"
+os.environ["STRIPE_PUBLIC_KEY"] = "<Your Stripe Public Key>"    
+os.environ["STRIPE_SECRET_KEY"] = "<Your Stripe Secret Key>"    
+os.environ["STRIPE_WH_SECRET"] = "<Your Stripe WH Secret Key>"    
+```
+More information on setting up Stripe keys can be found [here](https://stripe.com/docs).
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+### Install Required Packages
 
-## Updates Since The Instructional Video
+To install the required packages, input `pip3 install -r requirements.txt`
+in your terminal.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+### Create Database
+* You will need to make migrations by inputting `python3 manage.py makemigrations` into your terminal.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+* Migrate this data by inputting `python3 manage.py migrate` into your terminal.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+### Create a Super User
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
---------
-
-Happy coding!
+To access the website's admin to create objects, you will first have to create an admin account.
+* Input `python3 manage.py createsuperuser` into your terminal.
+* Follow the steps by inputting a username, email(optional), and a password.
+* To open admin, you will need to open the website. To do this type `python3 manage.py runserver` in your terminal and an option to open the website should be available in your IDE.
+* After you open the website, add `/admin` to the end of the websites URL to open Admin.
+* Click categories and create 4 different categories ensuring all 4 names are used and used only once. You can input whatever you wish into the friendly name and price fields.
+The database and website should now work as expected.
