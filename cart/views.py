@@ -18,7 +18,8 @@ def add_to_cart(request):
     fast_delivery = request.POST.get('fast_delivery')
 
     cart_product = {
-      "category": item_type, "complexity": complexity, "variations": variations, "user_description": user_description,
+      "category": item_type, "complexity": complexity,
+      "variations": variations, "user_description": user_description,
       "fast_delivery": fast_delivery,
 }
     product_id = { f"{id}": [cart_product]}

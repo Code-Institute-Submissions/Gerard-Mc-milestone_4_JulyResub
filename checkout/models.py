@@ -63,7 +63,7 @@ class OrderLineItem(models.Model):
         (1.00, 'Single'),
         (1.25,'2  (+25%)'),
         (1.50,'3  (+50%)'),
-        (1.75,'3  (+75%)'),
+        (1.75,'4  (+75%)'),
         ]
     DELIVERY_CHOICES =[
         (False, "No"),

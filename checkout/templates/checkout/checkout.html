@@ -1,0 +1,144 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<section class="container-fluid height-60vh">
+    <div class="container-fluid col-10 offset-1 bold-font">
+        <h1 class="text-left font mt-5 mb-5">Checkout</h1>
+    </div>
+    <div class="container-fluid col-10 offset-1 bg-white p-5 button-style shadow">
+
+        <h3 class="">Items: {{ product_count }}</h3>
+        <h3 class="">Total: &euro;{{ total }}</h3>
+        <div class="container-fluid mx-0 px-0 my-4 button-style">
+            <button onclick="window.location.href='{% url 'order' %}'"
+                class="btn pink-bg color-white bold-font font shadow-extra">Add another item</button>
+            <button onclick="window.location.href='{% url 'view_cart' %}'"
+                class="btn blue-bg color-white bold-font font shadow-extra border-none">Return to cart</button>
+        </div>
+    </div>
+    <div class="row col-10 offset-1 bg-white p-5 mt-1 mb-5 button-style shadow">
+        <p class="text-muted text-center w-100 mb-5">Please review your items and fill out the form below to complete
+            your order</p>
+        <div class="col-5">
+            <h2>Items</h2>
+            {% for item in cart_items %}
+            <hr class="w-50 ml-0 pl-0">
+            <div class="row">
+                <div class="col-6">
+                    <p class="w-100 mb-0">
+                        {% if item.complexity == 1 %}
+                        Standard
+                        {% elif item.complexity == 1.25 %}
+                        Advanced
+                        {% else %}
+                        Complex
+                        {% endif %}
+                        {% if item.category == "1" %}
+                        Logo
+                        {% elif item.category == "2" %}
+                        Poster
+                        {% elif item.category == "3" %}
+                        Icon
+                        {% else %}
+                        Banner
+                        {% endif %}
+                        <br>
+                        Variations:
+                        {% if item.variations == "1" %}
+                        1
+                        {% elif item.variations == "1.25" %}
+                        2
+                        {% elif item.variations == "1.5" %}
+                        3
+                        {% else %}
+                        4
+                        {% endif %}
+                        <br>&euro;{{ item.price}}
+                    </p>
+                    <button class="pink-bg color-white border-none mt-0 border-round" type="button" data-toggle="modal"
+                        data-target="#x{{ item.id }}">View</button>
+                    <div class="modal" id="x{{ item.id }}" role="dialog">
+                        <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">
+                                        <strong>
+                                            {% if item.complexity == 1 %}
+                                            Standard
+                                            {% elif item.complexity == 1.25 %}
+                                            Advanced
+                                            {% else %}
+                                            Complex
+                                            {% endif %}
+                                            {% if item.category == "1" %}
+                                            Logo
+                                            {% elif item.category == "2" %}
+                                            Poster
+                                            {% elif item.category == "3" %}
+                                            Icon
+                                            {% else %}
+                                            Banner
+                                            {% endif %}
+                                        </strong>
+                                    </h4>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p><strong>Variations:</strong> {{ item.variations }}</p>
+                                    <p class="modal-title"><strong>Description</strong></p>
+                                    <p>{{ item.user_description }}</p>
+                                    <p><strong>Price:</strong> &euro;{{ item.price|floatformat:2 }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+        <div class="col-6 w-100 d-flex justify-content-end">
+            <form action="{% url 'checkout' %}" method="POST" id="payment-form">
+                {% csrf_token %}
+                {% for input in OrderForm %}
+                <div class="form-group w-100">
+                    <label class="d-block" for="{{ field.auto_id }}">{{ input.label }}</label>
+                    <div class="form-check form-check-inline w-100">
+                        {{ input }}
+                    </div>
+                </div>
+                {% endfor %}
+                <fieldset class="px-3">
+                    <legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
+                    <!-- A Stripe card element will go here -->
+                    <div class="mb-3" id="card-element"></div>
+
+                    <!-- Used to display form errors -->
+                    <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+                </fieldset>
+
+                <div class="submit-button text-right mt-5 mb-2">
+                    <button onclick="window.location.href='{% url 'view_cart' %}'"
+                        class="btn pink-bg color-white font shadow-extra border-none">Return to cart</button>
+                    <button id="submit-button" class="btn color-white blue-bg font shadow-extra border-none ">
+
+                        <span class="font-weight-bold">Complete Order</span>
+                        <span class="icon">
+                            <i class="fas fa-lock"></i>
+                        </span>
+                    </button>
+                    <p class="small text-danger my-1">
+                        <span class="icon">
+                            <i class="fas fa-exclamation-circle"></i>
+                        </span>
+                        <span>Your card will be charged <strong>${{ grand_total|floatformat:2 }}</strong></span>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}

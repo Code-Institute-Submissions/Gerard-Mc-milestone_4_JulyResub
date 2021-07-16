@@ -9,7 +9,7 @@
     <div class="container-fluid col-10 offset-1 bg-white p-5 button-style shadow">
        
         <h3 class="">Items: {{ product_count }}</h3>
-        <h3 class="">Total: {{ total }}</h3>
+        <h3 class="">Total: &euro;{{ total }}</h3>
     </div>
     <div class="container-fluid col-10 offset-1 my-4 button-style">
         <button  onclick="window.location.href='{% url 'order' %}'" class="btn blue-bg color-white bold-font font shadow-extra">Return to order</button>
@@ -29,22 +29,33 @@
         {% endif %}
         <hr>
         
-        <p>Complexity Level: {% if  id.complexity == 1 %}
-            <u>Standard</u>
-            {% elif item.complexity == 1.25 %}
-            <u>Advanced</u>
+        <p>Complexity Level:<strong> {% if  item.complexity == "1.0" %}
+            Standard
+            {% elif item.complexity == "1.25" %}
+            Advanced
             {% else %}
-            <u>Complex</u>
-            {% endif %}</p>
-        <p>Variations: <u>{{ item.variations}}</u></p>
-        <p>Description: {{ item.user_description }}</p>
-        {% if  id.item_type == "True" %}
-        <p>Fast Delivery: <u>Yes</u></p>
+            Complex
+            {% endif %}</strong></p>
+        <p>Variations: <strong>
+        {% if item.variations == "1.0" %}
+        1
+        {% elif item.variations == "1.25" %}
+        2
+        {% elif item.variations == "1.5" %}
+        3
         {% else %}
-        <p>Fast Delivery: <u>No</u></p>
+        4
+        {% endif %}
+    </strong>
+        </p>
+        <p>Description: {{ item.user_description }}</p>
+        {% if  item.item_type == "True" %}
+        <p>Fast Delivery: <strong>Yes</strong></p>
+        {% else %}
+        <p>Fast Delivery: <strong>No</strong></p>
         {% endif %}
         <br>
-        <p>Item Price: <strong>{{ item.price }}</strong></p>
+        <p>Item Price: <strong>&euro;{{ item.price }}</strong></p>
         <form class="form" action="{% url 'remove_from_cart' %}" method="POST">
             {% csrf_token %}
             <textarea name="id" style="display:none;">{{ item.id }}</textarea>

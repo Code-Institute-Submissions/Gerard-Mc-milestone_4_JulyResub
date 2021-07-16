@@ -309,6 +309,10 @@ footer .lower-footer{
 	box-shadow: 1px 1px 5px #c0c0c0;
 }
 
+.border-round{
+	border-radius: 5px;
+}
+
 .border-none{
 	border-style: none;
 }

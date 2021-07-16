@@ -28,9 +28,9 @@ You will find links to them below.
 [AWS](https://aws.amazon.com/)
 
 ### Set up Environment Variables
-* Create a .env file in the root directory.
+* Create an env.py file in the root directory.
 * If not already included in the .gitignore file, make sure to add it otherwise your environment files will be visible to the public.
-* Paste the following code into the .env file and input the values found in your Stripe account.
+* Paste the following code into the env.py file and input the values found in your Stripe account.
 ```
 import os  
 os.environ["DEVELOPMENT"] = "True"    
