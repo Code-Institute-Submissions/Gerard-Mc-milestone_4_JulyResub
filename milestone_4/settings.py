@@ -191,3 +191,7 @@ if 'USE_AWS' in os.environ:
 
 # Fast delivery percentage multiplier.
 FAST_DELIVERY_CHARGE = 1.15
+
+STRIPE_CURRENCY = 'eur'
+STRIPE_PUBLIC_KEY = os.environ.get('STRIPE_PUBLIC_KEY', '')
+STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY', '')
