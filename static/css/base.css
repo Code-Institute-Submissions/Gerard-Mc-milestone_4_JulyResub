@@ -454,6 +454,10 @@ footer .lower-footer{
 	min-height: 60vh;
 }
 
+.overflow{
+	overflow: auto;
+}
+
 
 #home-main{
 	padding: 0 !important;
@@ -476,6 +480,7 @@ footer .lower-footer{
 	}
 }
 
+
 @media (max-width: 495px) {
 	nav a {
 		padding-left: 0;
@@ -483,17 +488,21 @@ footer .lower-footer{
 	}
 	nav a h2 {
 		font-size: 23px;
+		margin-left: 10px;
+		padding: 22px 5px 10px 5px;
 	}
 	#img-mobile {
-		max-width: 70px;
+		max-width: 50px;
 		height: auto;
 	}
 	#topnav {
 		margin-top: 80px!important;
 	}
-	.color-blue {
-		display: block;
+
+	#img-mobile{
+		display: none!important;
 	}
+
 }
 
 @media (max-width: 768px) {
