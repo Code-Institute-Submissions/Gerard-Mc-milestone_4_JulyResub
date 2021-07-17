@@ -593,3 +593,8 @@ footer .lower-footer{
 	max-width: 100%;
  }
  
+ /* Style Allauth pages */
+
+ .allauth label{
+	 display: block;
+ }
