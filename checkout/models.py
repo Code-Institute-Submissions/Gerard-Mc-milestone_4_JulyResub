@@ -40,15 +40,20 @@ class Order(models.Model):
     street_address2 = models.CharField(max_length=80, null=True, blank=True)
     county = models.CharField(max_length=80, null=True, blank=True)
     date = models.DateTimeField(auto_now_add=True)
-    grand_total = models.DecimalField(default=1,max_digits=5, decimal_places=2)
+    grand_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
 
     def _generate_order_number(self):
         return uuid.uuid4().hex.upper()
+
+    def update_total(self):
+        self.grand_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
+        self.save()
 
     def save(self, *args, **kwargs):
         if not self.order_number:
             self.order_number = self._generate_order_number()
         super().save(*args, **kwargs)
+
     def __str__(self):
         return self.order_number
 
@@ -106,6 +111,7 @@ class OrderLineItem(models.Model):
         if self.fast_delivery == True:
             delivery = Decimal(round(settings.FAST_DELIVERY_CHARGE, 2))
         self.lineitem_total = round(Decimal(self.category.price) * Decimal(self.complexity) * Decimal(self.variations) * Decimal(delivery), 2)
+        print(self.lineitem_total)
         super().save(*args, **kwargs)
 
     def __str__(self):

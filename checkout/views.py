@@ -14,22 +14,7 @@ def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
     if request.method == 'POST':
-        grand_total = 0
         cart = request.session.get('cart', {})
-        for item in cart.items():
-            item_price = 0
-            delivery = False
-            complexity = Decimal(item[1]["complexity"])
-            variations = Decimal(item[1]["variations"])
-            category = get_object_or_404(Category, pk=int(item[1]["category"]))
-            item_price = category.price
-            item_price = Decimal(item_price) * complexity
-            item_price = Decimal(item_price) * variations
-            if item[1]["fast_delivery"] == "True":
-                    delivery = True
-                    item_price = Decimal(item_price) * Decimal(settings.FAST_DELIVERY_CHARGE)
-                    item_price = Decimal(round(item_price, 2))
-            grand_total+= item_price
         form_data = {
             'full_name': request.POST['full_name'],
             'email': request.POST['email'],
@@ -40,27 +25,27 @@ def checkout(request):
             'street_address1': request.POST['street_address1'],
             'street_address2': request.POST['street_address2'],
             'county': request.POST['county'],
-            'grand_total': grand_total,
-
         }
-        print(grand_total)
         order_form = OrderForm(form_data)
         if order_form.is_valid():
             order = order_form.save()
             for item in cart.items():
-                
                 item_price = 0
                 delivery = False
                 complexity = Decimal(item[1]["complexity"])
                 variations = Decimal(item[1]["variations"])
+                print(complexity)
+                print(variations)
                 category = get_object_or_404(Category, pk=int(item[1]["category"]))
-                item_price = Decimal(category.price)
+                item_price = category.price
                 item_price = Decimal(item_price) * complexity
                 item_price = Decimal(item_price) * variations
                 if item[1]["fast_delivery"] == "True":
                     delivery = True
                     item_price = Decimal(item_price) * Decimal(settings.FAST_DELIVERY_CHARGE)
                     item_price = Decimal(round(item_price, 2))
+                    print(type(item_price))
+                    print(item_price)
 
                 if id:
                     order_line_item = OrderLineItem(
@@ -72,10 +57,13 @@ def checkout(request):
                         fast_delivery=delivery,
                         lineitem_total=Decimal(item_price),
                         )
+                    print("item_price")
+                    print(type(item_price))
+                    print(item_price)
                     order_line_item.save()
 
             request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse('checkout'))
+            return redirect(reverse('checkout_success', args=[order.order_number]))
 
     else:
         cart = request.session.get('cart', {})
@@ -101,6 +89,27 @@ def checkout(request):
             'client_secret': intent.client_secret,
 
         }
+
+    return render(request, template, context)
+
+
+def checkout_success(request, order_number):
+    """
+    Handle successful checkouts
+    """
+    save_info = request.session.get('save_info')
+    order = get_object_or_404(Order, order_number=order_number)
+    messages.success(request, f'Order successfully processed! \
+        Your order number is {order_number}. A confirmation \
+        email will be sent to {order.email}.')
+
+    if 'cart' in request.session:
+        del request.session['cart']
+
+    template = 'checkout/checkout_success.html'
+    context = {
+        'order': order,
+    }
 
     return render(request, template, context)
 
