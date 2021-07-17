@@ -26,7 +26,6 @@ def add_to_cart(request):
     cart = request.session.get('cart', {})
     cart.__setitem__(id, cart_product)
     request.session['cart'] = cart
-    # print(request.session['cart'])
     form = CustomProductForm()
     context = {
         'form': form

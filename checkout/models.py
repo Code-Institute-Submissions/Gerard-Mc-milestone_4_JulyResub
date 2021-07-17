@@ -42,7 +42,7 @@ class Order(models.Model):
     county = models.CharField(max_length=80, null=True, blank=True)
     date = models.DateTimeField(auto_now_add=True)
     grand_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
-    original_bag = models.TextField(null=False, blank=False, default='')
+    original_cart = models.TextField(null=False, blank=False, default='')
     stripe_pid = models.CharField(max_length=254, null=False, blank=False, default='')
 
     def _generate_order_number(self):
@@ -114,7 +114,6 @@ class OrderLineItem(models.Model):
         if self.fast_delivery == True:
             delivery = Decimal(round(settings.FAST_DELIVERY_CHARGE, 2))
         self.lineitem_total = round(Decimal(self.category.price) * Decimal(self.complexity) * Decimal(self.variations) * Decimal(delivery), 2)
-        print(self.lineitem_total)
         super().save(*args, **kwargs)
 
     def __str__(self):
