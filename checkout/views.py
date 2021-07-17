@@ -34,8 +34,6 @@ def checkout(request):
                 delivery = False
                 complexity = Decimal(item[1]["complexity"])
                 variations = Decimal(item[1]["variations"])
-                print(complexity)
-                print(variations)
                 category = get_object_or_404(Category, pk=int(item[1]["category"]))
                 item_price = category.price
                 item_price = Decimal(item_price) * complexity
@@ -44,8 +42,6 @@ def checkout(request):
                     delivery = True
                     item_price = Decimal(item_price) * Decimal(settings.FAST_DELIVERY_CHARGE)
                     item_price = Decimal(round(item_price, 2))
-                    print(type(item_price))
-                    print(item_price)
 
                 if id:
                     order_line_item = OrderLineItem(
@@ -57,9 +53,6 @@ def checkout(request):
                         fast_delivery=delivery,
                         lineitem_total=Decimal(item_price),
                         )
-                    print("item_price")
-                    print(type(item_price))
-                    print(item_price)
                     order_line_item.save()
 
             request.session['save_info'] = 'save-info' in request.POST
