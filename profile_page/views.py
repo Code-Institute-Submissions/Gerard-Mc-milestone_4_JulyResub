@@ -1,7 +1,10 @@
 from django.shortcuts import render
 
 
-def profile_page(request):
-    """ Returns the profile page """
+def profile(request):
+    """ Display the user's profile. """
 
-    return render(request, 'profile_page/profile_page.html')
+    template = 'profile_page/profile_page.html'
+    context = {}
+
+    return render(request, template, context)
