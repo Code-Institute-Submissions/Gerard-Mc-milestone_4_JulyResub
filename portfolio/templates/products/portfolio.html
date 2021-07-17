@@ -2,7 +2,7 @@
 {% load static %}
 {% block content %}
 
-<div class="container-fluid grey-bg">
+<div class="container-fluid grey-bg height-60vh">
   <div class="row">
     <div class="col text-center mt-4">
       <h1 class="h1-text-style mb-4 mt-5">Portfolio</h1>
@@ -54,6 +54,7 @@
     <div class="col-10 offset-1 p-5">
       <div class="row">
         {% for product in products %}
+        {% if product.display_in_portfolio == True %}
         <div id="product-image-container"
           class="border-box col-sm-6 col-md-6 col-lg-4 col-xl-3 white-bg p-4 d-flex align-items-center justify-content-center shadow">
           {% if product.image %}
@@ -93,6 +94,7 @@
             </div>
           </div>
         </div>
+        {% endif %}
         {% endfor %}
       </div>
     </div>
