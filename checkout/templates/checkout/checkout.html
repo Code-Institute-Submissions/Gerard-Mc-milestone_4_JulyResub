@@ -120,7 +120,7 @@
             </div>
             {% endfor %}
         </div>
-        <div class="col-12 col-lg-6 w-100">
+        <div class="col-12 col-lg-6 w-100 mb-0">
             <form action="{% url 'checkout' %}" method="POST" id="payment-form" class="font-2">
                 {% csrf_token %}
                 {% for input in OrderForm %}
@@ -131,6 +131,17 @@
                     </div>
                 </div>
                 {% endfor %}
+                <div class="form-check form-check-inline mt-2 mb-3 border border-dark p-1 border-round px-3">
+                    {% if user.is_authenticated %}
+                        <label class="form-check-label" for="id-save-info">Save your delivery information to your profile</label>
+                        <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
+                    {% else %}
+                        <label class="form-check-label" for="id-save-info">
+                            <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or 
+                            <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
+                        </label>
+                    {% endif %}
+                </div>
                 <div class="grey-bg p-2 border-round shadow-less border border-dark color-black font">
                     <p class="mt-0 mb-0  bold-font">Items: {{ product_count }}</p>
                     <p class="mt-0 mb-0">Order Total: &euro;{{ total }}</p>
