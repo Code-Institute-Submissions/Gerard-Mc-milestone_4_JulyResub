@@ -189,7 +189,7 @@ if 'USE_AWS' in os.environ:
     STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
 
-Fast delivery percentage multiplier.
+# Fast delivery percentage multiplier.
 FAST_DELIVERY_CHARGE = 1.15
 
 STRIPE_CURRENCY = 'eur'
